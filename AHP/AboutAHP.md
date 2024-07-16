@@ -24,14 +24,15 @@ Attached here has a spreadsheet with a sample data and process.
 
 In this way, I think that we need:
 
-- [ x ] list of boroughs
+- [x] list of boroughs
 - [ ] list of criterions that should we want to use
 - [ ] the definition of what the direction is better for each criterion
 - [ ] the values of each crossing section of our decision matrix
 
 With this datas available, we can create the processes in an endpoint.
 
-´´´
+
+´´´JSON
 Request
 [POST] /boroughs/ranking
 
@@ -50,4 +51,5 @@ body
         // other relevant information
     }
 ]
+
 ´´´
