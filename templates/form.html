@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affordable Place to live</title>
+    <!-- Link para o CSS do Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Affordable Place to live in London</h1>
+        <form action="{{ url_for('submit') }}" method="post" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+                <div class="invalid-feedback">Por favor, insira seu nome.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <div class="invalid-feedback">Por favor, insira um email válido.</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5 mb-3">
+                  <label for="priority">Priority:</label>
+                  <select class="custom-select d-block w-100" id="priority" required="">
+                    <option value="">Choose...</option>
+                    <option>Price (less better)</option>
+                    <option>Distance (less better)</option>
+                    <option>Criminality (less better)</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid priority.
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label for="distance">Distance to center</label>
+                    <input type="text" class="form-control" id="distance" placeholder="" required="">
+                    <div class="invalid-feedback">
+                        Distance to center required.
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <label for="income">Income by week</label>
+                    <input type="text" class="form-control" id="income" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      income by month required.
+                    </div>
+                </div>
+                
+              </div>
+            
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+    <!-- Link para o JavaScript do Bootstrap e dependências -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript para validação do formulário
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+</body>
+</html>
