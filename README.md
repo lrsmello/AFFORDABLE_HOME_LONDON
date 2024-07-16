@@ -47,10 +47,17 @@ This is a project that we are starting in our Aplied Data Science for Businesses
 
 ## Some datasets we already have looked up
 
-https://data.london.gov.uk/dataset/average-private-rents-borough
-https://data.london.gov.uk/dataset/index-private-housing-rental-prices-region
-https://trustforlondon.org.uk/data/rent-affordability-borough/
-https://data.london.gov.uk/dataset/ratio-house-prices-earnings-borough
-https://tfl.gov.uk/info-for/open-data-users/our-open-data#on-this-page-1
-https://data.ubdc.ac.uk/datasets/?organization=greater-london-authority
+- https://data.london.gov.uk/dataset/average-private-rents-borough
+- https://data.london.gov.uk/dataset/index-private-housing-rental-prices-region
+- https://trustforlondon.org.uk/data/rent-affordability-borough/
+- https://data.london.gov.uk/dataset/ratio-house-prices-earnings-borough
+- https://tfl.gov.uk/info-for/open-data-users/our-open-data#on-this-page-1
+- https://data.ubdc.ac.uk/datasets/?organization=greater-london-authority
 
+# How to contribute
+
+## Rules
+
+- The main branch is the source of truth.
+- If you will add something, first of all make shure your branch is up to dated with main.
+- If you already have added some code, push your commits into your branch and than create a pull request.
