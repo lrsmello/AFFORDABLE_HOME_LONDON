@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affordable Place to live</title>
+    <title>Formulário Simples com Mapa</title>
     <!-- Link para o CSS do Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link para o CSS do Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBntMNUj6wllEXbr4gU2mrBx6Hk6p/l04Z4pNh6oEUqniyz+Y4j6gsCDLZr5GVlmnkMBm5D3c0z3o8KaF6A==" crossorigin=""/>
 </head>
 <body>
     <div class="container mt-5">
@@ -24,7 +26,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-5 mb-3">
+                <div class="col-md-3 mb-3">
                   <label for="priority">Priority:</label>
                   <select class="custom-select d-block w-100" id="priority" required="">
                     <option value="">Choose...</option>
@@ -37,8 +39,21 @@
                   </div>
                 </div>
 
-                <div class="col-md-4 mb-3">
-                    <label for="distance">Distance to center</label>
+                <div class="col-md-3 mb-3">
+                    <label for="borough">Reference borough:</label>
+                    <select class="custom-select d-block w-100" id="borough" required="">
+                      <option value="">Choose...</option>
+                      <option>Price (less better)</option>
+                      <option>Distance (less better)</option>
+                      <option>Criminality (less better)</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid priority.
+                    </div>
+                  </div>
+
+                <div class="col-md-3 mb-3">
+                    <label for="distance">maximum distance from Reference:</label>
                     <input type="text" class="form-control" id="distance" placeholder="" required="">
                     <div class="invalid-feedback">
                         Distance to center required.
@@ -57,11 +72,17 @@
             
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
+        <div class="mt-5">
+            <h2>London Map</h2>
+            <div id="map" style="height: 400px;"></div>
+        </div>
     </div>
     <!-- Link para o JavaScript do Bootstrap e dependências -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Link para o JavaScript do Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-ek/4+Bx1w1knpKllIgb1A74x5lgbwsmcY6m8s6J/b9e16Vuvie9l2XcJAGge1dhFSAD1RoBoCkl7Xlg0wzR91g==" crossorigin=""></script>
     <script>
         // JavaScript para validação do formulário
         (function() {
@@ -79,6 +100,17 @@
                 });
             }, false);
         })();
+
+        // JavaScript para inicializar o mapa
+        var map = L.map('map').setView([51.505, -0.09], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([51.505, -0.09]).addTo(map)
+            .bindPopup('Londres, Reino Unido')
+            .openPopup();
     </script>
 </body>
 </html>
