@@ -3,97 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>>Affordable Place to live</title>
-    <!-- Link para o CSS do Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Link para o CSS do Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBntMNUj6wllEXbr4gU2mrBx6Hk6p/l04Z4pNh6oEUqniyz+Y4j6gsCDLZr5GVlmnkMBm5D3c0z3o8KaF6A==" crossorigin=""/>
+    <title>London Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQ75kIlZ7-rZjNyIUt--g3clxGBfS5rGL46aHbB7zZ2hDjYvsIvsGJjjKbAIYcYouiPJAF2U_2gC5-MjWXHiAuCv5Wr_0Wb8dDyH8JLFQ');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 750px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0078D7; /* Blue color representing the Thames river */
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, button {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            /* width: 100%; */ /* Comentado para utilizar o tamanho padrão */
+        }
+        button {
+            background-color: #0078D7; /* Blue color representing the Thames river */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1>Affordable Place to live in London</h1>
-        <form action="{{ url_for('submit') }}" method="post" class="needs-validation" novalidate>
-            <div class="form-group">
-                <label for="name">Nome:</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-                <div class="invalid-feedback">Por favor, insira seu nome.</div>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-                <div class="invalid-feedback">Por favor, insira um email válido.</div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-3 mb-3">
-                  <label for="priority">Priority:</label>
-                  <select class="custom-select d-block w-100" id="priority" required="">
-                    <option value="">Choose...</option>
-                    <option>Price (less better)</option>
-                    <option>Distance (less better)</option>
-                    <option>Criminality (less better)</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please select a valid priority.
-                  </div>
+    <div class="container">
+        <div class="col-md-8">
+            <h1>AFFORDABLE PLACE TO LIVE IN LONDON</h1>
+            <div class="invalid-feedback">Please enter your name and a valid email address:</div>
+            <br>
+            <form id="boroughForm" class="needs-validation" novalidate>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
                 </div>
 
-                <div class="col-md-3 mb-3">
-                  <label for="borough">Reference Borough:</label>
-                  <select class="form-control" id="borough" name="borough" required>
-                      <option value="" disabled selected>Choose a Borough</option>
-                  </select>
-                  <div class="invalid-feedback">Please select a Borough.</div>
-              </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
 
-                <div class="col-md-3 mb-3">
-                    <label for="distance">Maximum distance from Reference:</label>
-                    <input type="text" class="form-control" id="distance" placeholder="" required="">
-                    <div class="invalid-feedback">
-                        Distance to center required.
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="priority">Priority:</label>
+                        <select class="custom-select" id="priority" name="priority" required>
+                            <option value="" disabled selected>Choose a priority</option>
+                            <option value="price">Price (less better)</option>
+                            <option value="distance">Distance (less better)</option>
+                            <option value="criminality">Criminality (less better)</option>
+                        </select>
                     </div>
-                </div>
 
-                <div class="col-md-3 mb-3">
-                    <label for="income">Income by week</label>
-                    <input type="text" class="form-control" id="income" placeholder="" required="">
-                    <div class="invalid-feedback">
-                      income by month required.
+                    <div class="form-group col-md-3">
+                        <label for="borough">Reference Borough:</label>
+                        <select class="form-control" id="borough" name="borough" required>
+                            <option value="" disabled selected>Choose a Borough</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="distance">Maximum distance from Reference:</label>
+                        <input type="number" class="form-control" id="distance" name="distance" required>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="income">Income per week:</label>
+                        <input type="number" class="form-control" id="income" name="income" required>
                     </div>
                 </div>
                 
-              </div>
-            
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-        
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </div>
+
     <!-- Link para o JavaScript do Bootstrap e dependências -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Link para o JavaScript do Leaflet -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-ek/4+Bx1w1knpKllIgb1A74x5lgbwsmcY6m8s6J/b9e16Vuvie9l2XcJAGge1dhFSAD1RoBoCkl7Xlg0wzR91g==" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
     <script>
         // JavaScript para validação do formulário
         (function() {
-          'use strict';
-          window.addEventListener('load', function() {
-              var forms = document.getElementsByClassName('needs-validation');
-              var validation = Array.prototype.filter.call(forms, function(form) {
-                  form.addEventListener('submit', function(event) {
-                      if (form.checkValidity() === false) {
-                          event.preventDefault();
-                          event.stopPropagation();
-                      }
-                      form.classList.add('was-validated');
-                  }, false);
-              });
-          }, false);
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        } else {
+                            event.preventDefault(); // Impedir o envio padrão para processar os dados localmente
+
+                            const formData = {
+                                name: document.getElementById('name').value,
+                                email: document.getElementById('email').value,
+                                priority: document.getElementById('priority').value,
+                                borough: document.getElementById('borough').value,
+                                distance: document.getElementById('distance').value,
+                                income: document.getElementById('income').value
+                            };
+
+                            console.log('Form Data:', formData);
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
         })();
 
-      // Carregar boroughs do JSON e preencher a dropdown list
+        // Carregar boroughs do JSON e preencher a dropdown list
         fetch('/data/boroughs')
         .then(response => response.json())
         .then(data => {
@@ -105,8 +153,7 @@
                 boroughSelect.appendChild(option);
             });
         })
-        .catch(error => console.error('Erro ao carregar os boroughs:', error));
-
+        .catch(error => console.error('Error loading boroughs:', error));
     </script>
 </body>
 </html>
