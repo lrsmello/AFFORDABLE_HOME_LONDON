@@ -40,20 +40,15 @@
                 </div>
 
                 <div class="col-md-3 mb-3">
-                    <label for="borough">Reference borough:</label>
-                    <select class="custom-select d-block w-100" id="borough" required="">
-                      <option value="">Choose...</option>
-                      <option>Price (less better)</option>
-                      <option>Distance (less better)</option>
-                      <option>Criminality (less better)</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Please select a valid priority.
-                    </div>
-                  </div>
+                  <label for="borough">Reference Borough:</label>
+                  <select class="form-control" id="borough" name="borough" required>
+                      <option value="" disabled selected>Choose a Borough</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a Borough.</div>
+              </div>
 
                 <div class="col-md-3 mb-3">
-                    <label for="distance">maximum distance from Reference:</label>
+                    <label for="distance">Maximum distance from Reference:</label>
                     <input type="text" class="form-control" id="distance" placeholder="" required="">
                     <div class="invalid-feedback">
                         Distance to center required.
@@ -83,20 +78,35 @@
     <script>
         // JavaScript para validação do formulário
         (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-                var forms = document.getElementsByClassName('needs-validation');
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
+          'use strict';
+          window.addEventListener('load', function() {
+              var forms = document.getElementsByClassName('needs-validation');
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                      if (form.checkValidity() === false) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                      }
+                      form.classList.add('was-validated');
+                  }, false);
+              });
+          }, false);
         })();
+
+      // Carregar boroughs do JSON e preencher a dropdown list
+        fetch('/data/boroughs')
+        .then(response => response.json())
+        .then(data => {
+            const boroughSelect = document.getElementById('borough');
+            data.forEach(borough => {
+                const option = document.createElement('option');
+                option.value = borough.name;
+                option.textContent = borough.name;
+                boroughSelect.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Erro ao carregar os boroughs:', error));
+
     </script>
 </body>
 </html>
