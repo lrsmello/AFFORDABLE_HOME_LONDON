@@ -1,0 +1,30 @@
+{
+  "name": "gaussian_ahp",
+  "version": "1.0.0",
+  "description": "this is an api that serves few endpoints to execute a gaussian analytical hierarchycal process",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrsmello/AFFORDABLE_HOME_LONDON.git"
+  },
+  "keywords": [
+    "AHP",
+    "optimization"
+  ],
+  "author": "b.adrianobarbosa@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lrsmello/AFFORDABLE_HOME_LONDON/issues"
+  },
+  "homepage": "https://github.com/lrsmello/AFFORDABLE_HOME_LONDON#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
