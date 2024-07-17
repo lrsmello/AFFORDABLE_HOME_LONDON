@@ -72,10 +72,7 @@
             
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
-        <div class="mt-5">
-            <h2>London Map</h2>
-            <div id="map" style="height: 400px;"></div>
-        </div>
+        
     </div>
     <!-- Link para o JavaScript do Bootstrap e dependências -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -100,17 +97,6 @@
                 });
             }, false);
         })();
-
-        // JavaScript para inicializar o mapa
-        var map = L.map('map').setView([51.505, -0.09], 13);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        L.marker([51.505, -0.09]).addTo(map)
-            .bindPopup('Londres, Reino Unido')
-            .openPopup();
     </script>
 </body>
 </html>
