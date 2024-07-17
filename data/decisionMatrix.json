@@ -1,0 +1,482 @@
+[
+    {
+        "Boroughs/Things that matter": "Camden",
+        "ID": 7,
+        "features": {
+            "Criterion 1": 7,
+            "Criterion 2": 331,
+            "Criterion 3": 890,
+            "Criterion 4": 23,
+            "Criterion 5": 0.062551379,
+            "Criterion 6": 93,
+            "Criterion 7": 162,
+            "Criterion 8": 271,
+            "Criterion 9": 32
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Greenwich",
+        "ID": 11,
+        "features": {
+            "Criterion 1": 77,
+            "Criterion 2": 344,
+            "Criterion 3": 29,
+            "Criterion 4": 50,
+            "Criterion 5": 0.141582884,
+            "Criterion 6": 74,
+            "Criterion 7": 337,
+            "Criterion 8": 70,
+            "Criterion 9": 21
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Hackney",
+        "ID": 12,
+        "features": {
+            "Criterion 1": 75,
+            "Criterion 2": 344,
+            "Criterion 3": 729,
+            "Criterion 4": 1,
+            "Criterion 5": 0.830122548,
+            "Criterion 6": 98,
+            "Criterion 7": 427,
+            "Criterion 8": 279,
+            "Criterion 9": 29
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Hammersmith and Fulham",
+        "ID": 13,
+        "features": {
+            "Criterion 1": 7,
+            "Criterion 2": 364,
+            "Criterion 3": 1000,
+            "Criterion 4": 45,
+            "Criterion 5": 0.461853872,
+            "Criterion 6": 56,
+            "Criterion 7": 125,
+            "Criterion 8": 509,
+            "Criterion 9": 50
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Islington",
+        "ID": 19,
+        "features": {
+            "Criterion 1": 26,
+            "Criterion 2": 453,
+            "Criterion 3": 347,
+            "Criterion 4": 2,
+            "Criterion 5": 0.152483992,
+            "Criterion 6": 9,
+            "Criterion 7": 177,
+            "Criterion 8": 527,
+            "Criterion 9": 25
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Kensington and Chelsea",
+        "ID": 20,
+        "features": {
+            "Criterion 1": 1,
+            "Criterion 2": 174,
+            "Criterion 3": 321,
+            "Criterion 4": 48,
+            "Criterion 5": 0.332298176,
+            "Criterion 6": 12,
+            "Criterion 7": 482,
+            "Criterion 8": 110,
+            "Criterion 9": 43
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Lambeth",
+        "ID": 22,
+        "features": {
+            "Criterion 1": 20,
+            "Criterion 2": 497,
+            "Criterion 3": 886,
+            "Criterion 4": 1,
+            "Criterion 5": 0.237576127,
+            "Criterion 6": 63,
+            "Criterion 7": 444,
+            "Criterion 8": 648,
+            "Criterion 9": 25
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Lewisham",
+        "ID": 23,
+        "features": {
+            "Criterion 1": 55,
+            "Criterion 2": 424,
+            "Criterion 3": 817,
+            "Criterion 4": 22,
+            "Criterion 5": 0.6680356,
+            "Criterion 6": 31,
+            "Criterion 7": 158,
+            "Criterion 8": 712,
+            "Criterion 9": 20
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Southwark",
+        "ID": 28,
+        "features": {
+            "Criterion 1": 26,
+            "Criterion 2": 238,
+            "Criterion 3": 454,
+            "Criterion 4": 16,
+            "Criterion 5": 0.731589284,
+            "Criterion 6": 17,
+            "Criterion 7": 252,
+            "Criterion 8": 83,
+            "Criterion 9": 15
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Tower Hamlets",
+        "ID": 30,
+        "features": {
+            "Criterion 1": 15,
+            "Criterion 2": 321,
+            "Criterion 3": 97,
+            "Criterion 4": 25,
+            "Criterion 5": 0.658408977,
+            "Criterion 6": 65,
+            "Criterion 7": 249,
+            "Criterion 8": 985,
+            "Criterion 9": 7
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Wandsworth",
+        "ID": 32,
+        "features": {
+            "Criterion 1": 24,
+            "Criterion 2": 299,
+            "Criterion 3": 892,
+            "Criterion 4": 12,
+            "Criterion 5": 0.44218222,
+            "Criterion 6": 74,
+            "Criterion 7": 333,
+            "Criterion 8": 676,
+            "Criterion 9": 49
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Westminster",
+        "ID": 33,
+        "features": {
+            "Criterion 1": 7,
+            "Criterion 2": 100,
+            "Criterion 3": 672,
+            "Criterion 4": 20,
+            "Criterion 5": 0.829499561,
+            "Criterion 6": 31,
+            "Criterion 7": 284,
+            "Criterion 8": 760,
+            "Criterion 9": 43
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Barking and Dagenham",
+        "ID": 2,
+        "features": {
+            "Criterion 1": 76,
+            "Criterion 2": 199,
+            "Criterion 3": 678,
+            "Criterion 4": 12,
+            "Criterion 5": 0.85858262,
+            "Criterion 6": 33,
+            "Criterion 7": 235,
+            "Criterion 8": 146,
+            "Criterion 9": 25
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Barnet",
+        "ID": 3,
+        "features": {
+            "Criterion 1": 76,
+            "Criterion 2": 432,
+            "Criterion 3": 584,
+            "Criterion 4": 10,
+            "Criterion 5": 0.112798724,
+            "Criterion 6": 42,
+            "Criterion 7": 180,
+            "Criterion 8": 722,
+            "Criterion 9": 20
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Bexley",
+        "ID": 4,
+        "features": {
+            "Criterion 1": 23,
+            "Criterion 2": 474,
+            "Criterion 3": 811,
+            "Criterion 4": 48,
+            "Criterion 5": 0.632593525,
+            "Criterion 6": 23,
+            "Criterion 7": 220,
+            "Criterion 8": 978,
+            "Criterion 9": 6
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Brent",
+        "ID": 5,
+        "features": {
+            "Criterion 1": 25,
+            "Criterion 2": 124,
+            "Criterion 3": 868,
+            "Criterion 4": 33,
+            "Criterion 5": 0.425041262,
+            "Criterion 6": 85,
+            "Criterion 7": 379,
+            "Criterion 8": 787,
+            "Criterion 9": 41
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Bromley",
+        "ID": 6,
+        "features": {
+            "Criterion 1": 87,
+            "Criterion 2": 162,
+            "Criterion 3": 979,
+            "Criterion 4": 17,
+            "Criterion 5": 0.733689249,
+            "Criterion 6": 22,
+            "Criterion 7": 446,
+            "Criterion 8": 94,
+            "Criterion 9": 16
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Croydon",
+        "ID": 8,
+        "features": {
+            "Criterion 1": 32,
+            "Criterion 2": 310,
+            "Criterion 3": 19,
+            "Criterion 4": 24,
+            "Criterion 5": 0.517124338,
+            "Criterion 6": 16,
+            "Criterion 7": 362,
+            "Criterion 8": 321,
+            "Criterion 9": 47
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Ealing",
+        "ID": 9,
+        "features": {
+            "Criterion 1": 37,
+            "Criterion 2": 107,
+            "Criterion 3": 977,
+            "Criterion 4": 39,
+            "Criterion 5": 0.938965298,
+            "Criterion 6": 9,
+            "Criterion 7": 260,
+            "Criterion 8": 128,
+            "Criterion 9": 37
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Enfield",
+        "ID": 10,
+        "features": {
+            "Criterion 1": 22,
+            "Criterion 2": 427,
+            "Criterion 3": 104,
+            "Criterion 4": 1,
+            "Criterion 5": 0.100283678,
+            "Criterion 6": 92,
+            "Criterion 7": 188,
+            "Criterion 8": 230,
+            "Criterion 9": 17
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Haringey",
+        "ID": 14,
+        "features": {
+            "Criterion 1": 81,
+            "Criterion 2": 358,
+            "Criterion 3": 890,
+            "Criterion 4": 11,
+            "Criterion 5": 0.964891065,
+            "Criterion 6": 1,
+            "Criterion 7": 400,
+            "Criterion 8": 426,
+            "Criterion 9": 35
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Harrow",
+        "ID": 15,
+        "features": {
+            "Criterion 1": 95,
+            "Criterion 2": 424,
+            "Criterion 3": 55,
+            "Criterion 4": 15,
+            "Criterion 5": 0.4171008,
+            "Criterion 6": 20,
+            "Criterion 7": 428,
+            "Criterion 8": 419,
+            "Criterion 9": 42
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Havering",
+        "ID": 16,
+        "features": {
+            "Criterion 1": 89,
+            "Criterion 2": 161,
+            "Criterion 3": 206,
+            "Criterion 4": 44,
+            "Criterion 5": 0.423758078,
+            "Criterion 6": 74,
+            "Criterion 7": 176,
+            "Criterion 8": 438,
+            "Criterion 9": 44
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Hillingdon",
+        "ID": 17,
+        "features": {
+            "Criterion 1": 12,
+            "Criterion 2": 306,
+            "Criterion 3": 651,
+            "Criterion 4": 40,
+            "Criterion 5": 0.73394172,
+            "Criterion 6": 71,
+            "Criterion 7": 148,
+            "Criterion 8": 147,
+            "Criterion 9": 40
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Hounslow",
+        "ID": 18,
+        "features": {
+            "Criterion 1": 56,
+            "Criterion 2": 414,
+            "Criterion 3": 653,
+            "Criterion 4": 26,
+            "Criterion 5": 0.07271755,
+            "Criterion 6": 22,
+            "Criterion 7": 274,
+            "Criterion 8": 300,
+            "Criterion 9": 34
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Kingston upon Thames",
+        "ID": 21,
+        "features": {
+            "Criterion 1": 86,
+            "Criterion 2": 284,
+            "Criterion 3": 416,
+            "Criterion 4": 26,
+            "Criterion 5": 0.566578764,
+            "Criterion 6": 80,
+            "Criterion 7": 169,
+            "Criterion 8": 403,
+            "Criterion 9": 50
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Merton",
+        "ID": 24,
+        "features": {
+            "Criterion 1": 79,
+            "Criterion 2": 379,
+            "Criterion 3": 820,
+            "Criterion 4": 5,
+            "Criterion 5": 0.063529389,
+            "Criterion 6": 60,
+            "Criterion 7": 462,
+            "Criterion 8": 758,
+            "Criterion 9": 17
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Newham",
+        "ID": 25,
+        "features": {
+            "Criterion 1": 68,
+            "Criterion 2": 200,
+            "Criterion 3": 574,
+            "Criterion 4": 3,
+            "Criterion 5": 0.692795965,
+            "Criterion 6": 22,
+            "Criterion 7": 472,
+            "Criterion 8": 667,
+            "Criterion 9": 28
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Redbridge",
+        "ID": 26,
+        "features": {
+            "Criterion 1": 92,
+            "Criterion 2": 290,
+            "Criterion 3": 230,
+            "Criterion 4": 24,
+            "Criterion 5": 0.909360134,
+            "Criterion 6": 8,
+            "Criterion 7": 368,
+            "Criterion 8": 906,
+            "Criterion 9": 20
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Richmond upon Thames",
+        "ID": 27,
+        "features": {
+            "Criterion 1": 87,
+            "Criterion 2": 382,
+            "Criterion 3": 979,
+            "Criterion 4": 19,
+            "Criterion 5": 0.98514102,
+            "Criterion 6": 55,
+            "Criterion 7": 452,
+            "Criterion 8": 312,
+            "Criterion 9": 17
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Sutton",
+        "ID": 29,
+        "features": {
+            "Criterion 1": 59,
+            "Criterion 2": 105,
+            "Criterion 3": 858,
+            "Criterion 4": 33,
+            "Criterion 5": 0.714979952,
+            "Criterion 6": 62,
+            "Criterion 7": 454,
+            "Criterion 8": 597,
+            "Criterion 9": 44
+        }
+    },
+    {
+        "Boroughs/Things that matter": "Waltham Forest",
+        "ID": 31,
+        "features": {
+            "Criterion 1": 66,
+            "Criterion 2": 386,
+            "Criterion 3": 217,
+            "Criterion 4": 9,
+            "Criterion 5": 0.343160749,
+            "Criterion 6": 76,
+            "Criterion 7": 346,
+            "Criterion 8": 308,
+            "Criterion 9": 21
+        }
+    }
+]
