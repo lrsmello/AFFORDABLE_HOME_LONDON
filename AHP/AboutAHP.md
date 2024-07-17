@@ -31,6 +31,7 @@ In this way, I think that we need:
 
 With this datas available, we can create the processes in an endpoint.
 
+The rows between 36 and 56 should be well formated, but it didn't work. If anyone knows how can I do the right way to format this stuff in Markdown, let me know please.
 
 ´´´JSON
 Request
@@ -53,3 +54,21 @@ body
 ]
 
 ´´´
+
+## Pseudo AHP engine endpoint
+
+- Receive a list with all the criteria is important to user (just a name).
+- create a decision matrix
+- normalize the matrix
+- calc the average
+- calc the standard deviation
+- calc the gaussian factor
+- normalize the gausian factor
+- calculate the index AHP
+- generate the rank
+- return the result
+
+## Platform Idea
+
+Rest api with nodeJs Express
+https://www.npmjs.com/package/r-integration
