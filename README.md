@@ -50,6 +50,8 @@ This is a project that we are starting in our Aplied Data Science for Businesses
 - https://data.ubdc.ac.uk/datasets/?organization=greater-london-authority
 - https://diamondgeezer.blogspot.com/2023/07/londons-most-central-boroughs.html
 
+# Model Api Documentation
+- https://documenter.getpostman.com/view/10424887/2sA3kSn3Lk
 # How to contribute
 
 ## Rules
