@@ -1,0 +1,9 @@
+[
+    {"ID":1,"DS_CATEGORY":"Room"},
+    {"ID":2,"DS_CATEGORY":"Studio"},
+    {"ID":3,"DS_CATEGORY":"One Bedroom"},
+    {"ID":4,"DS_CATEGORY":"Two Bedroom"},
+    {"ID":5,"DS_CATEGORY":"Three Bedroom"},
+    {"ID":6,"DS_CATEGORY":"Four or more Bedrooms"},
+    {"ID":7,"DS_CATEGORY":"All categories"}
+]
