@@ -4,7 +4,7 @@
         "BoroughName": "City of London",
         "AverageCrime": 33596,
         "AverageIncome": 167000,
-        "AverageWellbeing": "NA"
+        "AverageWellbeing": 7.213
     },
     { 
         "BoroughId": 2,
