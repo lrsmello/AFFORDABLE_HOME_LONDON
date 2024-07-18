@@ -4,6 +4,7 @@
     "referenceBoroughId":7,
     "maximumDistanceFromReference":100,
     "incomePerWeek":750,
+    "categoryPlace": 7,
     "priorities":[
         1,5,8
     ]
