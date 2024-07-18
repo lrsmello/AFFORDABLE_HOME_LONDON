@@ -1,0 +1,7 @@
+[
+    {"ID":1, "DS_PRIORITY":"Rent Price", "NU_DIRECTION":-1},
+    {"ID":2, "DS_PRIORITY":"Distance", "NU_DIRECTION":-1},
+    {"ID":3, "DS_PRIORITY":"Well Being", "NU_DIRECTION":1},
+    {"ID":4, "DS_PRIORITY":"Travelling Time", "NU_DIRECTION":-1},
+    {"ID":5, "DS_PRIORITY":"Cost of Living", "NU_DIRECTION":-1}
+]
