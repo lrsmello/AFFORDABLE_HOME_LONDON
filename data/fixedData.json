@@ -3,197 +3,230 @@
         "BoroughId": 1,
         "BoroughName": "City of London",
         "AverageCrime": 33596,
+        "AverageIncome": 167000,
         "AverageWellbeing": "NA"
     },
     { 
         "BoroughId": 2,
         "BoroughName": "Barking and Dagenham",
+        "AverageIncome": 31800,
         "AverageCrime": 20530,
         "AverageWellbeing": 7.620
     },
     { 
         "BoroughId": 3,
         "BoroughName": "Barnet",
+        "AverageIncome": 59100,
         "AverageCrime": 27888,
         "AverageWellbeing": 7.113
     },
     { 
         "BoroughId": 4,
         "BoroughName": "Bexley",
+        "AverageIncome": 38000,
         "AverageCrime": 16325,
         "AverageWellbeing": 7.443
     },
     { 
         "BoroughId": 5,
         "BoroughName": "Brent",
+        "AverageIncome": 44100,
         "AverageCrime": 31097,
         "AverageWellbeing": 7.223
     },
     { 
         "BoroughId": 6,
         "BoroughName": "Bromley",
+        "AverageIncome": 54500,
         "AverageCrime": 23118.5,
         "AverageWellbeing": 7.410
     },
     { 
         "BoroughId": 7,
         "BoroughName": "Camden",
+        "AverageIncome": 119000,
         "AverageCrime": 39162,
         "AverageWellbeing": 7.343
     },
     { 
         "BoroughId": 8,
         "BoroughName": "Croydon",
+        "AverageIncome": 40900,
         "AverageCrime": 30699.5,
         "AverageWellbeing": 7.240
     },
     { 
         "BoroughId": 9,
         "BoroughName": "Ealing",
+        "AverageIncome": 46800,
         "AverageCrime": 29097.5,
         "AverageWellbeing": 7.337
     },
     { 
         "BoroughId": 10,
         "BoroughName": "Enfield",
+        "AverageIncome": 42800,
         "AverageCrime": 27189.5,
         "AverageWellbeing": 7.540
     },
     { 
         "BoroughId": 11,
         "BoroughName": "Greenwich",
+        "AverageIncome": 48900,
         "AverageCrime": 31790.5,
         "AverageWellbeing": 7.547
     },
     { 
         "BoroughId": 12,
         "BoroughName": "Hackney",
+        "AverageIncome": 52500,
         "AverageCrime": 21135,
         "AverageWellbeing": 7.180
     },
     { 
         "BoroughId": 13,
         "BoroughName": "Hammersmith and Fulham",
+        "AverageIncome": 83600,
         "AverageCrime": 28841.5,
         "AverageWellbeing": 7.663
     },
     { 
         "BoroughId": 14,
         "BoroughName": "Haringey",
+        "AverageIncome": 57100,
         "AverageCrime": 15448.5,
         "AverageWellbeing": 7.123
     },
     { 
         "BoroughId": 15,
         "BoroughName": "Harrow",
+        "AverageIncome": 46500,
         "AverageCrime": 20464.5,
         "AverageWellbeing": 7.703
     },
     { 
         "BoroughId": 16,
         "BoroughName": "Havering",
+        "AverageIncome": 40000,
         "AverageCrime": 25586.5,
         "AverageWellbeing": 7.653
     },
     { 
         "BoroughId": 17,
         "BoroughName": "Hillingdon",
+        "AverageIncome": 41600,
         "AverageCrime": 26112.5,
         "AverageWellbeing": 7.690
     },
     { 
         "BoroughId": 18,
         "BoroughName": "Hounslow",
+        "AverageIncome": 45400,
         "AverageCrime": 28439.5,
         "AverageWellbeing": 7.607
     },
     { 
         "BoroughId": 19,
         "BoroughName": "Islington",
+        "AverageIncome": 76600,
         "AverageCrime": 22382.5,
         "AverageWellbeing": 7.253
     },
     { 
         "BoroughId": 20,
         "BoroughName": "Kensington and Chelsea",
+        "AverageIncome": 208000,
         "AverageCrime": 11615.5,
         "AverageWellbeing": 7.383
     },
     { 
         "BoroughId": 21,
         "BoroughName": "Kingston upon Thames",
+        "AverageIncome": 56500,
         "AverageCrime": 35476.5,
         "AverageWellbeing": 7.450
     },
     { 
         "BoroughId": 22,
         "BoroughName": "Lambeth",
+        "AverageIncome": 56100,
         "AverageCrime": 29145.5,
         "AverageWellbeing": 7.627
     },
     { 
         "BoroughId": 23,
         "BoroughName": "Lewisham",
+        "AverageIncome": 44800,
         "AverageCrime": 13839,
         "AverageWellbeing": 7.447
     },
     { 
         "BoroughId": 24,
         "BoroughName": "Merton",
+        "AverageIncome": 63000,
         "AverageCrime": 37078.5,
         "AverageWellbeing": 7.470
     },
     { 
         "BoroughId": 25,
         "BoroughName": "Newham",
+        "AverageIncome": 36100,
         "AverageCrime": 24066,
         "AverageWellbeing": 7.997
     },
     { 
         "BoroughId": 26,
         "BoroughName": "Redbridge",
+        "AverageIncome": 42700,
         "AverageCrime": 11766,
         "AverageWellbeing": 7.703
     },
     { 
         "BoroughId": 27,
         "BoroughName": "Richmond upon Thames",
+        "AverageIncome": 90400,
         "AverageCrime": 36473.5,
         "AverageWellbeing": 7.403
     },
     { 
         "BoroughId": 28,
         "BoroughName": "Southwark",
+        "AverageIncome": 57800,
         "AverageCrime": 13124,
         "AverageWellbeing": 7.250
     },
     { 
         "BoroughId": 29,
         "BoroughName": "Sutton",
+        "AverageIncome": 45200,
         "AverageCrime": 34740.5,
         "AverageWellbeing": 7.553
     },
     { 
         "BoroughId": 30,
         "BoroughName": "Tower Hamlets",
+        "AverageIncome": 55500,
         "AverageCrime": 28910.5,
         "AverageWellbeing": 7.163
     },
     { 
         "BoroughId": 31,
         "BoroughName": "Waltham Forest",
+        "AverageIncome": 40100,
         "AverageCrime": 23098.5,
         "AverageWellbeing": 7.160
     },
     { 
         "BoroughId": 32,
         "BoroughName": "Wandsworth",
+        "AverageIncome": 79700,
         "AverageCrime": 25650.5,
         "AverageWellbeing": 7.400
     },
     { 
         "BoroughId": 33,
         "BoroughName": "Westminster", 
+        "AverageIncome": 133000,
         "AverageCrime": 88105,
         "AverageWellbeing": 7.087
     }
