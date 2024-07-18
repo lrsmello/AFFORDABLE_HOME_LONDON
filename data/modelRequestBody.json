@@ -1,0 +1,10 @@
+{
+    "userName":"Joe Doe",
+    "emailAddres":"joe@doe.com",
+    "referenceBoroughId":7,
+    "maximumDistanceFromReference":100,
+    "incomePerWeek":750,
+    "priorities":[
+        1,5,8
+    ]
+}
