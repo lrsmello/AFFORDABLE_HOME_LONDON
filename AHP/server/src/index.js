@@ -77,12 +77,20 @@ async function calculateIndex(normalizedGaussians,normalizedMatrix,originalMatri
     }
     return originalMatrix;
 }
-
+async function validateUserInformation(userInformation){
+    // checks 
+    // if has an attribute called referenceBoroughId
+    // if has an attribute called maximumDistanceFromReference and its a valide borough ID
+    // if has an attribute called incomePerMonth and its a number
+    // if has an attribute called categoryPlace and its a number
+    // if has an attribute called priorities and its an Array with length at least 2
+}
 async function createDataMatrix(userInformation) {
     // validate inputs
     // filter data dimensions
     // join features togheter
     // prepare the data
+    // remove zero datas
     // return the matrix
 }
 
