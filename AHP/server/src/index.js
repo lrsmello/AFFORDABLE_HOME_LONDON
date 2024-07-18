@@ -79,7 +79,11 @@ async function calculateIndex(normalizedGaussians,normalizedMatrix,originalMatri
 }
 
 
-app.get("/test", async (req, res) => {
+app.post("/model/run", async (req, res) => {
+
+    const body = require("../../../data/modelRequestBody.json");
+    console.log([body,req.body]);
+    /// create datamatrix according to the input user
 
     /**
      * The results gererated is the same of the spreadsheet
