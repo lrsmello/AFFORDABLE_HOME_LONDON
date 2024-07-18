@@ -78,13 +78,20 @@ async function calculateIndex(normalizedGaussians,normalizedMatrix,originalMatri
     return originalMatrix;
 }
 
+async function createDataMatrix(userInformation) {
+    // validate inputs
+    // filter data dimensions
+    // join features togheter
+    // prepare the data
+    // return the matrix
+}
 
 app.post("/model/run", async (req, res) => {
 
     const body = require("../../../data/modelRequestBody.json");
-    console.log([body,req.body]);
+    
     /// create datamatrix according to the input user
-
+    // const dataMatrix = createDataMatrix(userInformation);
     /**
      * The results gererated is the same of the spreadsheet
      * but, now I need to improve here how can we proccess the user choises, 
