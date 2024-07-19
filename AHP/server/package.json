@@ -2,7 +2,7 @@
   "name": "gaussian_ahp",
   "version": "1.0.0",
   "description": "this is an api that serves few endpoints to execute a gaussian analytical hierarchycal process",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "NODE_ENV=test jest --passWithNoTests",
     "start": "node .",
