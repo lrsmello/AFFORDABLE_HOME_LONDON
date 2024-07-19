@@ -23,5 +23,19 @@ def get_boroughs():
         boroughs = json.load(f)
     return jsonify(boroughs)
 
+@app.route('/data/dimPriority')
+def get_dimPriorities():
+    data_path = os.path.join('data', 'dimPriority.json')
+    with open(data_path) as f:
+        dimPriority = json.load(f)
+    return jsonify(dimPriority)
+
+@app.route('/data/dimCategoryRoom')
+def get_dimCategoryRoom():
+    data_path = os.path.join('data', 'dimCategoryRoom.json')
+    with open(data_path) as f:
+        dimCategoryRoom = json.load(f)
+    return jsonify(dimCategoryRoom)
+
 if __name__ == '__main__':
     app.run(debug=True)
