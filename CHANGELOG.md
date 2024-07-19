@@ -1,5 +1,9 @@
 ## Changelog
 
+### [1.1.2] - 2023-07-17
+
+- Add new variables and improve dataset layout.
+
 ### [1.1.1] - 2023-07-17
 
 - Add input form and saving variables.

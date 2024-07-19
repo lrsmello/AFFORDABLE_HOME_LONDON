@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQ75kIlZ7-rZjNyIUt--g3clxGBfS5rGL46aHbB7zZ2hDjYvsIvsGJjjKbAIYcYouiPJAF2U_2gC5-MjWXHiAuCv5Wr_0Wb8dDyH8JLFQ');
+            background-image: url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcT2DgyM_gzjEd6ebB4avNE0UKLK_YyntRc9mZD7If-dIAgQ1W4nhRaB1ueyPfGDkEUeu7r5t8jTpDMjR9VJiwpJdwL6V3nhZGCUsAIYWw');
             background-size: cover;
             background-repeat: no-repeat;
             color: #333;
@@ -15,11 +15,10 @@
             padding: 0;
         }
         .container {
-            max-width: 750px;
+            max-width: 1000px;
             margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            background-color: rgba(232, 231, 231, 0.7);
         }
         h1 {
             color: #0078D7; /* Blue color representing the Thames river */
@@ -32,7 +31,7 @@
         }
         label {
             margin-bottom: 5px;
-            font-weight: bold;
+            font-weight: bold; /* Rótulos de entrada em negrito */
         }
         input, select, button {
             padding: 10px;
@@ -40,7 +39,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 16px;
-            /* width: 100%; */ /* Comentado para utilizar o tamanho padrão */
+            width: 95%;
         }
         button {
             background-color: #0078D7; /* Blue color representing the Thames river */
@@ -50,6 +49,19 @@
         }
         button:hover {
             background-color: #005bb5;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Ajustar o espaço entre os itens */
+        }
+        .checkbox-group .form-check {
+            display: flex;
+            align-items: center;
+            margin-right: 20px; /* Ajustar o espaço entre as caixas */
+        }
+        .checkbox-group .form-check label {
+            font-weight: normal; /* Remover o negrito dos rótulos das prioridades */
         }
     </style>
 </head>
@@ -71,30 +83,34 @@
                 </div>
 
                 <div class="form-row">
-                    <div class="form-group col-md-3">
-                        <label for="priority">Priority:</label>
-                        <select class="custom-select" id="priority" name="priority" required>
-                            <option value="" disabled selected>Choose a priority</option>
-                            <option value="price">Price (less better)</option>
-                            <option value="distance">Distance (less better)</option>
-                            <option value="criminality">Criminality (less better)</option>
-                        </select>
+                    <div class="form-group col-md-12">
+                        <label for="dimPriority">Priority:</label>
+                        <div id="dimPriority" class="checkbox-group" name="dimPriority" required>
+                            <!-- As caixas de seleção serão geradas aqui -->
+                        </div>
                     </div>
 
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-6">
                         <label for="borough">Reference Borough:</label>
                         <select class="form-control" id="borough" name="borough" required>
-                            <option value="" disabled selected>Choose a Borough</option>
+                            <option value="" disabled selected>Choose a borough</option>
                         </select>
                     </div>
 
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-6">
+                        <label for="dimCategoryRoom">Reference category:</label>
+                        <select class="form-control" id="dimCategoryRoom" name="dimCategoryRoom" required>
+                            <option value="" disabled selected>Choose a category:</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-6">
                         <label for="distance">Maximum distance from Reference:</label>
                         <input type="number" class="form-control" id="distance" name="distance" required>
                     </div>
 
-                    <div class="form-group col-md-3">
-                        <label for="income">Income per week:</label>
+                    <div class="form-group col-md-6">
+                        <label for="income">Monthly income:</label>
                         <input type="number" class="form-control" id="income" name="income" required>
                     </div>
                 </div>
@@ -111,13 +127,21 @@
     <!-- Link para o JavaScript do Leaflet -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
     <script>
-        // JavaScript para validação do formulário
+        // JavaScript para validação do formulário e salvar JSON
         (function() {
             'use strict';
             window.addEventListener('load', function() {
                 var forms = document.getElementsByClassName('needs-validation');
                 Array.prototype.filter.call(forms, function(form) {
                     form.addEventListener('submit', function(event) {
+                        // Validação de prioridade
+                        const checkedPriorities = document.querySelectorAll('input[name="dimPriority"]:checked');
+                        if (checkedPriorities.length < 2) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            alert('Please select at least two priorities.');
+                        }
+
                         if (form.checkValidity() === false) {
                             event.preventDefault();
                             event.stopPropagation();
@@ -127,13 +151,22 @@
                             const formData = {
                                 name: document.getElementById('name').value,
                                 email: document.getElementById('email').value,
-                                priority: document.getElementById('priority').value,
+                                priorities: Array.from(document.querySelectorAll('input[name="dimPriority"]:checked')).map(checkbox => checkbox.value),
                                 borough: document.getElementById('borough').value,
                                 distance: document.getElementById('distance').value,
                                 income: document.getElementById('income').value
                             };
 
-                            console.log('Form Data:', formData);
+                            // Criar um arquivo JSON e forçar o download
+                            const blob = new Blob([JSON.stringify(formData, null, 2)], { type: 'application/json' });
+                            const url = URL.createObjectURL(blob);
+                            const a = document.createElement('a');
+                            a.href = url;
+                            a.download = 'form-data.json';
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                            URL.revokeObjectURL(url); // Liberar o URL após o download
                         }
                         form.classList.add('was-validated');
                     }, false);
@@ -148,12 +181,55 @@
             const boroughSelect = document.getElementById('borough');
             data.forEach(borough => {
                 const option = document.createElement('option');
-                option.value = borough.name;
+                option.value = borough.ID;
                 option.textContent = borough.name;
                 boroughSelect.appendChild(option);
             });
         })
         .catch(error => console.error('Error loading boroughs:', error));
+
+        // Carregar categories do JSON e preencher a dropdown list
+        fetch('/data/dimCategoryRoom')
+        .then(response => response.json())
+        .then(data => {
+            const dimCategoryRoomSelect = document.getElementById('dimCategoryRoom');
+            data.forEach(dimCategoryRoom => {
+                const option = document.createElement('option');
+                option.value = dimCategoryRoom.ID;
+                option.textContent = dimCategoryRoom.DS_CATEGORY;
+                dimCategoryRoomSelect.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Error loading categories:', error));
+
+        // Carregar Priorities do JSON
+        fetch('/data/dimPriority')
+        .then(response => response.json())
+        .then(data => {
+            const dimPriorityContainer = document.getElementById('dimPriority');
+            data.forEach(dimPriority => {
+                const div = document.createElement('div');
+                div.classList.add('form-check');
+
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.classList.add('form-check-input');
+                checkbox.id = dimPriority.ID;
+                checkbox.name = 'dimPriority';
+                checkbox.value = dimPriority.ID;
+                checkbox.checked = true; // Marcar todas as caixas por padrão
+
+                const label = document.createElement('label');
+                label.classList.add('form-check-label');
+                label.htmlFor = dimPriority.ID;
+                label.textContent = dimPriority.DS_PRIORITY;
+
+                div.appendChild(checkbox);
+                div.appendChild(label);
+                dimPriorityContainer.appendChild(div);
+            });
+        })
+        .catch(error => console.error('Erro ao carregar os dados:', error));
     </script>
 </body>
 </html>
