@@ -79,13 +79,15 @@ async function calculateIndex(normalizedGaussians,normalizedMatrix,originalMatri
 }
 async function validateUserInformation(userInformation){
     // checks 
-    // if has an attribute called referenceBoroughId
-    // if has an attribute called maximumDistanceFromReference and its a valide borough ID
+    // if has an attribute called referenceBoroughId and its a valide borough ID
+    // if has an attribute called maximumDistanceFromReference 
     // if has an attribute called incomePerMonth and its a number
     // if has an attribute called categoryPlace and its a number
     // if has an attribute called priorities and its an Array with length at least 2
 }
 async function createDataMatrix(userInformation) {
+    const isValid = validateUserInformation(userInformation);
+    
     // validate inputs
     // filter data dimensions
     // join features togheter
@@ -97,7 +99,7 @@ async function createDataMatrix(userInformation) {
 app.post("/model/run", async (req, res) => {
 
     const body = require("../../../data/modelRequestBody.json");
-    
+    const generatedDataMatrix = createDataMatrix(body);
     /// create datamatrix according to the input user
     // const dataMatrix = createDataMatrix(userInformation);
     /**
