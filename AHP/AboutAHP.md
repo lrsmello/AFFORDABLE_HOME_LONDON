@@ -25,9 +25,9 @@ Attached here has a spreadsheet with a sample data and process.
 In this way, I think that we need:
 
 - [x] list of boroughs
-- [ ] list of criterions that should we want to use
-- [ ] the definition of what the direction is better for each criterion
-- [ ] the values of each crossing section of our decision matrix
+- [x] list of criterions that should we want to use
+- [x] the definition of what the direction is better for each criterion
+- [x] the values of each crossing section of our decision matrix
 
 With this datas available, we can create the processes in an endpoint.
 
@@ -72,3 +72,20 @@ body
 
 Rest api with nodeJs Express
 https://www.npmjs.com/package/r-integration
+
+# How to run the server model ?
+
+- You need to have installed nodeJs on the computer. (https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)
+- By console (terminal) inside the folder "server", you can run:
+
+```
+npm install
+```
+
+And after all instalations, you can run the server with the command:
+
+```
+npm start
+```
+
+This actions should start a webserver to provide the API as seems like the documentation up above, listening to the port 3000, you will be able to create a post request to http://localhost:3000/api/model/run
