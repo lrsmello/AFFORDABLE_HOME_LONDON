@@ -1,3 +1,4 @@
 ~$*.xlsx
 node_modules
 coverage
+.vscode
