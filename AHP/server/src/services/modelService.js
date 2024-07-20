@@ -1,10 +1,18 @@
 const stats = require('statistics');
-const dataMatrix = require('../../../../data/decisionMatrix.json');
-const decisionDirections = require('../../../../data/criterionDirections.json');
+//const dataMatrix = require('../../../../data/decisionMatrix.json');
+const decisionDirectionsDefault = require('../../../../data/criterionDirections.json');
+let decisionDirections = decisionDirectionsDefault;
+const boroughs = require('../../../../data/boroughs.json');
+const distances = require('../../../../data/distance.json');
+const dimCategoryRoom = require('../../../../data/dimCategoryRoom.json');
+const londonBoroughRent = require('../../../../data/londonBoroughRent.json');
+const dimPriority = require('../../../../data/dimPriority.json');
+const fixedData = require('../../../../data/fixedData.json');
 
-const features = Object.keys(dataMatrix[0]['features']);
+let features = [];
 
 exports.getNormalizedMatrix = async (matrix) => {
+  features = Object.keys(matrix[0]['features']);
   let normalizedMatrix = [];
   for (let i = 0; i < features.length; i++) {
     const direction = decisionDirections[i];
@@ -44,13 +52,102 @@ exports.calculateIndex = async (normalizedGaussians, normalizedMatrix, originalM
 };
 
 exports.createDataMatrix = async (userInformation) => {
-  // Implementação da validação e criação da matriz de dados
-  
-    // validate inputs
+  // get referenced borough by id userInformation.referenceBoroughId filtering the file boroughs.json
+    let referenceBoroughId = userInformation.referenceBoroughId;
+    // get the distances using the boroughId to filter the distance.json on column target
+    let distFromReferenceBorough = distances.filter(
+      (d)=>d.Target==referenceBoroughId && d.Target!==d.Origin
+    ).map((b)=>{
+      let b_details = boroughs.filter((f)=>f.ID==b.Origin);
+      if (b_details.length>0) {
+        b_details = b_details[0];
+      }
+      b['boroughDetails'] = b_details;
+      return b;
+    });
+    // get the category place userInformation.categoryPlace, and use it to get the referenced dimension on dimCategoryRoom.json
+    let categoryPlace = userInformation.categoryPlace;
+    let category = dimCategoryRoom.filter((f)=>f.ID==categoryPlace);
+    if (category.length>0) {
+      category = category[0];
+    }
+    // get the rent price from the file londonBoroughRent.json using the metric NU_LOWER_QUARTILE, filtering the category
+    let rentPrices = londonBoroughRent.filter((f)=>f.ID_CATEGORY==categoryPlace);
+    // to filter the features that is in the fixedData.json, I need to create a from-to parameters between the dimPriority.json and fixedData
+    let prioritiesFilter = userInformation.priorities;
+    let priorities = dimPriority.filter((f)=>prioritiesFilter.indexOf(f.ID)!=-1);
+    decisionDirections = priorities.map((p)=>{
+      if (p.NU_DIRECTION > 0) return 'MAX';
+      return 'MIN';
+    });
+    // create a new matrix
+    let outputMatrix = [];
+    // create a copy of boroughs variable to remove from the list the referenced borough
+    let copyOfBoroughs = boroughs;
+    let idx = copyOfBoroughs.findIndex(obj => obj.ID ===referenceBoroughId);
+    if (idx !== -1) {
+      copyOfBoroughs.splice(idx,1);
+    }
+    // run over the borough list to join all the features
+    for (let bi = 0; bi < boroughs.length; bi++) {
+      const borough = boroughs[bi];
+      let featsObject = {};
+      for (let pi = 0; pi < priorities.length; pi++) {
+        const priority = priorities[pi];
+        // it was necessery create a manually link between the priority and the source data.
+        // according to each option.
+        // p1
+        if (priority.ID===1) {
+          var p1 = rentPrices.filter((f)=>f.ID_AREA==borough.ID);
+          if (p1.length>0){
+            p1 = p1[0].NU_LOWER_QUARTILE;
+          }
+          featsObject[priority.DS_PRIORITY] = p1
+        }
+        //
+        // p2
+        if (priority.ID===2) {
+          var p2 = distFromReferenceBorough.filter((f)=>f.Origin==borough.ID);
+          if (p2.length>0){
+            p2 = p2[0].Distance;
+          } else {
+            p2 = 0.000000001;// caso não encontre, atribui almost zero.
+            // in the begining was broken here, because the comparison bitween itself borough
+          }
+          featsObject[priority.DS_PRIORITY] = p2
+        }
+        //
+        // p3
+        if (priority.ID===3) {
+          var p3 = fixedData.filter((f)=>f.BoroughId==borough.ID);
+          if (p3.length>0){
+            p3 = p3[0].AverageWellbeing;
+          }
+          featsObject[priority.DS_PRIORITY] = p3
+        }
+        //
+
+        // other priorities needs to be handled here
+        //see the validateUserInformations arround line 20 for configuration as well
+      }
+      outputMatrix.push({
+        "ID":borough.ID,
+        "name":borough.name,
+        "features":featsObject
+      })
+    }
+    // priority 1  = NU_LOWER_QUARTILE in londonBoroughRent Data
+    // priority 2  = Distance in the distFromReferenceBorough variable
+    // priority 3  = AverageWellbeing in fixed Data
+
+    // priority 4  = I didnt found it.
+    // priority 5  = I didnt foind it.
+
     // filter data dimensions
     // join features togheter
     // prepare the data
     // remove zero datas
     // return the matrix
-  return dataMatrix; // Exemplo de retorno
+  // return dataMatrix; // Exemplo de retorno
+  return outputMatrix;
 };

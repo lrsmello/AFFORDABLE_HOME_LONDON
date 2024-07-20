@@ -7,14 +7,16 @@ exports.runModel = async (req, res) => {
     const matrixNormalized = await modelService.getNormalizedMatrix(generatedDataMatrix);
     const normalizedGaussians = await modelService.calculateNormalizedGaussianFactor(matrixNormalized);
     const matrix = await modelService.calculateIndex(normalizedGaussians, matrixNormalized, generatedDataMatrix);
-    let ranking  = [];
+    let ranking = [];
     // Ordena decrescente para criar um ranking
     if (Array.isArray(matrix)) {
       ranking = matrix.sort((a, b) => b.indexGAHP - a.indexGAHP);
       res.send({ ranking });
+    } else {
+      res.send({ ranking });
     }
-    res.send({ranking});
   } catch (error) {
-    res.status(500).send({ error: `Error running model, ${error}` });
+    console.log(`${error}`);
+    res.status(500).send({ error: `Error running model` });
   }
 };
