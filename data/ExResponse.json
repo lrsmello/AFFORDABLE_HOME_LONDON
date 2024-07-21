@@ -1,0 +1,314 @@
+{
+    "ranking": [
+      {
+        "ID": 20,
+        "name": "Kensington and Chelsea",
+        "features": {
+          "Rent Price": 2099.62,
+          "Distance": 3.2797418337,
+          "Well Being": 7.383
+        },
+        "indexGAHP": 0.0794830521576151
+      },
+      {
+        "ID": 8,
+        "name": "Croydon",
+        "features": {
+          "Rent Price": 1063.4,
+          "Distance": 3.6714216485,
+          "Well Being": 7.24
+        },
+        "indexGAHP": 0.07590849581408475
+      },
+      {
+        "ID": 21,
+        "name": "Kingston upon Thames",
+        "features": {
+          "Rent Price": 1270.17,
+          "Distance": 5.5765182226,
+          "Well Being": 7.45
+        },
+        "indexGAHP": 0.05196249691853374
+      },
+      {
+        "ID": 15,
+        "name": "Harrow",
+        "features": {
+          "Rent Price": 1358.78,
+          "Distance": 5.993676126,
+          "Well Being": 7.703
+        },
+        "indexGAHP": 0.0484981060631989
+      },
+      {
+        "ID": 1,
+        "name": "City of London",
+        "features": {
+          "Rent Price": 2060.63,
+          "Distance": 5.7427541962,
+          "Well Being": 7.213
+        },
+        "indexGAHP": 0.04784959374022085
+      },
+      {
+        "ID": 13,
+        "name": "Hammersmith and Fulham",
+        "features": {
+          "Rent Price": 1654.17,
+          "Distance": 6.5588493924,
+          "Well Being": 7.663
+        },
+        "indexGAHP": 0.04378146604659365
+      },
+      {
+        "ID": 14,
+        "name": "Haringey",
+        "features": {
+          "Rent Price": 1421.41,
+          "Distance": 7.2118986247,
+          "Well Being": 7.123
+        },
+        "indexGAHP": 0.04127543820043214
+      },
+      {
+        "ID": 5,
+        "name": "Brent",
+        "features": {
+          "Rent Price": 1476.94,
+          "Distance": 7.7743886985,
+          "Well Being": 7.223
+        },
+        "indexGAHP": 0.038612914807526474
+      },
+      {
+        "ID": 3,
+        "name": "Barnet",
+        "features": {
+          "Rent Price": 1388.32,
+          "Distance": 8.560281887,
+          "Well Being": 7.113
+        },
+        "indexGAHP": 0.03613729401240975
+      },
+      {
+        "ID": 31,
+        "name": "Waltham Forest",
+        "features": {
+          "Rent Price": 1270.17,
+          "Distance": 9.1744578532,
+          "Well Being": 7.16
+        },
+        "indexGAHP": 0.034874598506663426
+      },
+      {
+        "ID": 29,
+        "name": "Sutton",
+        "features": {
+          "Rent Price": 1092.93,
+          "Distance": 9.8954554585,
+          "Well Being": 7.553
+        },
+        "indexGAHP": 0.03420242523301938
+      },
+      {
+        "ID": 23,
+        "name": "Lewisham",
+        "features": {
+          "Rent Price": 1240.63,
+          "Distance": 10.6487253486,
+          "Well Being": 7.447
+        },
+        "indexGAHP": 0.03143710699647007
+      },
+      {
+        "ID": 10,
+        "name": "Enfield",
+        "features": {
+          "Rent Price": 1240.63,
+          "Distance": 12.3340924755,
+          "Well Being": 7.54
+        },
+        "indexGAHP": 0.02834185192464289
+      },
+      {
+        "ID": 33,
+        "name": "Westminster",
+        "features": {
+          "Rent Price": 2047.63,
+          "Distance": 10.691368229,
+          "Well Being": 7.087
+        },
+        "indexGAHP": 0.028326113924176655
+      },
+      {
+        "ID": 32,
+        "name": "Wandsworth",
+        "features": {
+          "Rent Price": 1654.17,
+          "Distance": 11.3486569203,
+          "Well Being": 7.4
+        },
+        "indexGAHP": 0.028145883502267245
+      },
+      {
+        "ID": 11,
+        "name": "Greenwich",
+        "features": {
+          "Rent Price": 1299.71,
+          "Distance": 12.6099723968,
+          "Well Being": 7.547
+        },
+        "indexGAHP": 0.027571187463988837
+      },
+      {
+        "ID": 16,
+        "name": "Havering",
+        "features": {
+          "Rent Price": 1092.93,
+          "Distance": 13.965143402,
+          "Well Being": 7.653
+        },
+        "indexGAHP": 0.027081054132157736
+      },
+      {
+        "ID": 26,
+        "name": "Redbridge",
+        "features": {
+          "Rent Price": 1240.63,
+          "Distance": 13.6980368777,
+          "Well Being": 7.703
+        },
+        "indexGAHP": 0.0264107755724729
+      },
+      {
+        "ID": 24,
+        "name": "Merton",
+        "features": {
+          "Rent Price": 1417.86,
+          "Distance": 14.4836986549,
+          "Well Being": 7.47
+        },
+        "indexGAHP": 0.024474715126447603
+      },
+      {
+        "ID": 25,
+        "name": "Newham",
+        "features": {
+          "Rent Price": 1417.86,
+          "Distance": 15.427734076,
+          "Well Being": 7.997
+        },
+        "indexGAHP": 0.023532800049594852
+      },
+      {
+        "ID": 28,
+        "name": "Southwark",
+        "features": {
+          "Rent Price": 1536.02,
+          "Distance": 15.7699895298,
+          "Well Being": 7.25
+        },
+        "indexGAHP": 0.022569478708472354
+      },
+      {
+        "ID": 27,
+        "name": "Richmond upon Thames",
+        "features": {
+          "Rent Price": 1536.02,
+          "Distance": 16.7525725512,
+          "Well Being": 7.403
+        },
+        "indexGAHP": 0.02169193008853561
+      },
+      {
+        "ID": 2,
+        "name": "Barking and Dagenham",
+        "features": {
+          "Rent Price": 1181.55,
+          "Distance": 20.1570827195,
+          "Well Being": 7.62
+        },
+        "indexGAHP": 0.02110486340586691
+      },
+      {
+        "ID": 12,
+        "name": "Hackney",
+        "features": {
+          "Rent Price": 1689.62,
+          "Distance": 16.8108518876,
+          "Well Being": 7.18
+        },
+        "indexGAHP": 0.021054851961209833
+      },
+      {
+        "ID": 19,
+        "name": "Islington",
+        "features": {
+          "Rent Price": 1719.16,
+          "Distance": 16.8833161491,
+          "Well Being": 7.253
+        },
+        "indexGAHP": 0.020909433796354487
+      },
+      {
+        "ID": 18,
+        "name": "Hounslow",
+        "features": {
+          "Rent Price": 1293.8,
+          "Distance": 20.000248097,
+          "Well Being": 7.607
+        },
+        "indexGAHP": 0.02051194411223043
+      },
+      {
+        "ID": 22,
+        "name": "Lambeth",
+        "features": {
+          "Rent Price": 1536.02,
+          "Distance": 19.7939328523,
+          "Well Being": 7.627
+        },
+        "indexGAHP": 0.019504035633008007
+      },
+      {
+        "ID": 6,
+        "name": "Bromley",
+        "features": {
+          "Rent Price": 1181.55,
+          "Distance": 24.2334253131,
+          "Well Being": 7.41
+        },
+        "indexGAHP": 0.01904985002191477
+      },
+      {
+        "ID": 9,
+        "name": "Ealing",
+        "features": {
+          "Rent Price": 1411.95,
+          "Distance": 21.8085376475,
+          "Well Being": 7.337
+        },
+        "indexGAHP": 0.018861756582916937
+      },
+      {
+        "ID": 30,
+        "name": "Tower Hamlets",
+        "features": {
+          "Rent Price": 1663.62,
+          "Distance": 20.5493365268,
+          "Well Being": 7.163
+        },
+        "indexGAHP": 0.018515878147775236
+      },
+      {
+        "ID": 17,
+        "name": "Hillingdon",
+        "features": {
+          "Rent Price": 1181.55,
+          "Distance": 26.2685790445,
+          "Well Being": 7.69
+        },
+        "indexGAHP": 0.018318607349198535
+      }
+    ]
+  }
