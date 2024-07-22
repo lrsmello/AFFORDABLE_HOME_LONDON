@@ -16,50 +16,50 @@
                 //     event.preventDefault();
                 //     event.stopPropagation();
                 // } else {
-                    event.preventDefault(); // Impedir o envio padrão para processar os dados localmente
+                event.preventDefault(); // Impedir o envio padrão para processar os dados localmente
 
-                    const formData = {
-                        userName: document.getElementById('name').value,
-                        emailAddres: document.getElementById('email').value,
-                        referenceBoroughId: document.getElementById('borough').value,
-                        maximumDistanceFromReference: document.getElementById('distance').value,
-                        incomePerMonth: document.getElementById('income').value,
-                        categoryPlace: document.getElementById('dimCategoryRoom').value,
-                        priorities: Array.from(document.querySelectorAll('input[name="dimPriority"]:checked')).map(checkbox => parseInt(checkbox.value))
-                    };
+                const formData = {
+                    userName: document.getElementById('name').value,
+                    emailAddres: document.getElementById('email').value,
+                    referenceBoroughId: parseInt(document.getElementById('borough').value),
+                    maximumDistanceFromReference: parseInt(document.getElementById('distance').value),
+                    incomePerMonth: parseFloat(document.getElementById('income').value),
+                    categoryPlace: parseInt(document.getElementById('dimCategoryRoom').value),
+                    priorities: Array.from(document.querySelectorAll('input[name="dimPriority"]:checked')).map(checkbox => parseInt(checkbox.value))
+                };
 
-                    // // Criar um arquivo JSON e forçar o download
-                    // const blob = new Blob([JSON.stringify(formData, null, 2)], { type: 'application/json' });
-                    // const url = URL.createObjectURL(blob);
-                    // const a = document.createElement('a');
-                    // a.href = url;
-                    // a.download = 'form-data.json';
-                    // document.body.appendChild(a);
-                    // a.click();
-                    // document.body.removeChild(a);
-                    // URL.revokeObjectURL(url); // Liberar o URL após o download
+                // // Criar um arquivo JSON e forçar o download
+                // const blob = new Blob([JSON.stringify(formData, null, 2)], { type: 'application/json' });
+                // const url = URL.createObjectURL(blob);
+                // const a = document.createElement('a');
+                // a.href = url;
+                // a.download = 'form-data.json';
+                // document.body.appendChild(a);
+                // a.click();
+                // document.body.removeChild(a);
+                // URL.revokeObjectURL(url); // Liberar o URL após o download
 
-                    // Enviar o JSON via POST
-                    fetch('http://localhost:3000/api/model/run', {
-                        method: 'POST',
-                        mode: 'no-cors',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Access-Control-Allow-Origin':'*',
-                            'Access-Control-Allow-Methods':"POST"
-                        },
-                        body: JSON.stringify(formData)
+                // Enviar o JSON via POST
+                fetch("http://localhost:3000/api/model/run", {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Methods': "POST"
+                    },
+                    body: JSON.stringify(formData)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Success:', data);
+                        // Exibir uma mensagem de sucesso ou redirecionar, se necessário
+                        alert('Formulário enviado com sucesso!');
                     })
-                        .then(response => response.json())
-                        .then(data => {
-                            console.log('Success:', data);
-                            // Exibir uma mensagem de sucesso ou redirecionar, se necessário
-                            alert('Formulário enviado com sucesso!');
-                        })
-                        .catch((error) => {
-                            console.error('Error:', error);
-                            alert('Erro ao enviar o formulário.');
-                        });
+                    .catch((error) => {
+                        alert(`Error: ${error}`);
+                        console.log(error);
+                    });
 
                 // }
                 form.classList.add('was-validated');
