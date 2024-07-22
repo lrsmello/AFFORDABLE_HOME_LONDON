@@ -10,13 +10,13 @@ app = Flask(__name__)
 def form():
     return render_template('form.html')
 
-@app.route('/submit', methods=['POST'])
-def submit():
-    userName = request.form['name']
-    emailAddres = request.form['email']
-    referenceBoroughId = request.form['borough']
-    print(f'Name: {username}, Email: {email}, Borough: {borough}')
-    return redirect(url_for('form'))
+# @app.route('/submit', methods=['POST'])
+# def submit():
+#     username = request.form['name']
+#     email = request.form['email']
+#     borough = request.form['borough']
+#     print(f'Name: {name}, Email: {email}, borough: {borough}')
+#     return redirect(url_for('form'))
 
 @app.route('/data/boroughs')
 def get_boroughs():

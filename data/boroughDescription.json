@@ -1,0 +1,134 @@
+[
+    {
+        "ID_AREA":1,
+        "TX_DESCRIPTION": "Known as the financial heart of London, living here is ideal for professionals seeking proximity to work. The area is quieter at night but offers historical landmarks, exclusive dining, and luxury living."
+    },
+    {
+        "ID_AREA":2,
+        "TX_DESCRIPTION": "An affordable option with ongoing regeneration projects. It offers a suburban lifestyle with improving amenities and good transport links. It's suitable for families and those seeking more space."
+    },
+    {
+        "ID_AREA":3,
+        "TX_DESCRIPTION": "This North London borough offers a suburban lifestyle with excellent schools, ample green spaces, and a strong community feel, making it ideal for families."
+    },
+    {
+        "ID_AREA":4,
+        "TX_DESCRIPTION": "Known for its suburban tranquility, Bexley provides good schools, parks, and a quieter, residential environment, appealing to families and those looking for more space."
+    },
+    {
+        "ID_AREA":5,
+        "TX_DESCRIPTION": "Diverse and vibrant, with excellent transport links. Living here means enjoying cultural diversity, sports events at Wembley, and a mix of residential areas."
+    },
+    {
+        "ID_AREA":6,
+        "TX_DESCRIPTION": "A leafy borough with extensive parks and woodlands. It offers a suburban feel with good schools and family-friendly amenities, making it popular among families."
+    },
+    {
+        "ID_AREA":7,
+        "TX_DESCRIPTION": "Famous for its markets and cultural attractions, Camden offers a lively, eclectic lifestyle. It's ideal for young professionals and creatives who enjoy a vibrant nightlife and arts scene."
+    },
+    {
+        "ID_AREA":8,
+        "TX_DESCRIPTION": "A major commercial hub with modern shopping centers and good transport links. Living here offers urban convenience with ongoing development, appealing to both families and professionals."
+    },
+    {
+        "ID_AREA":9,
+        "TX_DESCRIPTION": "Known for its green spaces and community events, Ealing offers a suburban lifestyle with a vibrant cultural scene, making it attractive to families and young professionals."
+    },
+    {
+        "ID_AREA":10,
+        "TX_DESCRIPTION": "Combining urban and rural environments, Enfield offers a mix of historic sites, parks, and residential areas. It's suitable for those seeking a balance of city and countryside living."
+    },
+    {
+        "ID_AREA":11,
+        "TX_DESCRIPTION": "Known for its maritime history and beautiful parks, living in Greenwich offers a mix of historical charm and modern amenities, attracting families and professionals alike."
+    },
+    {
+        "ID_AREA":12,
+        "TX_DESCRIPTION": "Renowned for its creative arts scene and trendy markets, Hackney offers a vibrant lifestyle with plenty of nightlife and cultural activities, popular among young professionals."
+    },
+    {
+        "ID_AREA":13,
+        "TX_DESCRIPTION": "This West London borough offers riverside views, excellent shopping, and sports venues. It's a desirable area for professionals and families seeking a central yet suburban feel."
+    },
+    {
+        "ID_AREA":14,
+        "TX_DESCRIPTION": "Home to Alexandra Palace and Tottenham Hotspur, Haringey offers diverse neighborhoods with good transport links, making it a popular choice for both families and young professionals."
+    },
+    {
+        "ID_AREA":15,
+        "TX_DESCRIPTION": "A suburban borough known for its excellent schools and peaceful residential areas. It's ideal for families seeking a quieter lifestyle with good amenities."
+    },
+    {
+        "ID_AREA":16,
+        "TX_DESCRIPTION": "Featuring rural countryside and suburban towns, Havering offers a relaxed, family-friendly environment with good schools and community facilities."
+    },
+    {
+        "ID_AREA":17,
+        "TX_DESCRIPTION": "The westernmost borough, home to Heathrow Airport. It offers significant green spaces and a suburban lifestyle, appealing to families and frequent travelers."
+    },
+    {
+        "ID_AREA":18,
+        "TX_DESCRIPTION": "A mix of urban and rural environments with excellent transport links and historical sites. Living here offers convenience and a diverse community, ideal for professionals and families."
+    },
+    {
+        "ID_AREA":19,
+        "TX_DESCRIPTION": "Known for its Georgian townhouses and lively arts scene, Islington offers a vibrant, central lifestyle with plenty of dining and entertainment options, popular among young professionals."
+    },
+    {
+        "ID_AREA":20,
+        "TX_DESCRIPTION": "An affluent borough with luxury shops, museums, and historical landmarks. It offers an upscale lifestyle with excellent amenities, attracting wealthy residents and professionals."
+    },
+    {
+        "ID_AREA":21,
+        "TX_DESCRIPTION": "A historic borough with a riverside setting and extensive shopping. It offers a suburban lifestyle with good schools and green spaces, ideal for families."
+    },
+    {
+        "ID_AREA":22,
+        "TX_DESCRIPTION": "Stretching along the South Bank, Lambeth features cultural institutions and a vibrant nightlife. It's popular among young professionals and those seeking an active social scene."
+    },
+    {
+        "ID_AREA":23,
+        "TX_DESCRIPTION": "A diverse borough with plenty of green spaces and community markets. It offers a family-friendly environment with good schools and affordable housing."
+    },
+    {
+        "ID_AREA":24,
+        "TX_DESCRIPTION": "Known for the Wimbledon Tennis Championships, Merton offers a quiet suburban lifestyle with excellent schools and parks, making it popular among families."
+    },
+    {
+        "ID_AREA":25,
+        "TX_DESCRIPTION": "Experiencing rapid development, Newham offers modern amenities, good transport links, and attractions like the Olympic Park, appealing to young professionals and families."
+    },
+    {
+        "ID_AREA":26,
+        "TX_DESCRIPTION": "Known for its leafy suburbs and extensive parks, Redbridge offers a blend of urban and rural living with good schools, making it ideal for families."
+    },
+    {
+        "ID_AREA":27,
+        "TX_DESCRIPTION": "A picturesque borough famed for Richmond Park and Kew Gardens. It offers a high quality of life with beautiful scenery and excellent schools, attracting affluent families."
+    },
+    {
+        "ID_AREA":28,
+        "TX_DESCRIPTION": "Home to major landmarks like the Shard and Borough Market. Southwark offers a vibrant, central lifestyle with cultural attractions and a bustling social scene, popular among young professionals."
+    },
+    {
+        "ID_AREA":29,
+        "TX_DESCRIPTION": "Known for its suburban charm and excellent schools, Sutton offers green spaces and a family-friendly environment, making it a desirable area for families."
+    },
+    {
+        "ID_AREA":30,
+        "TX_DESCRIPTION": "Rich in history and diversity, featuring the Tower of London and vibrant Brick Lane. Living here offers a mix of cultural experiences and modern amenities, popular among young professionals."
+    },
+    {
+        "ID_AREA":31,
+        "TX_DESCRIPTION": "Combining urban living with green spaces like Epping Forest. It offers a community-focused environment with good schools, appealing to families and professionals."
+    },
+    {
+        "ID_AREA":32,
+        "TX_DESCRIPTION": "A Southwest London borough with riverside living, extensive parks, and attractions like Battersea Park. It offers a high quality of life with good schools, making it popular among families."
+    },
+    {
+        "ID_AREA":33,
+        "TX_DESCRIPTION": "The heart of London, home to the UK’s central government and iconic landmarks. It offers a prestigious lifestyle with cultural attractions and excellent transport links, popular among affluent professionals."
+    }
+]
