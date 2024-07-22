@@ -3,74 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link para o JavaScript do Bootstrap e dependências -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+    
+    
+    
+    <!-- Link para o JavaScript do Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
+
+     <!-- Bootstrap CSS -->
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+    <!-- Arquivo CSS personalizado -->
+    <link rel="stylesheet" type="text/css" href="static/formsStyles.css">
+
     <title>London Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcT2DgyM_gzjEd6ebB4avNE0UKLK_YyntRc9mZD7If-dIAgQ1W4nhRaB1ueyPfGDkEUeu7r5t8jTpDMjR9VJiwpJdwL6V3nhZGCUsAIYWw');
-            background-size: cover;
-            background-repeat: no-repeat;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: rgba(232, 231, 231, 0.7);
-        }
-        h1 {
-            color: #0078D7; /* Blue color representing the Thames river */
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            margin-bottom: 5px;
-            font-weight: bold; /* Rótulos de entrada em negrito */
-        }
-        input, select, button {
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            width: 95%;
-        }
-        button {
-            background-color: #0078D7; /* Blue color representing the Thames river */
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #005bb5;
-        }
-        .checkbox-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px; /* Ajustar o espaço entre os itens */
-        }
-        .checkbox-group .form-check {
-            display: flex;
-            align-items: center;
-            margin-right: 20px; /* Ajustar o espaço entre as caixas */
-        }
-        .checkbox-group .form-check label {
-            font-weight: normal; /* Remover o negrito dos rótulos das prioridades */
-        }
-    </style>
+   
 </head>
 <body>
     <div class="container">
-        <div class="col-md-8">
-            <h1>AFFORDABLE PLACE TO LIVE IN LONDON</h1>
-            <div class="invalid-feedback">Please enter your name and a valid email address:</div>
-            <br>
+        
+        <h1>AFFORDABLE PLACE TO LIVE IN LONDON</h1>
+        
+        
             <form id="boroughForm" class="needs-validation" novalidate>
                 <div class="form-group">
                     <label for="name">Name:</label>
@@ -82,50 +46,46 @@
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group col-md-12">
+                
+                    <div class="form-group">
                         <label for="dimPriority">Priority:</label>
                         <div id="dimPriority" class="checkbox-group" name="dimPriority" required>
-                            <!-- As caixas de seleção serão geradas aqui -->
                         </div>
                     </div>
 
-                    <div class="form-group col-md-6">
+                    
+                    <div class="form-group">
                         <label for="borough">Reference Borough:</label>
                         <select class="form-control" id="borough" name="borough" required>
                             <option value="" disabled selected>Choose a borough</option>
                         </select>
                     </div>
 
-                    <div class="form-group col-md-6">
+                    <div class="form-group">
                         <label for="dimCategoryRoom">Reference category:</label>
                         <select class="form-control" id="dimCategoryRoom" name="dimCategoryRoom" required>
                             <option value="" disabled selected>Choose a category:</option>
                         </select>
                     </div>
+                   
 
-                    <div class="form-group col-md-6">
+                    <div class="form-group">
                         <label for="distance">Maximum distance from Reference:</label>
                         <input type="number" class="form-control" id="distance" name="distance" required>
                     </div>
 
-                    <div class="form-group col-md-6">
+                    <div class="form-group">
                         <label for="income">Monthly income:</label>
                         <input type="number" class="form-control" id="income" name="income" required>
                     </div>
-                </div>
+                
                 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-        </div>
+        
     </div>
 
-    <!-- Link para o JavaScript do Bootstrap e dependências -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Link para o JavaScript do Leaflet -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
+     
     <script>
         // JavaScript para validação do formulário e salvar JSON
         (function() {
