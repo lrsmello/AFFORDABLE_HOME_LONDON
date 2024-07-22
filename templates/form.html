@@ -127,7 +127,7 @@
     <!-- Link para o JavaScript do Leaflet -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
     <script>
-        // JavaScript para validação do formulário e salvar JSON
+        // JavaScript para validação do formulário e salvar JSON e enviar via POST
         (function() {
             'use strict';
             window.addEventListener('load', function() {
@@ -149,12 +149,13 @@
                             event.preventDefault(); // Impedir o envio padrão para processar os dados localmente
 
                             const formData = {
-                                name: document.getElementById('name').value,
-                                email: document.getElementById('email').value,
-                                priorities: Array.from(document.querySelectorAll('input[name="dimPriority"]:checked')).map(checkbox => checkbox.value),
-                                borough: document.getElementById('borough').value,
-                                distance: document.getElementById('distance').value,
-                                income: document.getElementById('income').value
+                                userName: document.getElementById('name').value,
+                                emailAddres: document.getElementById('email').value,
+                                referenceBoroughId: document.getElementById('borough').value,
+                                maximumDistanceFromReference: document.getElementById('distance').value,
+                                incomePerMonth: document.getElementById('income').value,
+                                categoryPlace: document.getElementById('dimCategoryRoom').value,
+                                priorities: Array.from(document.querySelectorAll('input[name="dimPriority"]:checked')).map(checkbox => parseInt(checkbox.value))
                             };
 
                             // Criar um arquivo JSON e forçar o download
@@ -167,6 +168,25 @@
                             a.click();
                             document.body.removeChild(a);
                             URL.revokeObjectURL(url); // Liberar o URL após o download
+
+                            // Enviar o JSON via POST
+                            fetch('http://localhost:3000/api/model/run', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(formData)
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                console.log('Success:', data);
+                                // Exibir uma mensagem de sucesso ou redirecionar, se necessário
+                                alert('Formulário enviado com sucesso!');
+                            })
+                            .catch((error) => {
+                                console.error('Error:', error);
+                                alert('Erro ao enviar o formulário.');
+                            });
                         }
                         form.classList.add('was-validated');
                     }, false);

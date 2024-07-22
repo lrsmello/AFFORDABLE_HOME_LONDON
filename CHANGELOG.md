@@ -1,6 +1,12 @@
 ## Changelog
 
+### [1.2.0] - 2023-07-21
+
+* Json file and post API.
+
 ### [1.1.2] - 2023-07-17
+
+- Add new variables and improve dataset layout.
 
 - Add new variables and improve dataset layout.
 
