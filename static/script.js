@@ -10,34 +10,46 @@
                     event.preventDefault();
                     event.stopPropagation();
                     alert('Please select at least two priorities.');
+                    return; // Adicionei return para garantir que a execução pare aqui se a condição não for atendida
                 }
 
                 if (form.checkValidity() === false) {
                     event.preventDefault();
                     event.stopPropagation();
-                } else {
-                    event.preventDefault(); // Impedir o envio padrão para processar os dados localmente
-
-                    const formData = {
-                        name: document.getElementById('name').value,
-                        email: document.getElementById('email').value,
-                        priorities: Array.from(document.querySelectorAll('input[name="dimPriority"]:checked')).map(checkbox => checkbox.value),
-                        borough: document.getElementById('borough').value,
-                        distance: document.getElementById('distance').value,
-                        income: document.getElementById('income').value
-                    };
-
-                    // Criar um arquivo JSON e forçar o download
-                    const blob = new Blob([JSON.stringify(formData, null, 2)], { type: 'application/json' });
-                    const url = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = 'form-data.json';
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                    URL.revokeObjectURL(url); // Liberar o URL após o download
+                    return; // Adicionei return para garantir que a execução pare aqui se a condição não for atendida
                 }
+
+                event.preventDefault(); // Impedir o envio padrão para processar os dados localmente
+
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    priorities: Array.from(document.querySelectorAll('input[name="dimPriority"]:checked')).map(checkbox => checkbox.value),
+                    borough: document.getElementById('borough').value,
+                    dimCategoryRoom: document.getElementById('dimCategoryRoom').value, // Adicionando esta linha
+                    distance: document.getElementById('distance').value,
+                    income: document.getElementById('income').value
+                };
+
+                // Enviar o JSON via POST
+                fetch('http://localhost:3000/api/model/run', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    // Exibir uma mensagem de sucesso ou redirecionar, se necessário
+                    alert('Formulário enviado com sucesso!');
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('Erro ao enviar o formulário.');
+                });
+
                 form.classList.add('was-validated');
             }, false);
         });
