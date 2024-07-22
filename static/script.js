@@ -10,6 +10,7 @@
                     event.preventDefault();
                     event.stopPropagation();
                     alert('Please select at least two priorities.');
+                    return; // Adicionei return para garantir que a execução pare aqui se a condição não for atendida
                 }
 
                 // if (form.checkValidity() === false) {
