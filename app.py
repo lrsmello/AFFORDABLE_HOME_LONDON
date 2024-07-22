@@ -3,6 +3,7 @@ import os
 import json
 import io
 import matplotlib.pyplot as plt
+import requests
 
 app = Flask(__name__)
 
@@ -12,10 +13,41 @@ def form():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    username = request.form['name']
-    email = request.form['email']
-    borough = request.form['borough']
-    print(f'Name: {name}, Email: {email}, borough: {borough}')
+    userName = request.form['name']
+    emailAddres = request.form['email']
+    referenceBoroughId = request.form['borough']
+    maximumDistanceFromReference = request.form['distance']
+    incomePerMonth = request.form['income']
+    categoryPlace = request.form['dimCategoryRoom']
+    priorities = request.form.getlist('dimPriority')
+
+    priorities = [int(x) for x in priorities]
+
+    # Criando o payload para a API
+    payload = {
+        'userName': userName,
+        'emailAddres': emailAddres,
+        'referenceBoroughId': referenceBoroughId,
+        'maximumDistanceFromReference': int(maximumDistanceFromReference),
+        'incomePerMonth': int(incomePerMonth),
+        'categoryPlace': int(categoryPlace),
+        'priorities': priorities
+    }
+
+    print(payload)
+
+    # URL da API externa
+    api_url = 'http://localhost:3000/api/model/run'
+
+    # Fazendo a requisição POST para a API externa
+    response = requests.post(api_url, json=payload)
+
+    # Verificando a resposta da API
+    if response.status_code == 200:
+        print(f'Success: {response.json()}')
+    else:
+        print(f'Failed: {response.status_code}, {response.text}')
+
     return redirect(url_for('form'))
 
 @app.route('/data/boroughs')

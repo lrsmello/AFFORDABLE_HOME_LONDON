@@ -10,7 +10,7 @@ describe('validateUserInformation Middleware', () => {
         maximumDistanceFromReference: 5,
         incomePerMonth: 1000,
         categoryPlace: 2,
-        priorities: ['priority1', 'priority2']
+        priorities: [1,2,3]
       }
     };
     res = {
