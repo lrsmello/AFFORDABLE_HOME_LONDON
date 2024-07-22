@@ -12,7 +12,7 @@ def form():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    name = request.form['name']
+    username = request.form['name']
     email = request.form['email']
     borough = request.form['borough']
     print(f'Name: {name}, Email: {email}, borough: {borough}')
