@@ -8,6 +8,7 @@ const dimCategoryRoom = require('../../../../data/dimCategoryRoom.json');
 const londonBoroughRent = require('../../../../data/londonBoroughRent.json');
 const dimPriority = require('../../../../data/dimPriority.json');
 const fixedData = require('../../../../data/fixedData.json');
+const boroughDescription = require('../../../../data/boroughDescription.json');
 
 let features = [];
 
@@ -130,9 +131,19 @@ exports.createDataMatrix = async (userInformation) => {
         // other priorities needs to be handled here
         //see the validateUserInformations arround line 20 for configuration as well
       }
+      var bdesc = boroughDescription.filter((f)=>f.ID_AREA===borough.ID);
+      if (bdesc.length>0) {
+        bdesc = bdesc[0].TX_DESCRIPTION;
+      } else {
+        bdesc=  "";
+      }
+
       outputMatrix.push({
         "ID":borough.ID,
         "name":borough.name,
+        "description":bdesc,
+        "latitude":borough.latitude,
+        "longitude":borough.longitude,
         "features":featsObject
       })
     }
