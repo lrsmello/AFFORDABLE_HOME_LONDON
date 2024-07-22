@@ -23,9 +23,9 @@ form {
     display: flex;
     flex-direction: column;
 }
-label {
+/*label {
     margin-bottom: 5px;
-    font-weight: bold; /* Rótulos de entrada em negrito */
+    font-weight: bold;
 }
 input, select, button {
     padding: 10px;
@@ -36,7 +36,7 @@ input, select, button {
     width: 95%;
 }
 button {
-    background-color: #0078D7; /* Blue color representing the Thames river */
+    background-color: #0078D7;
     color: white;
     border: none;
     cursor: pointer;
@@ -47,14 +47,26 @@ button:hover {
 .checkbox-group {
     display: flex;
    flex-wrap: wrap;
-    
-   gap: 10px; /* Ajustar o espaço entre os itens */
+   gap: 10px;
 }
 .checkbox-group .form-check {
     display: flex;
     align-items: center;
-    margin-right: 20px; /* Ajustar o espaço entre as caixas */
+    margin-right: 20px;
 }
 .checkbox-group .form-check label {
-    font-weight: normal; /* Remover o negrito dos rótulos das prioridades */
+    font-weight: normal;
+}
+*/
+
+/* Estilos personalizados */
+body {
+    padding: 10px;
+}
+#charts {
+    margin-top: 10px;
+}
+#charts img {
+    width: 100%;
+    height: auto;
 }
