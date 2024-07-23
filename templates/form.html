@@ -16,7 +16,8 @@
         <h1>WHERE TO LIVE IN LONDON</h1>
         <h2 >Based on your preferences, you'll be given a list of affordable boroughs to live in.</h2    >
         
-        <form id="boroughForm" class="needs-validation" novalidate action="{{url_for('submit')}}" method="post">
+        <!-- <form id="boroughForm" class="needs-validation" novalidate action="{{url_for('submit')}}" method="post"> -->
+        <form id="boroughForm" class="needs-validation" novalidate>
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" class="form-control" id="name" name="name">
@@ -59,6 +60,12 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
+
+        <div id="response" class="json">
+            <h2 >Generated Ranking</h2    >
+                <script src="static/scriptResponse.js"></script>
+        </div>
+
         <div id="charts" class="mt-5">
             <h2 >Generated Charts</h2    >
             <div class="row">
@@ -76,6 +83,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Arquivo JavaScript personalizado -->
     <script src="static/script.js"></script>
 </body>

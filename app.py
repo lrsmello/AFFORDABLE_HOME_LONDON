@@ -11,8 +11,13 @@ app = Flask(__name__)
 def form():
     return render_template('form.html')
 
+@app.route('/result')
+def formRedirect():
+    return render_template('formRedirect.html')
+
 @app.route('/submit', methods=['POST'])
 def submit():
+    # data = request.get_json()
     userName = request.form['name']
     emailAddres = request.form['email']
     referenceBoroughId = request.form['borough']
@@ -34,7 +39,7 @@ def submit():
         'priorities': priorities
     }
 
-    print(payload)
+    # print(payload)
 
     # URL da API externa
     api_url = 'http://localhost:3000/api/model/run'
@@ -42,13 +47,17 @@ def submit():
     # Fazendo a requisição POST para a API externa
     response = requests.post(api_url, json=payload)
 
-    # Verificando a resposta da API
-    if response.status_code == 200:
-        print(f'Success: {response.json()}')
-    else:
-        print(f'Failed: {response.status_code}, {response.text}')
+    responseJson = response.json()
+    # print(responseJson)
 
-    return redirect(url_for('form'))
+    # # Verificando a resposta da API
+    # if response.status_code == 200:
+    #     print(f'Success: {response.json()}')
+    # else:
+    #     print(f'Failed: {response.status_code}, {response.text}')
+
+    # return redirect(url_for('formRedirect', responseData=responseJson))
+    return jsonify(result=responseJson)
 
 @app.route('/data/boroughs')
 def get_boroughs():
