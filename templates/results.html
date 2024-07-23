@@ -102,28 +102,28 @@
                             r: data['Borough 1'],
                             theta: data['categories'],
                             fill: 'toself',
-                            name: 'Borough 1'
+                            name: '{{ranking1_name}}'
                         },
                         {
                             type: 'scatterpolar',
                             r: data['Borough 2'],
                             theta: data['categories'],
                             fill: 'toself',
-                            name: 'Borough 2'
+                            name: '{{ranking2_name}}'
                         },
                         {
                             type: 'scatterpolar',
                             r: data['Borough 3'],
                             theta: data['categories'],
                             fill: 'toself',
-                            name: 'Borough 3'
+                            name: '{{ranking3_name}}'
                         },
                         {
                             type: 'scatterpolar',
                             r: data['Borough RF'],
                             theta: data['categories'],
                             fill: 'toself',
-                            name: 'Borough RF'
+                            name: '{{rankingRef_name}}'
                         }
                     ];
 
@@ -131,7 +131,7 @@
                         polar: {
                             radialaxis: {
                                 visible: true,
-                                range: [0, 5]
+                                range: [0, 1]
                             }
                         },
                         showlegend: true
