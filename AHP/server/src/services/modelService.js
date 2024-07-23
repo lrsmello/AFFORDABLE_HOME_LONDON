@@ -86,12 +86,6 @@ exports.createDataMatrix = async (userInformation) => {
   let travelTimesBorough = travelTimes.filter((f) => f.destination_ID === referenceBoroughId);
   // create a new matrix
   let outputMatrix = [];
-  // create a copy of boroughs variable to remove from the list the referenced borough
-  let copyOfBoroughs = boroughs;
-  let idx = copyOfBoroughs.findIndex(obj => obj.ID === referenceBoroughId);
-  if (idx !== -1) {
-    copyOfBoroughs.splice(idx, 1);
-  }
   // run over the borough list to join all the features
   for (let bi = 0; bi < boroughs.length; bi++) {
     const borough = boroughs[bi];
