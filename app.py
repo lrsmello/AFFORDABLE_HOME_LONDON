@@ -11,8 +11,13 @@ app = Flask(__name__)
 def form():
     return render_template('form.html')
 
+@app.route('/result')
+def formRedirect():
+    return render_template('formRedirect.html')
+
 @app.route('/submit', methods=['POST'])
 def submit():
+    # data = request.get_json()
     userName = request.form['name']
     emailAddres = request.form['email']
     referenceBoroughId = request.form['borough']
@@ -34,7 +39,7 @@ def submit():
         'priorities': priorities
     }
 
-    print(payload)
+    # print(payload)
 
     # URL da API externa
     api_url = 'http://localhost:3000/api/model/run'
