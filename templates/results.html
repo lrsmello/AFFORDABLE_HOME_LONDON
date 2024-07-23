@@ -10,48 +10,65 @@
     
     <!-- Arquivo CSS personalizado -->
     <link rel="stylesheet" type="text/css" href="static/formsStyles.css">
-
+ 
     <!-- Plotly JS -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-</head>
 
+    <script>
+        function goBack() {
+          window.history.back()
+        }
+    </script>
+
+</head>
 <body>
     <div class="container">
         <h1>WHERE TO LIVE IN LONDON</h1>
-        <h2 >Based on your preferences, you'll be given a list of affordable boroughs to live in.</h2    >
+        <h2>Here are the list of affordable boroughs to live in.</h2>
         
+        <div id="ranking">
+            <br>
+           First option: {{ ranking1_name }} <br>
+           <br>
+           Second option: {{ ranking2_name }} <br>
+           <br>
+           Third option: {{ ranking3_name }} <br><br>
+        </div>
+
+        <button type="submit" class="btn btn-primary" onclick="goBack()">Back to query</button>
+
         <!-- Div para o mapa Choropleth Plotly -->
         <div id="plotly-map" class="mt-5" style="height: 500px;"></div>
 
         <div id="charts" class="mt-5">
-            <h2 >Generated Charts</h2    >
+            <h2>Generated Charts</h2>
             <div class="row">
-                <div class="col-md-6">
-                    <img id="chart1" src="{{ url_for('generate_chart', chart_id=1) }}" class="img-fluid" alt="Chart 1">
-                </div>
-                <div class="col-md-6">
-                    <img id="chart2" src="{{ url_for('generate_chart', chart_id=2) }}" class="img-fluid" alt="Chart 2">
-                </div>
+                <!-- Espaço onde estavam os gráficos removidos -->
             </div>
+            <div id="polar-chart" class="mt-5" style="height: 500px;"></div>
         </div>
     </div>
      
-    <!-- jQuery e Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+    </div>
+
+ 
+<!-- jQuery e Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!-- Código JavaScript para Plotly -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Dados dos pontos (latitude e longitude)
             var data = [{
                 type: 'scattermapbox',
-                lat: [51.5155, 51.5365],  // Latitude dos pontos
-                lon: [-0.0922, 0.1272],   // Longitude dos pontos
+                lat: ['{{ranking1_latitude}}', '{{ranking2_latitude}}','{{ranking3_latitude}}'],  // Latitude dos pontos
+                lon: ['{{ranking1_longitude}}', '{{ranking2_longitude}}','{{ranking3_longitude}}'],   // Longitude dos pontos
                 mode: 'markers',
                 marker: { size: 14 },
-                text: ['City of London', 'Barking and Dagenham']  // Textos dos pontos
+                text: ['{{ranking1_name}}', '{{ranking2_name}}','{{ranking3_name}}']  // Textos dos pontos
             }];
 
             // Layout do mapa
@@ -75,11 +92,57 @@
             Plotly.newPlot('plotly-map', data, layout);
         });
     
-    </script>
-    
-    <!-- Arquivo JavaScript personalizado -->
-    <script src="static/script.js"></script>
+            // Carregar dados para o gráfico polar
+            fetch('/polar-chart-data')
+                .then(response => response.json())
+                .then(data => {
+                    var polarData = [
+                        {
+                            type: 'scatterpolar',
+                            r: data['Borough 1'],
+                            theta: data['categories'],
+                            fill: 'toself',
+                            name: 'Borough 1'
+                        },
+                        {
+                            type: 'scatterpolar',
+                            r: data['Borough 2'],
+                            theta: data['categories'],
+                            fill: 'toself',
+                            name: 'Borough 2'
+                        },
+                        {
+                            type: 'scatterpolar',
+                            r: data['Borough 3'],
+                            theta: data['categories'],
+                            fill: 'toself',
+                            name: 'Borough 3'
+                        },
+                        {
+                            type: 'scatterpolar',
+                            r: data['Borough RF'],
+                            theta: data['categories'],
+                            fill: 'toself',
+                            name: 'Borough RF'
+                        }
+                    ];
 
-    
+                    var polarLayout = {
+                        polar: {
+                            radialaxis: {
+                                visible: true,
+                                range: [0, 5]
+                            }
+                        },
+                        showlegend: true
+                    };
+
+                    Plotly.newPlot('polar-chart', polarData, polarLayout);
+                })
+                .catch(error => console.error('Error loading polar chart data:', error));
+
+    </script>
+
+
 </body>
 </html>

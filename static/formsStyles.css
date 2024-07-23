@@ -29,7 +29,12 @@ form {
     display: flex;
     flex-direction: column;
 }
-
+.ranking {
+    color: #9300d7;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: medium;
+}
 /* Estilos personalizados */
 body {
     padding: 10px;
