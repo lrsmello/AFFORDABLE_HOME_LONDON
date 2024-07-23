@@ -136,6 +136,10 @@ exports.createDataMatrix = async (userInformation) => {
         if (p4.length > 0) {
           p4 = p4[0].duration;
         }
+        else {
+          p4 = 0.000000001;// caso não encontre, atribui almost zero.
+
+        }
         featsObject[priority.DS_PRIORITY] = p4
       }
       //

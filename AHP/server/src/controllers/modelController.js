@@ -3,10 +3,15 @@ const modelService = require('../services/modelService');
 exports.runModel = async (req, res) => {
   try {
     const userInformation = req.body;  // Recebe as informações do corpo da requisição validadas
+    console.log(userInformation);
     const generatedDataMatrix = await modelService.createDataMatrix(userInformation);
+    console.log(generatedDataMatrix);
     const matrixNormalized = await modelService.getNormalizedMatrix(generatedDataMatrix);
+    console.log(matrixNormalized);
     const normalizedGaussians = await modelService.calculateNormalizedGaussianFactor(matrixNormalized);
+    console.log(normalizedGaussians);
     const matrix = await modelService.calculateIndex(normalizedGaussians, matrixNormalized, generatedDataMatrix);
+    console.log(matrix);
     let ranking = [];
     // Ordena decrescente para criar um ranking
     if (Array.isArray(matrix)) {

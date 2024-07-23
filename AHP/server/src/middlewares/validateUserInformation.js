@@ -5,6 +5,9 @@ exports.validateUserInformation = (req, res, next) => {
     if (!userInformation.referenceBoroughId) {
       return res.status(400).send({ error: 'referenceBoroughId is required' });
     }
+    if (typeof userInformation.referenceBoroughId!== 'number') {
+      return res.status(400).send({ error: 'referenceBoroughId must be a number' });
+    }
     if (typeof userInformation.maximumDistanceFromReference !== 'number') {
       return res.status(400).send({ error: 'maximumDistanceFromReference must be a number' });
     }
