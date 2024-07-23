@@ -5,6 +5,7 @@ import io
 import plotly.graph_objects as go
 import plotly.io as pio
 import requests
+import functions
 
 app = Flask(__name__)
 
@@ -17,6 +18,10 @@ def formRedirect():
     return render_template('results.html')
 
 features = []
+rankingRefNormalized = []
+ranking1Normalized = []
+ranking2Normalized = []
+ranking3Normalized = []
 
 @app.route('/submit', methods=['POST'])
 def submit():
@@ -60,6 +65,9 @@ def submit():
     rankingRef_latitude = rankingRef['latitude']
     rankingRef_longitude = rankingRef['longitude']
     rankingRef_normalized = rankingRef['normalizedFeatures']
+    
+    global rankingRefNormalized
+    rankingRefNormalized = functions.dict_to_list(rankingRef_normalized)
 
     ranking1 = responseJson['ranking'][1]
     ranking1_name = ranking1['name']
@@ -68,12 +76,18 @@ def submit():
     ranking1_longitude = ranking1['longitude']
     ranking1_normalized = ranking1['normalizedFeatures']
 
+    global ranking1Normalized
+    ranking1Normalized = functions.dict_to_list(ranking1_normalized)
+
     ranking2 = responseJson['ranking'][2]
     ranking2_name = ranking2['name']
     ranking2_description = ranking2['description']
     ranking2_latitude = ranking2['latitude']
     ranking2_longitude = ranking2['longitude']
-    ranking2normalized = ranking2['normalizedFeatures']
+    ranking2_normalized = ranking2['normalizedFeatures']
+    
+    global ranking2Normalized
+    ranking2Normalized  = functions.dict_to_list(ranking2_normalized)
 
     ranking3 = responseJson['ranking'][3]
     ranking3_name = ranking3['name']
@@ -81,6 +95,9 @@ def submit():
     ranking3_latitude = ranking3['latitude']
     ranking3_longitude = ranking3['longitude']
     ranking3_normalized = ranking3['normalizedFeatures']
+    
+    global ranking3Normalized
+    ranking3Normalized  = functions.dict_to_list(ranking3_normalized)
 
     global features
     features = responseJson['inputUser']['priorities']
@@ -138,10 +155,10 @@ def get_polar_chart_data():
                 x.append(categ_string[i])      
     
     data = {
-        'Borough 1': [1, 5, 2, 2, 3],
-        'Borough 2': [4, 3, 2.5, 1, 2],
-        'Borough 3': [2, 3, 5, 1, 4],
-        'Borough RF': [2, 3, 5, 1, 4],
+        'Borough 1': ranking1Normalized,
+        'Borough 2': ranking2Normalized,
+        'Borough 3': ranking3Normalized,
+        'Borough RF': rankingRefNormalized,
         'categories': x
     }
     return jsonify(data)
