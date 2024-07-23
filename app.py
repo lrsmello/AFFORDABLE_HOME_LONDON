@@ -56,7 +56,9 @@ def submit():
     # else:
     #     print(f'Failed: {response.status_code}, {response.text}')
 
-    return redirect(url_for('formRedirect', responseData=responseJson))
+    # return jsonify({'redirect': url_for('formRedirect', responseData=responseJson)})
+    # return redirect(url_for('formRedirect', responseData=responseJson))
+    return render_template('formRedirect.html', responseJson=responseJson)
     # return jsonify(result=responseJson)
 
 @app.route('/data/boroughs')
