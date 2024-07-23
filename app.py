@@ -62,8 +62,6 @@ def submit():
     rankingRef_longitude = rankingRef['longitude']
     rankingRef_normalized = rankingRef['normalizedFeatures']
 
-    df = treatment.transform(rankingRef_normalized)
-
     ranking1 = responseJson['ranking'][1]
     ranking1_name = ranking1['name']
     ranking1_description = ranking1['description']
@@ -135,7 +133,6 @@ def get_polar_chart_data():
     categ_string = ['Exclui','Rent Price','Distance','Wellbeing','Travelling time','Cost of Living']
     categories = features
     x = []
-    y = 0
     for i in categories:
         for j in categ_string:
             if categ_string.index(j) == i:
