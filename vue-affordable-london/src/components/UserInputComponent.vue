@@ -8,7 +8,7 @@ const dados = reactive({
   maximumDistanceFromReference: 100,
   incomePerMonth: 750,
   categoryPlace: 7,
-  priorities: [1, 2, 3],
+  priorities: [1, 2, 3, 4, 5],
 });
 
 const predefData = reactive({
@@ -25,9 +25,7 @@ const predefData = reactive({
 });
 
 function rodar() {
-  let promise = axios.post(`http://localhost:3000/api/model/run`,
-    dados
-  );
+  let promise = axios.post(`http://localhost:3000/api/model/run`, dados);
   promise
     .then((res) => {
       predefData.ranking.splice(0, predefData.ranking.length);
@@ -35,7 +33,7 @@ function rodar() {
     })
     .catch((err) => {
       console.log(err);
-      Swal(err.message+ ' '+ err.response.data.error);
+      Swal(err.message + " " + err.response.data.error);
     });
 }
 
@@ -142,7 +140,14 @@ onMounted(() => {
     <button @click="rodar" class="btn btn-primary">Submit</button>
 
     <ul>
-      <li v-for="(r,idx) in predefData.ranking" :id="idx">{{ r.name }}</li>
+      <li v-for="(r, idx) in predefData.ranking" :id="idx">
+        {{ r.name }} {{ r.description }}
+      </li>
     </ul>
   </div>
 </template>
+<style scoped>
+.container h1 {
+  background-color: red;
+}
+</style>

@@ -18,7 +18,7 @@ exports.validateUserInformation = (req, res, next) => {
       return res.status(400).send({ error: 'priorities must be an array with at least 2 items' });
     }
     // just for now, when we implement the other priorities datas needs to be included here
-    const validPriorities = [1,2,3];
+    const validPriorities = [1,2,3,4,5];
     for (let i = 0; i < userInformation.priorities.length; i++) {
       if (validPriorities.indexOf(userInformation.priorities[i])===-1) {
         return res.status(400).send({error:`The valid priorities are ${validPriorities.join(',')}`});
