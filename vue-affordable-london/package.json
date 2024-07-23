@@ -11,8 +11,10 @@
   "dependencies": {
     "axios": "^1.7.2",
     "bootstrap-vue": "^2.23.1",
+    "chart.js": "^4.4.3",
     "vue": "^3.4.29",
     "vue-axios": "^3.5.2",
+    "vue-chartjs": "^5.3.1",
     "vue-sweetalert2": "^5.0.11"
   },
   "devDependencies": {
