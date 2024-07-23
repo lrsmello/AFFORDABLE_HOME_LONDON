@@ -31,8 +31,8 @@
         "origin_ID": 1,
         "destination_ID": 6,
         "distance": 19.989,
-        "duration": 4126.333333333333,
-        "fare": 1.75
+        "duration": 18643,
+        "fare": "N/A"
     },
     {
         "origin_ID": 1,
@@ -59,15 +59,15 @@
         "origin_ID": 1,
         "destination_ID": 10,
         "distance": 17.601,
-        "duration": 4048.6666666666665,
-        "fare": 2.3833333333333333
+        "duration": 3141,
+        "fare": "N/A"
     },
     {
         "origin_ID": 1,
         "destination_ID": 11,
         "distance": 9.14,
-        "duration": 1912,
-        "fare": 1.75
+        "duration": 1970,
+        "fare": "N/A"
     },
     {
         "origin_ID": 1,
@@ -150,8 +150,8 @@
         "origin_ID": 1,
         "destination_ID": 23,
         "distance": 12.77,
-        "duration": 2371.3333333333335,
-        "fare": 2.3833333333333333
+        "duration": 2774,
+        "fare": "N/A"
     },
     {
         "origin_ID": 1,
@@ -255,8 +255,8 @@
         "origin_ID": 2,
         "destination_ID": 6,
         "distance": 38.205,
-        "duration": 6141,
-        "fare": 2.9
+        "duration": 7448,
+        "fare": "N/A"
     },
     {
         "origin_ID": 2,
@@ -289,9 +289,9 @@
     {
         "origin_ID": 2,
         "destination_ID": 11,
-        "distance": 19.3654338872,
-        "duration": 4168.333333333333,
-        "fare": 2.7666666666666666
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 2,
@@ -374,8 +374,8 @@
         "origin_ID": 2,
         "destination_ID": 23,
         "distance": 32.523,
-        "duration": 6605.666666666667,
-        "fare": 3.9166666666666665
+        "duration": 6643,
+        "fare": "N/A"
     },
     {
         "origin_ID": 2,
@@ -409,8 +409,8 @@
         "origin_ID": 2,
         "destination_ID": 28,
         "distance": 19.05,
-        "duration": 3521,
-        "fare": 2.8
+        "duration": 3947,
+        "fare": "N/A"
     },
     {
         "origin_ID": 2,
@@ -773,8 +773,8 @@
         "origin_ID": 4,
         "destination_ID": 16,
         "distance": 35.714,
-        "duration": 6986,
-        "fare": 3.5
+        "duration": 4569,
+        "fare": "N/A"
     },
     {
         "origin_ID": 4,
@@ -947,9 +947,9 @@
     {
         "origin_ID": 5,
         "destination_ID": 9,
-        "distance": 25.8592170421,
-        "duration": 5364,
-        "fare": 2.9166666666666665
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 5,
@@ -997,8 +997,8 @@
         "origin_ID": 5,
         "destination_ID": 16,
         "distance": 43.962,
-        "duration": 8406.666666666666,
-        "fare": 4.116666666666666
+        "duration": 4842,
+        "fare": "N/A"
     },
     {
         "origin_ID": 5,
@@ -1045,9 +1045,9 @@
     {
         "origin_ID": 5,
         "destination_ID": 23,
-        "distance": 15.6019209872,
-        "duration": 2577,
-        "fare": 2.3833333333333333
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 5,
@@ -1073,9 +1073,9 @@
     {
         "origin_ID": 5,
         "destination_ID": 27,
-        "distance": 24.0134736681,
-        "duration": 4740.333333333333,
-        "fare": 3.45
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 5,
@@ -1130,15 +1130,15 @@
         "origin_ID": 6,
         "destination_ID": 2,
         "distance": 39.85,
-        "duration": 8581,
-        "fare": 3.5
+        "duration": 5717,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
         "destination_ID": 3,
         "distance": 36.533,
-        "duration": 7688.666666666667,
-        "fare": 2.9166666666666665
+        "duration": 5260,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
@@ -1151,15 +1151,15 @@
         "origin_ID": 6,
         "destination_ID": 5,
         "distance": 34.075,
-        "duration": 7323.666666666667,
-        "fare": 3.85
+        "duration": 6632,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
         "destination_ID": 7,
         "distance": 26.059,
-        "duration": 5262.333333333333,
-        "fare": 1.75
+        "duration": 4385,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
@@ -1172,15 +1172,15 @@
         "origin_ID": 6,
         "destination_ID": 9,
         "distance": 32.255,
-        "duration": 6656,
-        "fare": 3.5
+        "duration": 5289,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
         "destination_ID": 10,
         "distance": 44.398,
-        "duration": 9251.666666666666,
-        "fare": 3.5
+        "duration": 6078,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
@@ -1200,22 +1200,22 @@
         "origin_ID": 6,
         "destination_ID": 13,
         "distance": 25.723,
-        "duration": 5513.333333333333,
-        "fare": 3.2666666666666666
+        "duration": 3832,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
         "destination_ID": 14,
         "distance": 31.544,
-        "duration": 6487,
-        "fare": 3.9833333333333334
+        "duration": 4226,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
         "destination_ID": 15,
         "distance": 38.536,
-        "duration": 7956.333333333333,
-        "fare": 3.3333333333333335
+        "duration": 7486,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
@@ -1228,29 +1228,29 @@
         "origin_ID": 6,
         "destination_ID": 17,
         "distance": 42.753,
-        "duration": 7429,
-        "fare": 3.9833333333333334
+        "duration": 7007,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
         "destination_ID": 18,
         "distance": 35.378,
-        "duration": 6790.666666666667,
-        "fare": 4.533333333333333
+        "duration": 5645,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
         "destination_ID": 19,
         "distance": 26.39,
-        "duration": 4827,
-        "fare": 3.3333333333333335
+        "duration": 3642,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
         "destination_ID": 20,
         "distance": 22.558,
-        "duration": 3840.6666666666665,
-        "fare": 4.616666666666666
+        "duration": 2967,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
@@ -1298,8 +1298,8 @@
         "origin_ID": 6,
         "destination_ID": 27,
         "distance": 36.093,
-        "duration": 6431.666666666667,
-        "fare": 3.8833333333333333
+        "duration": 5632,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
@@ -1326,22 +1326,22 @@
         "origin_ID": 6,
         "destination_ID": 31,
         "distance": 35.314,
-        "duration": 5557.666666666667,
-        "fare": 3.3166666666666664
+        "duration": 4774,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
         "destination_ID": 32,
         "distance": 26.555,
-        "duration": 4523,
-        "fare": 1.75
+        "duration": 4061,
+        "fare": "N/A"
     },
     {
         "origin_ID": 6,
         "destination_ID": 33,
         "distance": 18.723,
-        "duration": 4087.6666666666665,
-        "fare": 3.3166666666666664
+        "duration": 2132,
+        "fare": "N/A"
     },
     {
         "origin_ID": 7,
@@ -1382,8 +1382,8 @@
         "origin_ID": 7,
         "destination_ID": 6,
         "distance": 28.324,
-        "duration": 5366.333333333333,
-        "fare": 2.816666666666667
+        "duration": 7004,
+        "fare": "N/A"
     },
     {
         "origin_ID": 7,
@@ -1410,8 +1410,8 @@
         "origin_ID": 7,
         "destination_ID": 11,
         "distance": 18.513,
-        "duration": 3768.3333333333335,
-        "fare": 2.683333333333333
+        "duration": 20159,
+        "fare": "N/A"
     },
     {
         "origin_ID": 7,
@@ -1570,23 +1570,23 @@
     {
         "origin_ID": 8,
         "destination_ID": 1,
-        "distance": 4.722483559,
-        "duration": 1572.3333333333333,
-        "fare": 1.75
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 8,
         "destination_ID": 2,
         "distance": 41.637,
-        "duration": 8608.333333333334,
-        "fare": 2.9166666666666665
+        "duration": 9271,
+        "fare": "N/A"
     },
     {
         "origin_ID": 8,
         "destination_ID": 3,
         "distance": 37.264,
-        "duration": 7057,
-        "fare": 3.966666666666667
+        "duration": 7983,
+        "fare": "N/A"
     },
     {
         "origin_ID": 8,
@@ -1599,8 +1599,8 @@
         "origin_ID": 8,
         "destination_ID": 5,
         "distance": 40.656,
-        "duration": 8737.666666666666,
-        "fare": 3.9166666666666665
+        "duration": 7679,
+        "fare": "N/A"
     },
     {
         "origin_ID": 8,
@@ -1613,8 +1613,8 @@
         "origin_ID": 8,
         "destination_ID": 7,
         "distance": 29.992,
-        "duration": 6265.333333333333,
-        "fare": 3.4
+        "duration": 5725,
+        "fare": "N/A"
     },
     {
         "origin_ID": 8,
@@ -1627,8 +1627,8 @@
         "origin_ID": 8,
         "destination_ID": 10,
         "distance": 38.316,
-        "duration": 6969.333333333333,
-        "fare": 3.033333333333333
+        "duration": 6885,
+        "fare": "N/A"
     },
     {
         "origin_ID": 8,
@@ -1641,8 +1641,8 @@
         "origin_ID": 8,
         "destination_ID": 12,
         "distance": 30.097,
-        "duration": 5812,
-        "fare": 2.3333333333333335
+        "duration": 5949,
+        "fare": "N/A"
     },
     {
         "origin_ID": 8,
@@ -1655,22 +1655,22 @@
         "origin_ID": 8,
         "destination_ID": 14,
         "distance": 31.344,
-        "duration": 5507,
-        "fare": 3.4
+        "duration": 6097,
+        "fare": "N/A"
     },
     {
         "origin_ID": 8,
         "destination_ID": 15,
         "distance": 39.856,
-        "duration": 8581,
-        "fare": 3.5
+        "duration": 7616,
+        "fare": "N/A"
     },
     {
         "origin_ID": 8,
         "destination_ID": 16,
         "distance": 45.921,
-        "duration": 7726.333333333333,
-        "fare": 3.5
+        "duration": 8620,
+        "fare": "N/A"
     },
     {
         "origin_ID": 8,
@@ -1690,8 +1690,8 @@
         "origin_ID": 8,
         "destination_ID": 19,
         "distance": 24.975,
-        "duration": 5478.333333333333,
-        "fare": 3.9166666666666665
+        "duration": 4862,
+        "fare": "N/A"
     },
     {
         "origin_ID": 8,
@@ -1767,15 +1767,15 @@
         "origin_ID": 8,
         "destination_ID": 30,
         "distance": 27.295,
-        "duration": 5154,
-        "fare": 3.55
+        "duration": 5791,
+        "fare": "N/A"
     },
     {
         "origin_ID": 8,
         "destination_ID": 31,
         "distance": 39.683,
-        "duration": 8026.333333333333,
-        "fare": 3.533333333333333
+        "duration": 7576,
+        "fare": "N/A"
     },
     {
         "origin_ID": 8,
@@ -1788,22 +1788,22 @@
         "origin_ID": 8,
         "destination_ID": 33,
         "distance": 20.126,
-        "duration": 8923.666666666666,
-        "fare": 2.966666666666667
+        "duration": 3320,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
         "destination_ID": 1,
         "distance": 17.738,
-        "duration": 3619.3333333333335,
-        "fare": 2.3333333333333335
+        "duration": 2962,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
         "destination_ID": 2,
         "distance": 33.816,
-        "duration": 6369.333333333333,
-        "fare": 2.3333333333333335
+        "duration": 5160,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
@@ -1816,8 +1816,8 @@
         "origin_ID": 9,
         "destination_ID": 4,
         "distance": 39.012,
-        "duration": 7785,
-        "fare": 3.5
+        "duration": 7527,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
@@ -1830,8 +1830,8 @@
         "origin_ID": 9,
         "destination_ID": 6,
         "distance": 37.096,
-        "duration": 6400.333333333333,
-        "fare": 3.966666666666667
+        "duration": 7148,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
@@ -1858,15 +1858,15 @@
         "origin_ID": 9,
         "destination_ID": 11,
         "distance": 27.354,
-        "duration": 4845,
-        "fare": 4.466666666666667
+        "duration": 6103,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
         "destination_ID": 12,
         "distance": 22.091,
-        "duration": 4343.666666666667,
-        "fare": 3.9833333333333334
+        "duration": 3711,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
@@ -1893,8 +1893,8 @@
         "origin_ID": 9,
         "destination_ID": 16,
         "distance": 37.382,
-        "duration": 7373.666666666667,
-        "fare": 3.9166666666666665
+        "duration": 4222,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
@@ -1914,8 +1914,8 @@
         "origin_ID": 9,
         "destination_ID": 19,
         "distance": 16.153,
-        "duration": 3281.6666666666665,
-        "fare": 3.05
+        "duration": 3388,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
@@ -1935,15 +1935,15 @@
         "origin_ID": 9,
         "destination_ID": 22,
         "distance": 21.193,
-        "duration": 4048,
-        "fare": 4.016666666666667
+        "duration": 4336,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
         "destination_ID": 23,
         "distance": 28.436,
-        "duration": 5882.333333333333,
-        "fare": 3.55
+        "duration": 5986,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
@@ -1956,15 +1956,15 @@
         "origin_ID": 9,
         "destination_ID": 25,
         "distance": 30.107,
-        "duration": 5812,
-        "fare": 2.3333333333333335
+        "duration": 5343,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
         "destination_ID": 26,
         "distance": 34.193,
-        "duration": 6825.666666666667,
-        "fare": 4.333333333333333
+        "duration": 4758,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
@@ -1977,8 +1977,8 @@
         "origin_ID": 9,
         "destination_ID": 28,
         "distance": 19.504,
-        "duration": 4165,
-        "fare": 2.5833333333333335
+        "duration": 3839,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
@@ -1991,15 +1991,15 @@
         "origin_ID": 9,
         "destination_ID": 30,
         "distance": 22.447,
-        "duration": 4812.333333333333,
-        "fare": 3.816666666666667
+        "duration": 4557,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
         "destination_ID": 31,
         "distance": 26.71,
-        "duration": 5561,
-        "fare": 2.816666666666667
+        "duration": 4817,
+        "fare": "N/A"
     },
     {
         "origin_ID": 9,
@@ -2019,15 +2019,15 @@
         "origin_ID": 10,
         "destination_ID": 1,
         "distance": 18.269,
-        "duration": 3799,
-        "fare": 3.1
+        "duration": 3256,
+        "fare": "N/A"
     },
     {
         "origin_ID": 10,
         "destination_ID": 2,
         "distance": 34.373,
-        "duration": 6510.666666666667,
-        "fare": 3.533333333333333
+        "duration": 5895,
+        "fare": "N/A"
     },
     {
         "origin_ID": 10,
@@ -2089,8 +2089,8 @@
         "origin_ID": 10,
         "destination_ID": 12,
         "distance": 21.09,
-        "duration": 4523.666666666667,
-        "fare": 4.35
+        "duration": 3666,
+        "fare": "N/A"
     },
     {
         "origin_ID": 10,
@@ -2117,8 +2117,8 @@
         "origin_ID": 10,
         "destination_ID": 16,
         "distance": 38.63,
-        "duration": 8561.333333333334,
-        "fare": 2.9166666666666665
+        "duration": 5625,
+        "fare": "N/A"
     },
     {
         "origin_ID": 10,
@@ -2138,8 +2138,8 @@
         "origin_ID": 10,
         "destination_ID": 19,
         "distance": 15.724,
-        "duration": 3180.6666666666665,
-        "fare": 1.8
+        "duration": 3110,
+        "fare": "N/A"
     },
     {
         "origin_ID": 10,
@@ -2180,8 +2180,8 @@
         "origin_ID": 10,
         "destination_ID": 25,
         "distance": 29.805,
-        "duration": 5254.666666666667,
-        "fare": 3.8833333333333333
+        "duration": 5979,
+        "fare": "N/A"
     },
     {
         "origin_ID": 10,
@@ -2215,8 +2215,8 @@
         "origin_ID": 10,
         "destination_ID": 30,
         "distance": 24.673,
-        "duration": 4812.333333333333,
-        "fare": 3.4
+        "duration": 5292,
+        "fare": "N/A"
     },
     {
         "origin_ID": 10,
@@ -2243,8 +2243,8 @@
         "origin_ID": 11,
         "destination_ID": 1,
         "distance": 9.347,
-        "duration": 2221.6666666666665,
-        "fare": 2.9499999999999997
+        "duration": 2241,
+        "fare": "N/A"
     },
     {
         "origin_ID": 11,
@@ -2257,8 +2257,8 @@
         "origin_ID": 11,
         "destination_ID": 3,
         "distance": 24.384,
-        "duration": 4559.333333333333,
-        "fare": 2.816666666666667
+        "duration": 5550,
+        "fare": "N/A"
     },
     {
         "origin_ID": 11,
@@ -2306,15 +2306,15 @@
         "origin_ID": 11,
         "destination_ID": 10,
         "distance": 26.584,
-        "duration": 4523,
-        "fare": 1.75
+        "duration": 5637,
+        "fare": "N/A"
     },
     {
         "origin_ID": 11,
         "destination_ID": 12,
         "distance": 13.795,
-        "duration": 3203.6666666666665,
-        "fare": 3.033333333333333
+        "duration": 3658,
+        "fare": "N/A"
     },
     {
         "origin_ID": 11,
@@ -2327,8 +2327,8 @@
         "origin_ID": 11,
         "destination_ID": 14,
         "distance": 18.763,
-        "duration": 4087.6666666666665,
-        "fare": 3.3166666666666664
+        "duration": 4311,
+        "fare": "N/A"
     },
     {
         "origin_ID": 11,
@@ -2362,8 +2362,8 @@
         "origin_ID": 11,
         "destination_ID": 19,
         "distance": 12.459,
-        "duration": 3053.6666666666665,
-        "fare": 1.75
+        "duration": 2821,
+        "fare": "N/A"
     },
     {
         "origin_ID": 11,
@@ -2382,9 +2382,9 @@
     {
         "origin_ID": 11,
         "destination_ID": 22,
-        "distance": 32.3806999592,
-        "duration": 6179.666666666667,
-        "fare": 3.0
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 11,
@@ -2397,8 +2397,8 @@
         "origin_ID": 11,
         "destination_ID": 24,
         "distance": 22.408,
-        "duration": 5094,
-        "fare": 2.75
+        "duration": 4136,
+        "fare": "N/A"
     },
     {
         "origin_ID": 11,
@@ -2425,8 +2425,8 @@
         "origin_ID": 11,
         "destination_ID": 28,
         "distance": 7.654,
-        "duration": 2315.6666666666665,
-        "fare": 1.75
+        "duration": 1482,
+        "fare": "N/A"
     },
     {
         "origin_ID": 11,
@@ -2445,9 +2445,9 @@
     {
         "origin_ID": 11,
         "destination_ID": 31,
-        "distance": 15.4813501387,
-        "duration": 3919.6666666666665,
-        "fare": 2.75
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 11,
@@ -2726,8 +2726,8 @@
         "origin_ID": 13,
         "destination_ID": 6,
         "distance": 26.279,
-        "duration": 4116,
-        "fare": 3.3000000000000003
+        "duration": 4173,
+        "fare": "N/A"
     },
     {
         "origin_ID": 13,
@@ -2915,8 +2915,8 @@
         "origin_ID": 14,
         "destination_ID": 1,
         "distance": 10.049,
-        "duration": 2592.6666666666665,
-        "fare": 1.75
+        "duration": 2330,
+        "fare": "N/A"
     },
     {
         "origin_ID": 14,
@@ -3076,8 +3076,8 @@
         "origin_ID": 14,
         "destination_ID": 25,
         "distance": 22.05,
-        "duration": 4260.333333333333,
-        "fare": 3.8833333333333333
+        "duration": 5994,
+        "fare": "N/A"
     },
     {
         "origin_ID": 14,
@@ -3139,8 +3139,8 @@
         "origin_ID": 15,
         "destination_ID": 1,
         "distance": 21.63,
-        "duration": 3612.3333333333335,
-        "fare": 4.616666666666667
+        "duration": 3031,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
@@ -3152,16 +3152,16 @@
     {
         "origin_ID": 15,
         "destination_ID": 3,
-        "distance": 7.6548708323,
-        "duration": 2315.6666666666665,
-        "fare": 1.75
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
         "destination_ID": 4,
         "distance": 47.025,
-        "duration": 9670,
-        "fare": 3.5
+        "duration": 6192,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
@@ -3174,22 +3174,22 @@
         "origin_ID": 15,
         "destination_ID": 6,
         "distance": 42.852,
-        "duration": 7212,
-        "fare": 3.4
+        "duration": 6878,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
         "destination_ID": 7,
         "distance": 13.681,
-        "duration": 2878.3333333333335,
-        "fare": 2.35
+        "duration": 2641,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
         "destination_ID": 8,
         "distance": 36.318,
-        "duration": 6785.666666666667,
-        "fare": 3.9833333333333334
+        "duration": 7003,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
@@ -3201,23 +3201,23 @@
     {
         "origin_ID": 15,
         "destination_ID": 10,
-        "distance": 17.2432650049,
-        "duration": 3731.3333333333335,
-        "fare": 2.966666666666667
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
         "destination_ID": 11,
         "distance": 32.808,
-        "duration": 5861.333333333333,
-        "fare": 2.9166666666666665
+        "duration": 4558,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
         "destination_ID": 12,
         "distance": 25.673,
-        "duration": 4912.666666666667,
-        "fare": 2.683333333333333
+        "duration": 4205,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
@@ -3237,8 +3237,8 @@
         "origin_ID": 15,
         "destination_ID": 16,
         "distance": 42.004,
-        "duration": 8093.666666666667,
-        "fare": 3.5
+        "duration": 5220,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
@@ -3258,15 +3258,15 @@
         "origin_ID": 15,
         "destination_ID": 19,
         "distance": 20.551,
-        "duration": 4642,
-        "fare": 2.75
+        "duration": 3118,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
         "destination_ID": 20,
         "distance": 22.083,
-        "duration": 4343.666666666667,
-        "fare": 3.9833333333333334
+        "duration": 3427,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
@@ -3279,15 +3279,15 @@
         "origin_ID": 15,
         "destination_ID": 22,
         "distance": 26.108,
-        "duration": 4984.666666666667,
-        "fare": 2.683333333333333
+        "duration": 4596,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
         "destination_ID": 23,
-        "distance": 15.2079972969,
-        "duration": 3078.3333333333335,
-        "fare": 2.8
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
@@ -3300,15 +3300,15 @@
         "origin_ID": 15,
         "destination_ID": 25,
         "distance": 34.828,
-        "duration": 7931.333333333333,
-        "fare": 3.9166666666666665
+        "duration": 5454,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
         "destination_ID": 26,
         "distance": 37.841,
-        "duration": 7200.666666666667,
-        "fare": 5.3999999999999995
+        "duration": 6405,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
@@ -3321,8 +3321,8 @@
         "origin_ID": 15,
         "destination_ID": 28,
         "distance": 23.289,
-        "duration": 4570.666666666667,
-        "fare": 2.1666666666666665
+        "duration": 3446,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
@@ -3335,15 +3335,15 @@
         "origin_ID": 15,
         "destination_ID": 30,
         "distance": 29.284,
-        "duration": 5789.333333333333,
-        "fare": 4.4
+        "duration": 4420,
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
         "destination_ID": 31,
-        "distance": 9.7175985648,
-        "duration": 2354,
-        "fare": 3.0
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 15,
@@ -3356,8 +3356,8 @@
         "origin_ID": 15,
         "destination_ID": 33,
         "distance": 20.161,
-        "duration": 8647,
-        "fare": 2.966666666666667
+        "duration": 3469,
+        "fare": "N/A"
     },
     {
         "origin_ID": 16,
@@ -3432,9 +3432,9 @@
     {
         "origin_ID": 16,
         "destination_ID": 11,
-        "distance": 18.558869774,
-        "duration": 8461.333333333334,
-        "fare": 2.933333333333333
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 16,
@@ -3734,8 +3734,8 @@
         "origin_ID": 17,
         "destination_ID": 23,
         "distance": 40.893,
-        "duration": 9298.333333333334,
-        "fare": 4.116666666666666
+        "duration": 6512,
+        "fare": "N/A"
     },
     {
         "origin_ID": 17,
@@ -3804,8 +3804,8 @@
         "origin_ID": 17,
         "destination_ID": 33,
         "distance": 27.281,
-        "duration": 5154,
-        "fare": 3.55
+        "duration": 3860,
+        "fare": "N/A"
     },
     {
         "origin_ID": 18,
@@ -3873,9 +3873,9 @@
     {
         "origin_ID": 18,
         "destination_ID": 10,
-        "distance": 8.2294848893,
-        "duration": 2090,
-        "fare": 2.4499999999999997
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 18,
@@ -4098,15 +4098,15 @@
         "origin_ID": 19,
         "destination_ID": 10,
         "distance": 15.058,
-        "duration": 3498,
-        "fare": 3.5833333333333335
+        "duration": 3055,
+        "fare": "N/A"
     },
     {
         "origin_ID": 19,
         "destination_ID": 11,
         "distance": 12.905,
-        "duration": 2677.3333333333335,
-        "fare": 1.75
+        "duration": 3149,
+        "fare": "N/A"
     },
     {
         "origin_ID": 19,
@@ -4181,9 +4181,9 @@
     {
         "origin_ID": 19,
         "destination_ID": 23,
-        "distance": 17.2995406148,
-        "duration": 2818.6666666666665,
-        "fare": 3.45
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 19,
@@ -4294,8 +4294,8 @@
         "origin_ID": 20,
         "destination_ID": 6,
         "distance": 23.133,
-        "duration": 8518.333333333334,
-        "fare": 3.4166666666666665
+        "duration": 3435,
+        "fare": "N/A"
     },
     {
         "origin_ID": 20,
@@ -4364,8 +4364,8 @@
         "origin_ID": 20,
         "destination_ID": 16,
         "distance": 30.709,
-        "duration": 5529,
-        "fare": 3.4833333333333334
+        "duration": 4199,
+        "fare": "N/A"
     },
     {
         "origin_ID": 20,
@@ -4434,8 +4434,8 @@
         "origin_ID": 20,
         "destination_ID": 27,
         "distance": 13.554,
-        "duration": 2878,
-        "fare": 2.35
+        "duration": 2847,
+        "fare": "N/A"
     },
     {
         "origin_ID": 20,
@@ -4545,16 +4545,16 @@
     {
         "origin_ID": 21,
         "destination_ID": 10,
-        "distance": 9.9208483301,
-        "duration": 2435.3333333333335,
-        "fare": 2.6999999999999997
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 21,
         "destination_ID": 11,
         "distance": 33.576,
-        "duration": 6316.333333333333,
-        "fare": 4.533333333333333
+        "duration": 5892,
+        "fare": "N/A"
     },
     {
         "origin_ID": 21,
@@ -4644,15 +4644,15 @@
         "origin_ID": 21,
         "destination_ID": 25,
         "distance": 37.739,
-        "duration": 7066.666666666667,
-        "fare": 5.533333333333333
+        "duration": 6214,
+        "fare": "N/A"
     },
     {
         "origin_ID": 21,
         "destination_ID": 26,
         "distance": 46.613,
-        "duration": 8791,
-        "fare": 5.116666666666666
+        "duration": 7967,
+        "fare": "N/A"
     },
     {
         "origin_ID": 21,
@@ -4665,8 +4665,8 @@
         "origin_ID": 21,
         "destination_ID": 28,
         "distance": 25.541,
-        "duration": 8703.333333333334,
-        "fare": 4.4
+        "duration": 4185,
+        "fare": "N/A"
     },
     {
         "origin_ID": 21,
@@ -4812,8 +4812,8 @@
         "origin_ID": 22,
         "destination_ID": 16,
         "distance": 28.928,
-        "duration": 5999.666666666667,
-        "fare": 2.9166666666666665
+        "duration": 4436,
+        "fare": "N/A"
     },
     {
         "origin_ID": 22,
@@ -4931,8 +4931,8 @@
         "origin_ID": 23,
         "destination_ID": 1,
         "distance": 11.367,
-        "duration": 3292.3333333333335,
-        "fare": 2.75
+        "duration": 2511,
+        "fare": "N/A"
     },
     {
         "origin_ID": 23,
@@ -4945,8 +4945,8 @@
         "origin_ID": 23,
         "destination_ID": 3,
         "distance": 26.642,
-        "duration": 5062,
-        "fare": 2.4166666666666665
+        "duration": 18705,
+        "fare": "N/A"
     },
     {
         "origin_ID": 23,
@@ -5022,8 +5022,8 @@
         "origin_ID": 23,
         "destination_ID": 14,
         "distance": 21.021,
-        "duration": 5140,
-        "fare": 3.283333333333333
+        "duration": 4746,
+        "fare": "N/A"
     },
     {
         "origin_ID": 23,
@@ -5036,8 +5036,8 @@
         "origin_ID": 23,
         "destination_ID": 16,
         "distance": 31.99,
-        "duration": 5947,
-        "fare": 4.266666666666667
+        "duration": 4772,
+        "fare": "N/A"
     },
     {
         "origin_ID": 23,
@@ -5260,8 +5260,8 @@
         "origin_ID": 24,
         "destination_ID": 16,
         "distance": 36.879,
-        "duration": 7458.666666666667,
-        "fare": 3.9166666666666665
+        "duration": 4368,
+        "fare": "N/A"
     },
     {
         "origin_ID": 24,
@@ -5274,8 +5274,8 @@
         "origin_ID": 24,
         "destination_ID": 18,
         "distance": 23.407,
-        "duration": 4177.666666666667,
-        "fare": 1.75
+        "duration": 4165,
+        "fare": "N/A"
     },
     {
         "origin_ID": 24,
@@ -5330,8 +5330,8 @@
         "origin_ID": 24,
         "destination_ID": 27,
         "distance": 19.742,
-        "duration": 4567.333333333333,
-        "fare": 3.9166666666666665
+        "duration": 3577,
+        "fare": "N/A"
     },
     {
         "origin_ID": 24,
@@ -5672,9 +5672,9 @@
     {
         "origin_ID": 26,
         "destination_ID": 11,
-        "distance": 16.29111754,
-        "duration": 2885.6666666666665,
-        "fare": 3.1666666666666665
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 26,
@@ -5827,29 +5827,29 @@
         "origin_ID": 27,
         "destination_ID": 1,
         "distance": 22.333,
-        "duration": 4883.333333333333,
-        "fare": 1.75
+        "duration": 3707,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
         "destination_ID": 2,
         "distance": 40.266,
-        "duration": 7757.333333333333,
-        "fare": 3.5
+        "duration": 5272,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
         "destination_ID": 3,
         "distance": 37.021,
-        "duration": 6968.333333333333,
-        "fare": 3.9166666666666665
+        "duration": 7461,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
         "destination_ID": 4,
         "distance": 44.877,
-        "duration": 9216.666666666666,
-        "fare": 3.5
+        "duration": 6394,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
@@ -5890,22 +5890,22 @@
         "origin_ID": 27,
         "destination_ID": 10,
         "distance": 38.872,
-        "duration": 7813,
-        "fare": 3.5
+        "duration": 7336,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
         "destination_ID": 11,
         "distance": 29.66,
-        "duration": 5659,
-        "fare": 3.5
+        "duration": 5615,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
         "destination_ID": 12,
         "distance": 27.068,
-        "duration": 5620.333333333333,
-        "fare": 3.5
+        "duration": 4783,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
@@ -5918,8 +5918,8 @@
         "origin_ID": 27,
         "destination_ID": 14,
         "distance": 31.101,
-        "duration": 11018.666666666666,
-        "fare": 3.8833333333333333
+        "duration": 5575,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
@@ -5932,8 +5932,8 @@
         "origin_ID": 27,
         "destination_ID": 16,
         "distance": 45.45,
-        "duration": 8064,
-        "fare": 4.116666666666666
+        "duration": 6898,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
@@ -5974,15 +5974,15 @@
         "origin_ID": 27,
         "destination_ID": 22,
         "distance": 17.184,
-        "duration": 4221.333333333333,
-        "fare": 2.3333333333333335
+        "duration": 3026,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
         "destination_ID": 23,
         "distance": 32.625,
-        "duration": 9798.333333333334,
-        "fare": 2.9166666666666665
+        "duration": 5401,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
@@ -5995,22 +5995,22 @@
         "origin_ID": 27,
         "destination_ID": 25,
         "distance": 32.68,
-        "duration": 9726,
-        "fare": 3.3333333333333335
+        "duration": 5236,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
         "destination_ID": 26,
         "distance": 42.715,
-        "duration": 7429,
-        "fare": 3.9833333333333334
+        "duration": 7690,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
         "destination_ID": 28,
         "distance": 21.141,
-        "duration": 4048,
-        "fare": 4.016666666666667
+        "duration": 3228,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
@@ -6023,36 +6023,36 @@
         "origin_ID": 27,
         "destination_ID": 30,
         "distance": 27.137,
-        "duration": 5638.666666666667,
-        "fare": 2.3333333333333335
+        "duration": 4202,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
         "destination_ID": 31,
         "distance": 37.071,
-        "duration": 6968.333333333333,
-        "fare": 3.9166666666666665
+        "duration": 7054,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
         "destination_ID": 32,
         "distance": 14.834,
-        "duration": 3398.6666666666665,
-        "fare": 2.4166666666666665
+        "duration": 2176,
+        "fare": "N/A"
     },
     {
         "origin_ID": 27,
         "destination_ID": 33,
         "distance": 17.514,
-        "duration": 3666,
-        "fare": 2.7333333333333334
+        "duration": 2798,
+        "fare": "N/A"
     },
     {
         "origin_ID": 28,
         "destination_ID": 1,
         "distance": 1.986,
-        "duration": 1134.3333333333333,
-        "fare": 1.75
+        "duration": 1710,
+        "fare": "N/A"
     },
     {
         "origin_ID": 28,
@@ -6072,8 +6072,8 @@
         "origin_ID": 28,
         "destination_ID": 4,
         "distance": 22.014,
-        "duration": 3764.3333333333335,
-        "fare": 4.75
+        "duration": 3302,
+        "fare": "N/A"
     },
     {
         "origin_ID": 28,
@@ -6086,8 +6086,8 @@
         "origin_ID": 28,
         "destination_ID": 6,
         "distance": 18.573,
-        "duration": 8461.333333333334,
-        "fare": 2.933333333333333
+        "duration": 18078,
+        "fare": "N/A"
     },
     {
         "origin_ID": 28,
@@ -6121,8 +6121,8 @@
         "origin_ID": 28,
         "destination_ID": 11,
         "distance": 7.698,
-        "duration": 2258.6666666666665,
-        "fare": 1.75
+        "duration": 1572,
+        "fare": "N/A"
     },
     {
         "origin_ID": 28,
@@ -6156,8 +6156,8 @@
         "origin_ID": 28,
         "destination_ID": 16,
         "distance": 22.202,
-        "duration": 4333,
-        "fare": 2.3833333333333333
+        "duration": 2579,
+        "fare": "N/A"
     },
     {
         "origin_ID": 28,
@@ -6337,9 +6337,9 @@
     {
         "origin_ID": 29,
         "destination_ID": 10,
-        "distance": 18.6307700425,
-        "duration": 8461.333333333334,
-        "fare": 2.933333333333333
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 29,
@@ -6513,8 +6513,8 @@
         "origin_ID": 30,
         "destination_ID": 3,
         "distance": 20.042,
-        "duration": 4126.333333333333,
-        "fare": 1.75
+        "duration": 4772,
+        "fare": "N/A"
     },
     {
         "origin_ID": 30,
@@ -6548,15 +6548,15 @@
         "origin_ID": 30,
         "destination_ID": 8,
         "distance": 27.722,
-        "duration": 4911,
-        "fare": 3.6166666666666667
+        "duration": 4925,
+        "fare": "N/A"
     },
     {
         "origin_ID": 30,
         "destination_ID": 9,
         "distance": 23.073,
-        "duration": 8676.333333333334,
-        "fare": 4.0
+        "duration": 4022,
+        "fare": "N/A"
     },
     {
         "origin_ID": 30,
@@ -6590,8 +6590,8 @@
         "origin_ID": 30,
         "destination_ID": 14,
         "distance": 15.256,
-        "duration": 3078.3333333333335,
-        "fare": 2.8
+        "duration": 3629,
+        "fare": "N/A"
     },
     {
         "origin_ID": 30,
@@ -6792,9 +6792,9 @@
     {
         "origin_ID": 31,
         "destination_ID": 11,
-        "distance": 15.4813501387,
-        "duration": 3919.6666666666665,
-        "fare": 2.75
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 31,
@@ -6982,8 +6982,8 @@
         "origin_ID": 32,
         "destination_ID": 6,
         "distance": 27.548,
-        "duration": 5662.666666666667,
-        "fare": 3.533333333333333
+        "duration": 4664,
+        "fare": "N/A"
     },
     {
         "origin_ID": 32,
@@ -7023,9 +7023,9 @@
     {
         "origin_ID": 32,
         "destination_ID": 12,
-        "distance": 14.1201796065,
-        "duration": 2557.3333333333335,
-        "fare": 2.4166666666666665
+        "distance": "N/A",
+        "duration": "N/A",
+        "fare": "N/A"
     },
     {
         "origin_ID": 32,
@@ -7066,8 +7066,8 @@
         "origin_ID": 32,
         "destination_ID": 18,
         "distance": 15.573,
-        "duration": 2949.6666666666665,
-        "fare": 2.3833333333333333
+        "duration": 2863,
+        "fare": "N/A"
     },
     {
         "origin_ID": 32,
@@ -7129,8 +7129,8 @@
         "origin_ID": 32,
         "destination_ID": 27,
         "distance": 11.777,
-        "duration": 2990,
-        "fare": 2.3833333333333333
+        "duration": 2364,
+        "fare": "N/A"
     },
     {
         "origin_ID": 32,
@@ -7206,8 +7206,8 @@
         "origin_ID": 33,
         "destination_ID": 6,
         "distance": 18.879,
-        "duration": 3391,
-        "fare": 3.45
+        "duration": 2349,
+        "fare": "N/A"
     },
     {
         "origin_ID": 33,
@@ -7234,15 +7234,15 @@
         "origin_ID": 33,
         "destination_ID": 10,
         "distance": 21.194,
-        "duration": 4048,
-        "fare": 4.016666666666667
+        "duration": 3558,
+        "fare": "N/A"
     },
     {
         "origin_ID": 33,
         "destination_ID": 11,
         "distance": 12.862,
-        "duration": 2408,
-        "fare": 1.75
+        "duration": 2917,
+        "fare": "N/A"
     },
     {
         "origin_ID": 33,
@@ -7311,8 +7311,8 @@
         "origin_ID": 33,
         "destination_ID": 21,
         "distance": 20.258,
-        "duration": 3655.3333333333335,
-        "fare": 2.9166666666666665
+        "duration": 2898,
+        "fare": "N/A"
     },
     {
         "origin_ID": 33,
