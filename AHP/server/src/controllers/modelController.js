@@ -10,6 +10,7 @@ exports.runModel = async (req, res) => {
     let ranking = [];
     // Ordena decrescente para criar um ranking
     if (Array.isArray(matrix)) {
+      
       ranking = matrix.sort((a, b) => b.indexGAHP - a.indexGAHP);
       var distance = userInformation.maximumDistanceFromReference;
       var incomePerMonth = userInformation.incomePerMonth;
@@ -31,7 +32,10 @@ exports.runModel = async (req, res) => {
         }
 
       });
-      res.send({ ranking });
+
+      // var maxRent = Math.max(ranking.map((b)=>{return b.features['Rent Price']}));
+      // console.log(ranking.map((b)=>{return b.features['Rent Price']}));
+      res.send({ maxRent:maxRent, inputUser: userInformation, ranking:ranking });
     } else {
       res.send({ ranking });
     }
