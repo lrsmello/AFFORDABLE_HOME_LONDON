@@ -17,7 +17,7 @@ def formRedirect():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    # data = request.get_json()
+
     userName = request.form['name']
     emailAddres = request.form['email']
     referenceBoroughId = request.form['borough']
@@ -48,18 +48,12 @@ def submit():
     response = requests.post(api_url, json=payload)
 
     responseJson = response.json()
-    # print(responseJson)
 
-    # # Verificando a resposta da API
-    # if response.status_code == 200:
-    #     print(f'Success: {response.json()}')
-    # else:
-    #     print(f'Failed: {response.status_code}, {response.text}')
+    ranking1 = responseJson['ranking'][0]
+    ranking2 = responseJson['ranking'][1]
+    ranking3 = responseJson['ranking'][2]
 
-    # return jsonify({'redirect': url_for('formRedirect', responseData=responseJson)})
-    # return redirect(url_for('formRedirect', responseData=responseJson))
-    return render_template('formRedirect.html', responseJson=responseJson)
-    # return jsonify(result=responseJson)
+    return render_template('formRedirect.html', ranking1=ranking1, ranking2=ranking2, ranking3=ranking3)
 
 @app.route('/data/boroughs')
 def get_boroughs():
