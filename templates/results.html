@@ -67,7 +67,7 @@
                 lat: ['{{ranking1_latitude}}', '{{ranking2_latitude}}','{{ranking3_latitude}}'],  // Latitude dos pontos
                 lon: ['{{ranking1_longitude}}', '{{ranking2_longitude}}','{{ranking3_longitude}}'],   // Longitude dos pontos
                 mode: 'markers',
-                marker: { size: 50 },
+                marker: { size: 100 },
                 text: ['{{ranking1_name}}', '{{ranking2_name}}','{{ranking3_name}}']  // Textos dos pontos
             }];
 
@@ -77,8 +77,8 @@
                 hovermode: 'closest',
                 mapbox: {
                     style: "open-street-map",
-                    center: { lat: '{{ranking1_latitude}}', lon: '{{ranking1_longitude}}' },
-                    zoom: 12
+                    center: { lat: '{{rankingRef_latitude}}', lon: '{{rankingRef_longitude}}' },
+                    zoom: 9
                 },
                 margin: { t: 0, b: 0, l: 0, r: 0 }
             };
@@ -100,28 +100,28 @@
                         {
                             type: 'scatterpolar',
                             r: data['Borough 1'],
-                            theta: '{{features}}',
+                            theta: data['categories'],
                             fill: 'toself',
                             name: 'Borough 1'
                         },
                         {
                             type: 'scatterpolar',
                             r: data['Borough 2'],
-                            theta: '{{features}}',
+                            theta: data['categories'],
                             fill: 'toself',
                             name: 'Borough 2'
                         },
                         {
                             type: 'scatterpolar',
                             r: data['Borough 3'],
-                            theta: '{{features}}',
+                            theta: data['categories'],
                             fill: 'toself',
                             name: 'Borough 3'
                         },
                         {
                             type: 'scatterpolar',
                             r: data['Borough RF'],
-                            theta: '{{features}}',
+                            theta: data['categories'],
                             fill: 'toself',
                             name: 'Borough RF'
                         }
