@@ -50,6 +50,8 @@ def submit():
 
     responseJson = response.json()
 
+    # print(responseJson)
+
     ranking1 = responseJson['ranking'][0]
     ranking1_name = ranking1['name']
     ranking1_description = ranking1['description']
@@ -73,10 +75,8 @@ def submit():
         {"rank":2,"latitude": ranking2_latitude, "longitude": ranking2_longitude, "name": "ranking2_name"},
         {"rank":3,"latitude": ranking3_latitude, "longitude": ranking3_longitude, "name": "ranking3_name"}
         ]
-    
-    if response.status_code == 200:
-        features = responseJson['inputUser']['priorities']
-        return redirect('/polar-chart-data', features)
+
+    features = responseJson['inputUser']['priorities']
 
     return render_template('results.html', ranking1_name=ranking1_name, ranking1_description=ranking1_description, ranking1_latitude=ranking1_latitude,ranking1_longitude=ranking1_longitude,ranking2_name=ranking2_name,ranking2_description=ranking2_description,ranking2_latitude=ranking2_latitude,ranking2_longitude=ranking2_longitude,ranking3_name=ranking3_name,ranking3_description=ranking3_description,ranking3_latitude=ranking3_latitude,ranking3_longitude=ranking3_longitude,map_data=map_data,features=features)
 
@@ -120,13 +120,11 @@ def generate_chart(chart_id):
 
 @app.route('/polar-chart-data')
 def get_polar_chart_data():
-    categories = request['features']
     data = {
         'Borough 1': [1, 5, 2, 2, 3],
         'Borough 2': [4, 3, 2.5, 1, 2],
         'Borough 3': [2, 3, 5, 1, 4],
-        'Borough RF': [2, 3, 5, 1, 4],
-        'categories': categories
+        'Borough RF': [2, 3, 5, 1, 4]
     }
     return jsonify(data)
 
