@@ -1,334 +1,415 @@
 {
+    "inputUser": {
+        "userName": "",
+        "emailAddres": "",
+        "referenceBoroughId": 1,
+        "maximumDistanceFromReference": 100,
+        "incomePerMonth": 2000,
+        "categoryPlace": 1,
+        "priorities": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ]
+    },
     "ranking": [
         {
-            "ID": 9,
-            "name": "Ealing",
+            "ID": 27,
+            "name": "Richmond upon Thames",
+            "description": "A picturesque borough famed for Richmond Park and Kew Gardens. It offers a high quality of life with beautiful scenery and excellent schools, attracting affluent families.",
+            "latitude": 51.4515,
+            "longitude": -0.3346,
             "features": {
-                "Rent Price": 1004.32,
-                "Distance": 1e-09,
-                "Well Being": 7.337
+                "Rent Price": 1e-09,
+                "Distance": 14.1086819003,
+                "Well Being": 7.403,
+                "Travelling Time": 4883.333333333333,
+                "Cost of Living": 90400
             },
-            "indexGAHP": 0.9643434812941681
-        },
-        {
-            "ID": 4,
-            "name": "Bexley",
-            "features": {
-                "Rent Price": 708.93,
-                "Distance": 19.820047,
-                "Well Being": 7.443
-            },
-            "indexGAHP": 0.001454098673660822
-        },
-        {
-            "ID": 16,
-            "name": "Havering",
-            "features": {
-                "Rent Price": 738.47,
-                "Distance": 32.2276856376,
-                "Well Being": 7.653
-            },
-            "indexGAHP": 0.001406133883260125
-        },
-        {
-            "ID": 6,
-            "name": "Bromley",
-            "features": {
-                "Rent Price": 768.01,
-                "Distance": 9.8352971619,
-                "Well Being": 7.41
-            },
-            "indexGAHP": 0.0013530816639154741
-        },
-        {
-            "ID": 2,
-            "name": "Barking and Dagenham",
-            "features": {
-                "Rent Price": 797.55,
-                "Distance": 25.9785928442,
-                "Well Being": 7.62
-            },
-            "indexGAHP": 0.0013126994256829059
-        },
-        {
-            "ID": 29,
-            "name": "Sutton",
-            "features": {
-                "Rent Price": 797.55,
-                "Distance": 13.2590430811,
-                "Well Being": 7.553
-            },
-            "indexGAHP": 0.0013113532731119538
-        },
-        {
-            "ID": 17,
-            "name": "Hillingdon",
-            "features": {
-                "Rent Price": 821.18,
-                "Distance": 31.4834782108,
-                "Well Being": 7.69
-            },
-            "indexGAHP": 0.0012807377506427993
-        },
-        {
-            "ID": 26,
-            "name": "Redbridge",
-            "features": {
-                "Rent Price": 827.09,
-                "Distance": 20.9624129778,
-                "Well Being": 7.703
-            },
-            "indexGAHP": 0.0012729514696241807
+            "indexGAHP": 0.8013442527664003,
+            "isInsideDistance": True,
+            "isAffordableRent": True,
+            "isInsideCostOfLiving": False
         },
         {
             "ID": 8,
             "name": "Croydon",
+            "description": "A major commercial hub with modern shopping centers and good transport links. Living here offers urban convenience with ongoing development, appealing to both families and professionals.",
+            "latitude": 51.3723,
+            "longitude": -0.1091,
             "features": {
-                "Rent Price": 821.18,
-                "Distance": 18.3129052392,
-                "Well Being": 7.24
+                "Rent Price": 472.62,
+                "Distance": 4.722483559,
+                "Well Being": 7.24,
+                "Travelling Time": 1572.3333333333333,
+                "Cost of Living": 40900
             },
-            "indexGAHP": 0.0012716962105010102
-        },
-        {
-            "ID": 11,
-            "name": "Greenwich",
-            "features": {
-                "Rent Price": 827.09,
-                "Distance": 32.8910030296,
-                "Well Being": 7.547
-            },
-            "indexGAHP": 0.0012698170447477985
-        },
-        {
-            "ID": 18,
-            "name": "Hounslow",
-            "features": {
-                "Rent Price": 862.53,
-                "Distance": 32.3984054399,
-                "Well Being": 7.607
-            },
-            "indexGAHP": 0.0012250783318757776
-        },
-        {
-            "ID": 15,
-            "name": "Harrow",
-            "features": {
-                "Rent Price": 886.16,
-                "Distance": 26.1856553057,
-                "Well Being": 7.703
-            },
-            "indexGAHP": 0.0011984153823784444
-        },
-        {
-            "ID": 10,
-            "name": "Enfield",
-            "features": {
-                "Rent Price": 886.16,
-                "Distance": 25.1622845473,
-                "Well Being": 7.54
-            },
-            "indexGAHP": 0.0011951403291415215
+            "indexGAHP": 0.01081880130211969,
+            "isInsideDistance": True,
+            "isAffordableRent": True,
+            "isInsideCostOfLiving": False
         },
         {
             "ID": 31,
             "name": "Waltham Forest",
+            "description": "Combining urban living with green spaces like Epping Forest. It offers a community-focused environment with good schools, appealing to families and professionals.",
+            "latitude": 51.5898,
+            "longitude": -0.0195,
             "features": {
-                "Rent Price": 886.16,
-                "Distance": 18.214873224,
-                "Well Being": 7.16
+                "Rent Price": 590.78,
+                "Distance": 4.0130883592,
+                "Well Being": 7.16,
+                "Travelling Time": 2930,
+                "Cost of Living": 40100
             },
-            "indexGAHP": 0.0011875052468193247
-        },
-        {
-            "ID": 23,
-            "name": "Lewisham",
-            "features": {
-                "Rent Price": 915.7,
-                "Distance": 11.1703404466,
-                "Well Being": 7.447
-            },
-            "indexGAHP": 0.0011596043849094791
-        },
-        {
-            "ID": 25,
-            "name": "Newham",
-            "features": {
-                "Rent Price": 945.24,
-                "Distance": 9.7797993923,
-                "Well Being": 7.997
-            },
-            "indexGAHP": 0.0011390920943872222
-        },
-        {
-            "ID": 24,
-            "name": "Merton",
-            "features": {
-                "Rent Price": 945.24,
-                "Distance": 11.3397318457,
-                "Well Being": 7.47
-            },
-            "indexGAHP": 0.001128503406946183
-        },
-        {
-            "ID": 21,
-            "name": "Kingston upon Thames",
-            "features": {
-                "Rent Price": 945.24,
-                "Distance": 17.7963573511,
-                "Well Being": 7.45
-            },
-            "indexGAHP": 0.0011281015289204223
-        },
-        {
-            "ID": 3,
-            "name": "Barnet",
-            "features": {
-                "Rent Price": 945.24,
-                "Distance": 30.229144123,
-                "Well Being": 7.113
-            },
-            "indexGAHP": 0.0011213303812288486
-        },
-        {
-            "ID": 5,
-            "name": "Brent",
-            "features": {
-                "Rent Price": 947.6,
-                "Distance": 25.8592170421,
-                "Well Being": 7.223
-            },
-            "indexGAHP": 0.0011211038054293738
-        },
-        {
-            "ID": 14,
-            "name": "Haringey",
-            "features": {
-                "Rent Price": 946.42,
-                "Distance": 18.1046472312,
-                "Well Being": 7.123
-            },
-            "indexGAHP": 0.0011203114366933747
-        },
-        {
-            "ID": 22,
-            "name": "Lambeth",
-            "features": {
-                "Rent Price": 960.6,
-                "Distance": 14.3715312992,
-                "Well Being": 7.627
-            },
-            "indexGAHP": 0.0011160130533737493
-        },
-        {
-            "ID": 27,
-            "name": "Richmond upon Thames",
-            "features": {
-                "Rent Price": 1004.32,
-                "Distance": 28.0150112313,
-                "Well Being": 7.403
-            },
-            "indexGAHP": 0.0010696011471498985
-        },
-        {
-            "ID": 19,
-            "name": "Islington",
-            "features": {
-                "Rent Price": 1101.21,
-                "Distance": 23.1332691913,
-                "Well Being": 7.253
-            },
-            "indexGAHP": 0.0009855656328194092
-        },
-        {
-            "ID": 32,
-            "name": "Wandsworth",
-            "features": {
-                "Rent Price": 1122.47,
-                "Distance": 27.0536446635,
-                "Well Being": 7.4
-            },
-            "indexGAHP": 0.0009726124026635942
-        },
-        {
-            "ID": 28,
-            "name": "Southwark",
-            "features": {
-                "Rent Price": 1122.47,
-                "Distance": 18.4426188808,
-                "Well Being": 7.25
-            },
-            "indexGAHP": 0.0009695985652395885
-        },
-        {
-            "ID": 13,
-            "name": "Hammersmith and Fulham",
-            "features": {
-                "Rent Price": 1178.01,
-                "Distance": 21.9710254002,
-                "Well Being": 7.663
-            },
-            "indexGAHP": 0.0009390506722248542
-        },
-        {
-            "ID": 12,
-            "name": "Hackney",
-            "features": {
-                "Rent Price": 1181.55,
-                "Distance": 16.5560544328,
-                "Well Being": 7.18
-            },
-            "indexGAHP": 0.0009269939176139628
-        },
-        {
-            "ID": 7,
-            "name": "Camden",
-            "features": {
-                "Rent Price": 1279.62,
-                "Distance": 21.8085376475,
-                "Well Being": 7.343
-            },
-            "indexGAHP": 0.0008702805235215558
+            "indexGAHP": 0.010201635299658281,
+            "isInsideDistance": True,
+            "isAffordableRent": True,
+            "isInsideCostOfLiving": False
         },
         {
             "ID": 20,
             "name": "Kensington and Chelsea",
+            "description": "An affluent borough with luxury shops, museums, and historical landmarks. It offers an upscale lifestyle with excellent amenities, attracting wealthy residents and professionals.",
+            "latitude": 51.494,
+            "longitude": -0.19,
             "features": {
-                "Rent Price": 1331.61,
-                "Distance": 21.547437385,
-                "Well Being": 7.383
+                "Rent Price": 897.98,
+                "Distance": 3.9862338758,
+                "Well Being": 7.383,
+                "Travelling Time": 1940,
+                "Cost of Living": 208000
             },
-            "indexGAHP": 0.0008428662184500633
+            "indexGAHP": 0.00970803299050823,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
         },
         {
-            "ID": 30,
-            "name": "Tower Hamlets",
+            "ID": 29,
+            "name": "Sutton",
+            "description": "Known for its suburban charm and excellent schools, Sutton offers green spaces and a family-friendly environment, making it a desirable area for families.",
+            "latitude": 51.3618,
+            "longitude": -0.1945,
             "features": {
-                "Rent Price": 1408.41,
-                "Distance": 6.3410394719,
-                "Well Being": 7.163
+                "Rent Price": 649.85,
+                "Distance": 4.648804955,
+                "Well Being": 7.553,
+                "Travelling Time": 3737,
+                "Cost of Living": 45200
             },
-            "indexGAHP": 0.0008005738920792826
+            "indexGAHP": 0.008727098432723096,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 13,
+            "name": "Hammersmith and Fulham",
+            "description": "This West London borough offers riverside views, excellent shopping, and sports venues. It's a desirable area for professionals and families seeking a central yet suburban feel.", "latitude": 51.4927, "longitude": -0.2339, "features": {"Rent Price": 768.01, "Distance": 4.6702763645, "Well Being": 7.663, "Travelling Time": 2682, "Cost of Living": 83600}, "indexGAHP": 0.008525565746564457, "isInsideDistance": True, "isAffordableRent": False, "isInsideCostOfLiving": False}, {"ID": 7, "name": "Camden", "description": "Famous for its markets and cultural attractions, Camden offers a lively, eclectic lifestyle. It's ideal for young professionals and creatives who enjoy a vibrant nightlife and arts scene.",
+            "latitude": 51.545,
+            "longitude": -0.1622,
+            "features": {
+                "Rent Price": 921.61,
+                "Distance": 5.7427541962,
+                "Well Being": 7.343,
+                "Travelling Time": 1937,
+                "Cost of Living": 119000
+            },
+            "indexGAHP": 0.00801731974933606,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 28,
+            "name": "Southwark",
+            "description": "Home to major landmarks like the Shard and Borough Market. Southwark offers a vibrant, central lifestyle with cultural attractions and a bustling social scene, popular among young professionals.",
+            "latitude": 51.5035,
+            "longitude": -0.0804,
+            "features": {
+                "Rent Price": 649.85,
+                "Distance": 17.23172701,
+                "Well Being": 7.25,
+                "Travelling Time": 1134.3333333333333,
+                "Cost of Living": 57800
+            },
+            "indexGAHP": 0.007701795415553324,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 19,
+            "name": "Islington",
+            "description": "Known for its Georgian townhouses and lively arts scene, Islington offers a vibrant, central lifestyle with plenty of dining and entertainment options, popular among young professionals.",
+            "latitude": 51.538,
+            "longitude": -0.103,
+            "features": {
+                "Rent Price": 768.01,
+                "Distance": 19.6818185215,
+                "Well Being": 7.253,
+                "Travelling Time": 1112,
+                "Cost of Living": 76600
+            },
+            "indexGAHP": 0.007299385160781611,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 23,
+            "name": "Lewisham",
+            "description": "A diverse borough with plenty of green spaces and community markets. It offers a family-friendly environment with good schools and affordable housing.",
+            "latitude": 51.4452,
+            "longitude": -0.0209,
+            "features": {
+                "Rent Price": 590.78,
+                "Distance": 6.9749630095,
+                "Well Being": 7.447,
+                "Travelling Time": 3292.3333333333335,
+                "Cost of Living": 44800
+            },
+            "indexGAHP": 0.007104000181691827,
+            "isInsideDistance": True,
+            "isAffordableRent": True,
+            "isInsideCostOfLiving": False
         },
         {
             "ID": 33,
             "name": "Westminster",
+            "description": "The heart of London, home to the UK’s central government and iconic landmarks. It offers a prestigious lifestyle with cultural attractions and excellent transport links, popular among affluent professionals.",
+            "latitude": 51.4975,
+            "longitude": -0.1372,
             "features": {
-                "Rent Price": 1446.22,
-                "Distance": 12.7698064238,
-                "Well Being": 7.087
+                "Rent Price": 824.72,
+                "Distance": 9.5207420793,
+                "Well Being": 7.087,
+                "Travelling Time": 1555,
+                "Cost of Living": 133000
             },
-            "indexGAHP": 0.0007818792710211209
+            "indexGAHP": 0.0068738568068896395,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
         },
         {
-            "ID": 1,
-            "name": "City of London",
+            "ID": 12,
+            "name": "Hackney",
+            "description": "Renowned for its creative arts scene and trendy markets, Hackney offers a vibrant lifestyle with plenty of nightlife and cultural activities, popular among young professionals.",
+            "latitude": 51.5456,
+            "longitude": -0.0552,
             "features": {
-                "Rent Price": 1595.09,
-                "Distance": 17.7015592458,
-                "Well Being": 7.213
+                "Rent Price": 768.01,
+                "Distance": 11.1970988485,
+                "Well Being": 7.18,
+                "Travelling Time": 1799,
+                "Cost of Living": 52500
             },
-            "indexGAHP": 0.0007247276857976755
+            "indexGAHP": 0.006851507646610752,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 25,
+            "name": "Newham",
+            "description": "Experiencing rapid development, Newham offers modern amenities, good transport links, and attractions like the Olympic Park, appealing to young professionals and families.",
+            "latitude": 51.5071,
+            "longitude": 0.0462,
+            "features": {
+                "Rent Price": 620.31,
+                "Distance": 13.7139855132,
+                "Well Being": 7.997,
+                "Travelling Time": 2368,
+                "Cost of Living": 36100
+            },
+            "indexGAHP": 0.0063588295482841254,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 14,
+            "name": "Haringey",
+            "description": "Home to Alexandra Palace and Tottenham Hotspur, Haringey offers diverse neighborhoods with good transport links, making it a popular choice for both families and young professionals.",
+            "latitude": 51.5908,
+            "longitude": -0.1117,
+            "features": {
+                "Rent Price": 614.41,
+                "Distance": 9.1674264953,
+                "Well Being": 7.123,
+                "Travelling Time": 2592.6666666666665,
+                "Cost of Living": 57100
+            },
+            "indexGAHP": 0.006313433117247387,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 24,
+            "name": "Merton",
+            "description": "Known for the Wimbledon Tennis Championships, Merton offers a quiet suburban lifestyle with excellent schools and parks, making it popular among families.",
+            "latitude": 51.403,
+            "longitude": -0.1947,
+            "features": {
+                "Rent Price": 649.85,
+                "Distance": 8.9017309529,
+                "Well Being": 7.47,
+                "Travelling Time": 2599,
+                "Cost of Living": 63000
+            },
+            "indexGAHP": 0.006276060647417198,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 15,
+            "name": "Harrow",
+            "description": "A suburban borough known for its excellent schools and peaceful residential areas. It's ideal for families seeking a quieter lifestyle with good amenities.", "latitude": 51.5788, "longitude": -0.3339, "features": {"Rent Price": 590.78, "Distance": 8.5139721521, "Well Being": 7.703, "Travelling Time": 3612.3333333333335, "Cost of Living": 46500}, "indexGAHP": 0.006238940582840385, "isInsideDistance": True, "isAffordableRent": True, "isInsideCostOfLiving": False}, {"ID": 21, "name": "Kingston upon Thames", "description": "A historic borough with a riverside setting and extensive shopping. It offers a suburban lifestyle with good schools and green spaces, ideal for families.", "latitude": 51.4123, "longitude": -0.3005, "features": {"Rent Price": 590.78, "Distance": 7.0801060551, "Well Being": 7.45, "Travelling Time": 5461, "Cost of Living": 56500}, "indexGAHP": 0.006048992460733199, "isInsideDistance": True, "isAffordableRent": True, "isInsideCostOfLiving": False}, {"ID": 26, "name": "Redbridge", "description": "Known for its leafy suburbs and extensive parks, Redbridge offers a blend of urban and rural living with good schools, making it ideal for families.", "latitude": 51.5755, "longitude": 0.0851, "features": {"Rent Price": 590.78, "Distance": 9.1266532191, "Well Being": 7.703, "Travelling Time": 3981, "Cost of Living": 42700}, "indexGAHP": 0.006039295185159315, "isInsideDistance": True, "isAffordableRent": True, "isInsideCostOfLiving": False}, {"ID": 30, "name": "Tower Hamlets", "description": "Rich in history and diversity, featuring the Tower of London and vibrant Brick Lane. Living here offers a mix of cultural experiences and modern amenities, popular among young professionals.", "latitude": 51.5099, "longitude": -0.0204, "features": {"Rent Price": 768.01, "Distance": 17.9483398511, "Well Being": 7.163, "Travelling Time": 1843, "Cost of Living": 55500}, "indexGAHP": 0.005844121820083745, "isInsideDistance": True, "isAffordableRent": False, "isInsideCostOfLiving": False}, {"ID": 11, "name": "Greenwich", "description": "Known for its maritime history and beautiful parks, living in Greenwich offers a mix of historical charm and modern amenities, attracting families and professionals alike.", "latitude": 51.4821, "longitude": 0.005, "features": {"Rent Price": 640.4, "Distance": 15.1974503211, "Well Being": 7.547, "Travelling Time": 2221.6666666666665, "Cost of Living": 48900}, "indexGAHP": 0.005783888012540051, "isInsideDistance": True, "isAffordableRent": False, "isInsideCostOfLiving": False}, {"ID": 5, "name": "Brent", "description": "Diverse and vibrant, with excellent transport links. Living here means enjoying cultural diversity, sports events at Wembley, and a mix of residential areas.", "latitude": 51.5588, "longitude": -0.2817, "features": {"Rent Price": 590.78, "Distance": 13.1196422103, "Well Being": 7.223, "Travelling Time": 2773, "Cost of Living": 44100}, "indexGAHP": 0.005720974493945496, "isInsideDistance": True, "isAffordableRent": True, "isInsideCostOfLiving": False}, {"ID": 22, "name": "Lambeth", "description": "Stretching along the South Bank, Lambeth features cultural institutions and a vibrant nightlife. It's popular among young professionals and those seeking an active social scene.",
+            "latitude": 51.4576,
+            "longitude": -0.1177,
+            "features": {
+                "Rent Price": 649.85,
+                "Distance": 19.5133035057,
+                "Well Being": 7.627,
+                "Travelling Time": 1926,
+                "Cost of Living": 56100
+            },
+            "indexGAHP": 0.005596126230373287,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 4,
+            "name": "Bexley",
+            "description": "Known for its suburban tranquility, Bexley provides good schools, parks, and a quieter, residential environment, appealing to families and those looking for more space.",
+            "latitude": 51.4557,
+            "longitude": 0.1504,
+            "features": {
+                "Rent Price": 649.85,
+                "Distance": 17.359786715,
+                "Well Being": 7.443,
+                "Travelling Time": 3317,
+                "Cost of Living": 38000
+            },
+            "indexGAHP": 0.0051958971144232145,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 2,
+            "name": "Barking and Dagenham",
+            "description": "An affordable option with ongoing regeneration projects. It offers a suburban lifestyle with improving amenities and good transport links. It's suitable for families and those seeking more space.", "latitude": 51.5365, "longitude": 0.1272, "features": {"Rent Price": 708.93, "Distance": 15.9951265176, "Well Being": 7.62, "Travelling Time": 4806, "Cost of Living": 31800}, "indexGAHP": 0.005194798824730951, "isInsideDistance": True, "isAffordableRent": False, "isInsideCostOfLiving": False}, {"ID": 32, "name": "Wandsworth", "description": "A Southwest London borough with riverside living, extensive parks, and attractions like Battersea Park. It offers a high quality of life with good schools, making it popular among families.", "latitude": 51.4565, "longitude": -0.191, "features": {"Rent Price": 708.93, "Distance": 10.4424241975, "Well Being": 7.4, "Travelling Time": 3283, "Cost of Living": 79700}, "indexGAHP": 0.005167470288500046, "isInsideDistance": True, "isAffordableRent": False, "isInsideCostOfLiving": False}, {"ID": 16, "name": "Havering", "description": "Featuring rural countryside and suburban towns, Havering offers a relaxed, family-friendly environment with good schools and community facilities.", "latitude": 51.5742, "longitude": 0.1831, "features": {"Rent Price": 590.78, "Distance": 19.5858335343, "Well Being": 7.653, "Travelling Time": 2942, "Cost of Living": 40000}, "indexGAHP": 0.005144526332098853, "isInsideDistance": True, "isAffordableRent": True, "isInsideCostOfLiving": False}, {"ID": 10, "name": "Enfield", "description": "Combining urban and rural environments, Enfield offers a mix of historic sites, parks, and residential areas. It's suitable for those seeking a balance of city and countryside living.",
+            "latitude": 51.6523,
+            "longitude": -0.0815,
+            "features": {
+                "Rent Price": 584.87,
+                "Distance": 16.5817382046,
+                "Well Being": 7.54,
+                "Travelling Time": 3799,
+                "Cost of Living": 42800
+            },
+            "indexGAHP": 0.004839306022397668,
+            "isInsideDistance": True,
+            "isAffordableRent": True,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 9,
+            "name": "Ealing",
+            "description": "Known for its green spaces and community events, Ealing offers a suburban lifestyle with a vibrant cultural scene, making it attractive to families and young professionals.",
+            "latitude": 51.5111,
+            "longitude": -0.3084,
+            "features": {
+                "Rent Price": 602.59,
+                "Distance": 17.7015592458,
+                "Well Being": 7.337,
+                "Travelling Time": 3619.3333333333335,
+                "Cost of Living": 46800
+            },
+            "indexGAHP": 0.004661696815880939,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 3,
+            "name": "Barnet",
+            "description": "This North London borough offers a suburban lifestyle with excellent schools, ample green spaces, and a strong community feel, making it ideal for families.",
+            "latitude": 51.6252,
+            "longitude": -0.1517,
+            "features": {
+                "Rent Price": 649.85,
+                "Distance": 13.9354928232,
+                "Well Being": 7.113,
+                "Travelling Time": 5442,
+                "Cost of Living": 59100
+            },
+            "indexGAHP": 0.004213499556506838,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 6,
+            "name": "Bromley",
+            "description": "A leafy borough with extensive parks and woodlands. It offers a suburban feel with good schools and family-friendly amenities, making it popular among families.",
+            "latitude": 51.4036,
+            "longitude": 0.0196,
+            "features": {
+                "Rent Price": 531.7,
+                "Distance": 18.7406085173,
+                "Well Being": 7.41,
+                "Travelling Time": 4380,
+                "Cost of Living": 54500
+            },
+            "indexGAHP": 0.004097458045555232,
+            "isInsideDistance": True,
+            "isAffordableRent": True,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 18,
+            "name": "Hounslow",
+            "description": "A mix of urban and rural environments with excellent transport links and historical sites. Living here offers convenience and a diverse community, ideal for professionals and families.",
+            "latitude": 51.4672,
+            "longitude": -0.3617,
+            "features": {
+                "Rent Price": 620.31,
+                "Distance": 24.6924338909,
+                "Well Being": 7.607,
+                "Travelling Time": 4296,
+                "Cost of Living": 45400
+            },
+            "indexGAHP": 0.004068991184440807,
+            "isInsideDistance": True,
+            "isAffordableRent": False,
+            "isInsideCostOfLiving": False
+        },
+        {
+            "ID": 17,
+            "name": "Hillingdon",
+            "description": "The westernmost borough, home to Heathrow Airport. It offers significant green spaces and a suburban lifestyle, appealing to families and frequent travelers.",
+            "latitude": 51.5333,
+            "longitude": -0.4532,
+            "features": {
+                "Rent Price": 590.78,
+                "Distance": 22.3700263752,
+                "Well Being": 7.69,
+                "Travelling Time": 5650,
+                "Cost of Living": 41600
+            },
+            "indexGAHP": 0.0040224422180038626,
+            "isInsideDistance": True,
+            "isAffordableRent": True,
+            "isInsideCostOfLiving": False
         }
     ]
 }

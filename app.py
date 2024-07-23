@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify, send_file
+from flask import Flask, render_template, request, jsonify, send_file, redirect
 import os
 import json
 import io
-import matplotlib.pyplot as plt
+import plotly.graph_objects as go
+import plotly.io as pio
 import requests
 
 app = Flask(__name__)
@@ -13,11 +14,11 @@ def form():
 
 @app.route('/result')
 def formRedirect():
-    return render_template('formRedirect.html')
+    return render_template('results.html')
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    # data = request.get_json()
+
     userName = request.form['name']
     emailAddres = request.form['email']
     referenceBoroughId = request.form['borough']
@@ -32,7 +33,7 @@ def submit():
     payload = {
         'userName': userName,
         'emailAddres': emailAddres,
-        'referenceBoroughId': referenceBoroughId,
+        'referenceBoroughId': int(referenceBoroughId),
         'maximumDistanceFromReference': int(maximumDistanceFromReference),
         'incomePerMonth': int(incomePerMonth),
         'categoryPlace': int(categoryPlace),
@@ -47,27 +48,37 @@ def submit():
     # Fazendo a requisição POST para a API externa
     response = requests.post(api_url, json=payload)
 
-    ## Verificando a resposta da API
-    #if response.status_code == 200:
-    #    print(f'Success: {response.json()}')
-    #    
-    #else:
-    #    print(f'Failed: {response.status_code}, {response.text}')
+    responseJson = response.json()
 
-    #return redirect(url_for('form'))
-    # Sample data for the map
-    
+    # print(responseJson)
+
+    ranking1 = responseJson['ranking'][0]
+    ranking1_name = ranking1['name']
+    ranking1_description = ranking1['description']
+    ranking1_latitude = ranking1['latitude']
+    ranking1_longitude = ranking1['longitude']
+
+    ranking2 = responseJson['ranking'][1]
+    ranking2_name = ranking2['name']
+    ranking2_description = ranking2['description']
+    ranking2_latitude = ranking2['latitude']
+    ranking2_longitude = ranking2['longitude']
+
+    ranking3 = responseJson['ranking'][2]
+    ranking3_name = ranking3['name']
+    ranking3_description = ranking3['description']
+    ranking3_latitude = ranking3['latitude']
+    ranking3_longitude = ranking3['longitude']
+
     map_data = [
-        {"rank":1,"latitude": 51.5155, "longitude": -0.0922, "name": "City of London"},
-        {"rank":2,"latitude": 51.5365, "longitude": 0.1272, "name": "Barking and Dagenham"},
-        {"rank":3,"latitude": 51.5365, "longitude": 0.1272, "name": "Barking and Dagenham"},
-        {"rank":4,"latitude": 51.5365, "longitude": 0.1272, "name": "Barking and Dagenham"}
-    ]
+        {"rank":1,"latitude": ranking1_latitude, "longitude": ranking1_longitude, "name": "ranking1_name"},
+        {"rank":2,"latitude": ranking2_latitude, "longitude": ranking2_longitude, "name": "ranking2_name"},
+        {"rank":3,"latitude": ranking3_latitude, "longitude": ranking3_longitude, "name": "ranking3_name"}
+        ]
 
-    name = request.form['name']
-    email = request.form['email']
-    
-    return render_template('results.html', name=name, email=email)
+    features = responseJson['inputUser']['priorities']
+
+    return render_template('results.html', ranking1_name=ranking1_name, ranking1_description=ranking1_description, ranking1_latitude=ranking1_latitude,ranking1_longitude=ranking1_longitude,ranking2_name=ranking2_name,ranking2_description=ranking2_description,ranking2_latitude=ranking2_latitude,ranking2_longitude=ranking2_longitude,ranking3_name=ranking3_name,ranking3_description=ranking3_description,ranking3_latitude=ranking3_latitude,ranking3_longitude=ranking3_longitude,map_data=map_data,features=features)
 
 
 @app.route('/data/boroughs')
@@ -106,6 +117,16 @@ def generate_chart(chart_id):
     plt.savefig(img, format='png')
     img.seek(0)
     return send_file(img, mimetype='image/png')
+
+@app.route('/polar-chart-data')
+def get_polar_chart_data():
+    data = {
+        'Borough 1': [1, 5, 2, 2, 3],
+        'Borough 2': [4, 3, 2.5, 1, 2],
+        'Borough 3': [2, 3, 5, 1, 4],
+        'Borough RF': [2, 3, 5, 1, 4]
+    }
+    return jsonify(data)
 
 if __name__ == '__main__':
     app.run(debug=True)
