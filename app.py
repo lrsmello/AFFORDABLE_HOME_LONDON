@@ -53,7 +53,28 @@ def submit():
     ranking2 = responseJson['ranking'][1]
     ranking3 = responseJson['ranking'][2]
 
+    ## Verificando a resposta da API
+    #if response.status_code == 200:
+    #    print(f'Success: {response.json()}')
+    #    
+    #else:
+    #    print(f'Failed: {response.status_code}, {response.text}')
+
+    #return redirect(url_for('form'))
+    # Sample data for the map
+    
+    # map_data = [
+    #     {"rank":1,"latitude": 51.5155, "longitude": -0.0922, "name": "City of London"},
+    #     {"rank":2,"latitude": 51.5365, "longitude": 0.1272, "name": "Barking and Dagenham"},
+    #     {"rank":3,"latitude": 51.5365, "longitude": 0.1272, "name": "Barking and Dagenham"},
+    #     {"rank":4,"latitude": 51.5365, "longitude": 0.1272, "name": "Barking and Dagenham"}
+    # ]
+
+    # name = request.form['name']
+    # email = request.form['email']
+    
     return render_template('formRedirect.html', ranking1=ranking1, ranking2=ranking2, ranking3=ranking3)
+
 
 @app.route('/data/boroughs')
 def get_boroughs():
@@ -61,6 +82,7 @@ def get_boroughs():
     with open(data_path) as f:
         boroughs = json.load(f)
     return jsonify(boroughs)
+
 
 @app.route('/data/dimPriority')
 def get_dimPriorities():
