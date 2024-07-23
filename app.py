@@ -5,7 +5,6 @@ import io
 import plotly.graph_objects as go
 import plotly.io as pio
 import requests
-import treatment
 
 app = Flask(__name__)
 
