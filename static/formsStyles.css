@@ -29,41 +29,6 @@ form {
     display: flex;
     flex-direction: column;
 }
-/*label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-input, select, button {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 95%;
-}
-button {
-    background-color: #0078D7;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #005bb5;
-}
-.checkbox-group {
-    display: flex;
-   flex-wrap: wrap;
-   gap: 10px;
-}
-.checkbox-group .form-check {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-.checkbox-group .form-check label {
-    font-weight: normal;
-}
-*/
 
 /* Estilos personalizados */
 body {

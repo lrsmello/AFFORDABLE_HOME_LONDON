@@ -1,55 +1,47 @@
-import requests
-import json
-import itertools
+import googlemaps
+import pandas as pd
+import time
 
-def get_distance_matrix(origins, destinations, api_key, mode='transit'):
-    base_url = "https://maps.googleapis.com/maps/api/distancematrix/json"
-    
-    params = {
-        'origins': '|'.join(origins),
-        'destinations': '|'.join(destinations),
-        'key': api_key,
-        'mode': mode,
-        'units': 'metric',
-        'transit_routing_preference': 'fewer_transfers'  # Adicional para transporte público, se necessário
-    }
-    
-    response = requests.get(base_url, params=params)
-    
-    if response.status_code == 200:
-        return response.json()
-    else:
-        response.raise_for_status()
+API_KEY = 'AIzaSyAxTNoH5-2ftR84_qLfWnTb4HWU4VjsMMc'
 
-# Função para ler o arquivo JSON
-def read_locations_from_json(file_path):
-    with open(file_path, 'r') as file:
-        return json.load(file)
+gmaps = googlemaps.Client(key=API_KEY)
 
-# Exemplo de uso
-api_key = 'AIzaSyAxTNoH5-2ftR84_qLfWnTb4HWU4VjsMMc'
+# Caminho do arquivo JSON na pasta data
 file_path = 'data/boroughs.json'
 
-# Ler locais do arquivo JSON
-locations = read_locations_from_json(file_path)
+# Lendo o arquivo JSON usando pandas
+boroughs = pd.read_json(file_path)
 
-# Gerar todas as combinações possíveis de origens e destinos
-all_combinations = list(itertools.product(locations, repeat=2))
+# Função para obter a distância, duração e tarifa
+def get_distance_duration_fare(origin, destination):
+    response = gmaps.distance_matrix(origins=origin, destinations=destination, mode='transit')
+    element = response['rows'][0]['elements'][0]
+    distance = element.get('distance', {}).get('value', 'N/A')
+    duration = element.get('duration', {}).get('value', 'N/A')
+    fare = element.get('fare', {}).get('value', 'N/A')
+    return distance, duration, fare
+# Lista para armazenar os resultados
+results = []
+# Iterando sobre os boroughs para obter informações
+for origin_borough in boroughs:
+    origin = f"{origin_borough['latitude']},{origin_borough['longitude']}"
+    for destination_borough in boroughs:
+        if origin_borough['ID'] != destination_borough['ID']:
+            destination = f"{destination_borough['latitude']},{destination_borough['longitude']}"
+            distance, duration, fare = get_distance_duration_fare(origin, destination)
+            results.append({
+                'origin_ID': origin_borough['ID'],
+                'destination_ID': destination_borough['ID'],
+                'distance': distance,
+                'duration': duration,
+                'fare': fare
+            })
+            
+# Convertendo os resultados para um DataFrame
+results_df = pd.DataFrame(results)
 
-all_results = []
+# Salvando os resultados em um arquivo JSON
+results_df.to_json('data/distance_matrix_results.json', orient='records', lines=True)
 
-try:
-    for combo in all_combinations:
-        origin = f"{combo[0]['latitude']},{combo[0]['longitude']}"
-        destination = f"{combo[1]['latitude']},{combo[1]['longitude']}"
-        origins = [origin]
-        destinations = [destination]
-        result = get_distance_matrix(origins, destinations, api_key, mode='transit')
-        all_results.append(result)
-        print(result)
-except requests.exceptions.RequestException as e:
-    print(f"Erro ao realizar a solicitação: {e}")
-
-# Processar e imprimir resultados
-for result in all_results:
-    print(result)
+# Exibindo o DataFrame
+print(results_df)
