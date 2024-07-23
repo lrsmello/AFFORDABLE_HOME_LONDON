@@ -35,7 +35,7 @@ exports.runModel = async (req, res) => {
 
       // var maxRent = Math.max(ranking.map((b)=>{return b.features['Rent Price']}));
       // console.log(ranking.map((b)=>{return b.features['Rent Price']}));
-      res.send({ maxRent:maxRent, inputUser: userInformation, ranking:ranking });
+      res.send({ inputUser: userInformation, ranking:ranking });
     } else {
       res.send({ ranking });
     }
