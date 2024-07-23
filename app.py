@@ -5,6 +5,7 @@ import io
 import plotly.graph_objects as go
 import plotly.io as pio
 import requests
+import treatment
 
 app = Flask(__name__)
 
@@ -50,6 +51,8 @@ def submit():
 
     responseJson = response.json()
 
+    ranking = responseJson['ranking']
+
     # print(responseJson)
 
     ranking1 = responseJson['ranking'][0]
@@ -69,6 +72,8 @@ def submit():
     ranking3_description = ranking3['description']
     ranking3_latitude = ranking3['latitude']
     ranking3_longitude = ranking3['longitude']
+
+    df = treatment.transform(ranking)
 
     map_data = [
         {"rank":1,"latitude": ranking1_latitude, "longitude": ranking1_longitude, "name": "ranking1_name"},
