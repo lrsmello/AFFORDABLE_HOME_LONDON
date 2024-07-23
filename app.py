@@ -17,6 +17,8 @@ def form():
 def formRedirect():
     return render_template('results.html')
 
+features = []
+
 @app.route('/submit', methods=['POST'])
 def submit():
 
@@ -51,39 +53,44 @@ def submit():
 
     responseJson = response.json()
 
-    ranking = responseJson['ranking']
-
     # print(responseJson)
 
-    ranking1 = responseJson['ranking'][0]
+    rankingRef = responseJson['ranking'][0]
+    rankingRef_name = rankingRef['name']
+    rankingRef_description = rankingRef['description']
+    rankingRef_latitude = rankingRef['latitude']
+    rankingRef_longitude = rankingRef['longitude']
+    rankingRef_normalized = rankingRef['normalizedFeatures']
+
+    df = treatment.transform(rankingRef_normalized)
+
+    ranking1 = responseJson['ranking'][1]
     ranking1_name = ranking1['name']
     ranking1_description = ranking1['description']
     ranking1_latitude = ranking1['latitude']
     ranking1_longitude = ranking1['longitude']
+    ranking1_normalized = ranking1['normalizedFeatures']
 
-    ranking2 = responseJson['ranking'][1]
+    ranking2 = responseJson['ranking'][2]
     ranking2_name = ranking2['name']
     ranking2_description = ranking2['description']
     ranking2_latitude = ranking2['latitude']
     ranking2_longitude = ranking2['longitude']
+    ranking2normalized = ranking2['normalizedFeatures']
 
-    ranking3 = responseJson['ranking'][2]
+    ranking3 = responseJson['ranking'][3]
     ranking3_name = ranking3['name']
     ranking3_description = ranking3['description']
     ranking3_latitude = ranking3['latitude']
     ranking3_longitude = ranking3['longitude']
+    ranking3_normalized = ranking3['normalizedFeatures']
 
-    df = treatment.transform(ranking)
-
-    map_data = [
-        {"rank":1,"latitude": ranking1_latitude, "longitude": ranking1_longitude, "name": "ranking1_name"},
-        {"rank":2,"latitude": ranking2_latitude, "longitude": ranking2_longitude, "name": "ranking2_name"},
-        {"rank":3,"latitude": ranking3_latitude, "longitude": ranking3_longitude, "name": "ranking3_name"}
-        ]
-
+    global features
     features = responseJson['inputUser']['priorities']
 
-    return render_template('results.html', ranking1_name=ranking1_name, ranking1_description=ranking1_description, ranking1_latitude=ranking1_latitude,ranking1_longitude=ranking1_longitude,ranking2_name=ranking2_name,ranking2_description=ranking2_description,ranking2_latitude=ranking2_latitude,ranking2_longitude=ranking2_longitude,ranking3_name=ranking3_name,ranking3_description=ranking3_description,ranking3_latitude=ranking3_latitude,ranking3_longitude=ranking3_longitude,map_data=map_data,features=features)
+    # print(features)
+
+    return render_template('results.html', rankingRef_name=rankingRef_name, rankingRef_description=rankingRef_description, rankingRef_latitude=rankingRef_latitude, rankingRef_longitude=rankingRef_longitude,ranking1_name=ranking1_name, ranking1_description=ranking1_description, ranking1_latitude=ranking1_latitude,ranking1_longitude=ranking1_longitude,ranking2_name=ranking2_name,ranking2_description=ranking2_description,ranking2_latitude=ranking2_latitude,ranking2_longitude=ranking2_longitude,ranking3_name=ranking3_name,ranking3_description=ranking3_description,ranking3_latitude=ranking3_latitude,ranking3_longitude=ranking3_longitude,features=features)
 
 
 @app.route('/data/boroughs')
@@ -125,11 +132,21 @@ def generate_chart(chart_id):
 
 @app.route('/polar-chart-data')
 def get_polar_chart_data():
+    categ_string = ['Exclui','Rent Price','Distance','Wellbeing','Travelling time','Cost of Living']
+    categories = features
+    x = []
+    y = 0
+    for i in categories:
+        for j in categ_string:
+            if categ_string.index(j) == i:
+                x.append(categ_string[i])      
+    
     data = {
         'Borough 1': [1, 5, 2, 2, 3],
         'Borough 2': [4, 3, 2.5, 1, 2],
         'Borough 3': [2, 3, 5, 1, 4],
-        'Borough RF': [2, 3, 5, 1, 4]
+        'Borough RF': [2, 3, 5, 1, 4],
+        'categories': x
     }
     return jsonify(data)
 
