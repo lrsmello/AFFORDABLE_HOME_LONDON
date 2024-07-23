@@ -1053,5 +1053,5 @@
 {"origin_ID":33,"destination_ID":29,"distance":20279,"duration":3464,"fare":1.75},
 {"origin_ID":33,"destination_ID":30,"distance":11241,"duration":3224,"fare":4.55},
 {"origin_ID":33,"destination_ID":31,"distance":17691,"duration":2724,"fare":3},
-{"origin_ID":33,"destination_ID":32,"distance":8666,"duration":2035,"fare":1.75},
+{"origin_ID":33,"destination_ID":32,"distance":8666,"duration":2035,"fare":1.75}
 ]
