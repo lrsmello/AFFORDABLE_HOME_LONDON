@@ -3,18 +3,14 @@ const modelService = require('../services/modelService');
 exports.runModel = async (req, res) => {
   try {
     const userInformation = req.body;  // Recebe as informações do corpo da requisição validadas
-    console.log(userInformation);
     const generatedDataMatrix = await modelService.createDataMatrix(userInformation);
-    console.log(generatedDataMatrix);
     const matrixNormalized = await modelService.getNormalizedMatrix(generatedDataMatrix);
-    console.log(matrixNormalized);
     const normalizedGaussians = await modelService.calculateNormalizedGaussianFactor(matrixNormalized);
-    console.log(normalizedGaussians);
     const matrix = await modelService.calculateIndex(normalizedGaussians, matrixNormalized, generatedDataMatrix);
-    console.log(matrix);
     let ranking = [];
     // Ordena decrescente para criar um ranking
     if (Array.isArray(matrix)) {
+      
       ranking = matrix.sort((a, b) => b.indexGAHP - a.indexGAHP);
       var distance = userInformation.maximumDistanceFromReference;
       var incomePerMonth = userInformation.incomePerMonth;
@@ -36,7 +32,10 @@ exports.runModel = async (req, res) => {
         }
 
       });
-      res.send({ ranking });
+
+      // var maxRent = Math.max(ranking.map((b)=>{return b.features['Rent Price']}));
+      // console.log(ranking.map((b)=>{return b.features['Rent Price']}));
+      res.send({ maxRent:maxRent, inputUser: userInformation, ranking:ranking });
     } else {
       res.send({ ranking });
     }
