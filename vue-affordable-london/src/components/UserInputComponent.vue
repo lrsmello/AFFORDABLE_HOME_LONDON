@@ -107,7 +107,7 @@ onMounted(() => {
     </div>
 
     <div class="form-group">
-      <label for="distance">Maximum distance from Reference:</label>
+      <label for="distance">Maximum distance from Reference (KM):</label>
       <input
         type="number"
         class="form-control"
@@ -119,7 +119,7 @@ onMounted(() => {
     </div>
 
     <div class="form-group">
-      <label for="income">Monthly income:</label>
+      <label for="income">Monthly income £:</label>
       <input
         v-model="dados.incomePerMonth"
         type="number"
