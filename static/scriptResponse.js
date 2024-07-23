@@ -1,29 +1,24 @@
-// Carregar ResponseMethod do JSON
-const formData = {
-    userName: document.getElementById('name').value,
-    emailAddres: document.getElementById('email').value,
-    referenceBoroughId: document.getElementById('borough').value,
-    maximumDistanceFromReference: document.getElementById('distance').value,
-    incomePerMonth: document.getElementById('income').value,
-    categoryPlace: document.getElementById('dimCategoryRoom').value,
-    priorities: Array.from(document.querySelectorAll('input[name="dimPriority"]:checked')).map(checkbox => parseInt(checkbox.value))
-};
-
-const options = {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-}
-
-function sendData() {
-    $.ajax({
-        url: '/submit', 
-        type: 'POST', 
-        data: JSON.stringify(formData),
-        success: function(response)
-    });
-}
+$(document).ready(function() {
+    $('#form').on('submit',function(e){
+        $.ajax({
+            data: {
+                userName: $('#name').val(),
+                emailAddres: $('#email').val(),
+                referenceBoroughId: $('#borough').val(),
+                maximumDistanceFromReference: $('#distance').val(),
+                incomePerMonth: $('#income').val(),
+                categoryPlace: $('#dimCategoryRoom').val(),
+                priorities: Array.from(document.querySelectorAll('input[name="dimPriority"]:checked')).map(checkbox => parseInt(checkbox.val()))
+            },
+            url: '/submit', 
+            type: 'POST'
+        })
+        .done(function(data){
+            $('#output').text(data.output).show();
+          });
+          e.preventDefault();
+        });
+    }
+);
 
 
