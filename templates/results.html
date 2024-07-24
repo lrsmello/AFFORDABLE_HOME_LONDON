@@ -30,10 +30,12 @@
         <br>
 
         <!-- nova lista-->
-        <h3>Here is the list of boroughs to live in based on the priorities that were set.</h3>
-        <h4>Each line brings a quick description of the borough and information whether this borough is affordable, 
-            based on the monthly income that was informed, and if the borough is within the distance from the reference set.</h4>
-        <h4>Note: the first line is related to your reference selection.</h4>
+        <div id="textBlock">
+            <h3>Here is the list of boroughs to live in based on the priorities that were set.</h3>
+            <h4>Each line brings a quick description of the borough and information whether this borough is affordable, 
+                based on the monthly income that was informed, and if the borough is within the distance from the reference set.</h4>
+            <h4>Note: the first line is related to your reference selection.</h4>
+        </div>
             <table id="lista_recomendacao" class="table table-hover">
             <thead>
                 <tr>
@@ -87,17 +89,21 @@
 
         <!-- Div para o mapa Choropleth Plotly -->
         <br>
+        <div id="textBlock">
         <h3>Compare the recommended boroughs on the map</h3>
         <h4>Check here the location of the boroughs that were recomended. 
             Move the mouse on top of each marker to visualize each borough's location.</h4>
+        </div>
         <div id="plotly-map" class="mt-5" style="height: 400;"></div>
 
         <div id="charts" class="mt-5">
 
+        <div id="textBlock">
             <h3>Compare the main characteristics of the boroughs</h3>
             <h4>Based on the selected priorities, compare each borough's characteristics to decide which one fits better for you. </h4>
-            <h4>Note that the optimized option is the one which the parameters are close to 1. The reference borough will always show distance and travelling time equals to 1. You can click on the borough name in the legend to remove or add it from the graph view.</h4>
-            <h4>Note that Rent Prices at 1 means that there are no available data on the selected room category for that specidif borough.</h4>
+            <h4><ul>Note that the optimized option is the one which the parameters are close to 1. The reference borough will always show distance and travelling time equals to 1. You can click on the borough name in the legend to remove or add it from the graph view. <br>
+            Note that Rent Prices at 1 means that there are no available data on the selected room category for that specidif borough.</ul></h4>
+            </div>
             <div class="row">
                 <!-- Espaço onde estavam os gráficos removidos -->
             </div>

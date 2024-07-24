@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcT2DgyM_gzjEd6ebB4avNE0UKLK_YyntRc9mZD7If-dIAgQ1W4nhRaB1ueyPfGDkEUeu7r5t8jTpDMjR9VJiwpJdwL6V3nhZGCUsAIYWw');
+    background-image: url('https://www.spokin.com/wp-content/uploads/2023/10/london-3.png');
     background-size: cover;
     background-repeat: no-repeat;
     color: #333;
@@ -40,6 +40,14 @@ h4 {
     font-size: small;
     font-style: italic;
     font-family: Helvetica;
+}
+ul {
+    list-style-type: circle;
+}
+#textBlock{
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
 }
 form {
     display: flex;
