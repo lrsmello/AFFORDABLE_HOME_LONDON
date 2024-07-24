@@ -9,8 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "axios": "^1.7.2",
-    "bootstrap-vue": "^2.23.1",
+    "bootstrap": "^5.3.3",
     "chart.js": "^4.4.3",
     "vue": "^3.4.29",
     "vue-axios": "^3.5.2",

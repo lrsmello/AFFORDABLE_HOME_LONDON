@@ -43,11 +43,11 @@ exports.runModel = async (req, res) => {
       ranking = ranking.map((rk) => {
         // console.log(rk)
         rk['normalizedFeatures'] = {
-          'Rent Price': rk['features']['Rent Price'] / maxRent,
-          'Distance': rk['features']['Distance'] / maxDistance,
+          'Rent Price': 1-(rk['features']['Rent Price'] / maxRent),
+          'Distance': 1-(rk['features']['Distance'] / maxDistance),
           'Well Being': rk['features']['Well Being'] / maxWellBeing,
-          'Travelling Time': rk['features']['Travelling Time'] / maxTravellingTime,
-          'Cost of Living': rk['features']['Cost of Living'] / maxCostOfLiving,
+          'Travelling Time': 1-(rk['features']['Travelling Time'] / maxTravellingTime),
+          'Cost of Living': 1-(rk['features']['Cost of Living'] / maxCostOfLiving),
         };
         return rk;
       });
