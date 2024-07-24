@@ -15,6 +15,8 @@
     <!-- Plotly JS -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
     <script>
         function goBack() {
             window.history.back();
@@ -40,36 +42,41 @@
                     <th scope="col">Description</th>
                   <th scope="col">Affordable</th>
                 <th scope="col">Distance</th>
+                <th scope="col">Avg Income</th>
               </tr>
             </thead>
             <tbody>
-            <tr>
-                <th scope="row">1</th>
+            <tr  style="background-color: #d2dcf8;">
+                <th scope="row"></th>
                 <td>{{ rankingRef_name }}</td>
                 <td>{{rankingRef_description}}</td>
                 <td>{{rankingRef_IsAffordable}}</td>
                 <td>{{rankingRef_IsDistance}}</td>
+                <td>{{rankingRef_IsAvgIncome}}</td>
                 </tr>
               <tr>
-                <th scope="row">2</th>
+                <th scope="row">1</th>
                 <td>{{ ranking1_name }}</td>
                 <td>{{ranking1_description}}</td>
                 <td>{{ranking1_IsAffordable}}</td>
                 <td>{{ranking1_IsDistance}}</td>
+                <td>{{ranking1_IsAvgIncome}}</td>
               </tr>
               <tr>
-                <th scope="row">3</th>
+                <th scope="row">2</th>
                 <td>{{ ranking2_name }}</td>
                 <td>{{ranking2_description}}</td>
                 <td>{{ranking2_IsAffordable}}</td>
                 <td>{{ranking2_IsDistance}}</td>
+                <td>{{ranking2_IsAvgIncome}}</td>
               </tr>
               <tr>
-                <th scope="row">4</th>
+                <th scope="row">3</th>
                 <td>{{ ranking3_name }}</td>
                 <td>{{ranking3_description}}</td>
                 <td>{{ranking3_IsAffordable}}</td>
                 <td>{{ranking3_IsDistance}}</td>
+                <td>{{ranking3_IsAvgIncome}}</td>
               </tr>
             </tbody>
         </table>
@@ -232,6 +239,25 @@
                 .catch(error => console.error('Error loading polar chart data:', error));
         });
     </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Seleciona todas as <td> da tabela dentro do tbody
+        let tds = document.querySelectorAll('#lista_recomendacao tbody td');
+
+        // Percorre todas as <td>
+        tds.forEach(td => {
+            // Verifica se o texto dentro do <td> é "TRUE"
+            if (td.textContent.trim() === 'False') {
+                // Substitui o texto por um ícone de x
+                td.innerHTML = "<box-icon name='x' animation='tada' color='#ff0000' ></box-icon>";
+            } else if (td.textContent.trim() === 'True') {
+                // Substitui o texto por um ícone de check
+                td.innerHTML = "<box-icon name='check' animation='tada' color='#2eff00' ></box-icon>";
+            }
+        });
+    });
+</script>
 </body>
 
 </html>
