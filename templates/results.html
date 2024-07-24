@@ -16,10 +16,9 @@
 
     <script>
         function goBack() {
-          window.history.back()
+            window.history.back();
         }
     </script>
-
 </head>
 <body>
     <div class="container">
@@ -48,31 +47,28 @@
             <div id="polar-chart" class="mt-5" style="height: 500px;"></div>
         </div>
     </div>
-     
-    </div>
 
- 
-<!-- jQuery e Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jQuery e Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Código JavaScript para Plotly -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Dados dos pontos (latitude e longitude)
-            var data = [{
+            var mapData = [{
                 type: 'scattermapbox',
-                lat: ['{{ranking1_latitude}}', '{{ranking2_latitude}}','{{ranking3_latitude}}'],  // Latitude dos pontos
-                lon: ['{{ranking1_longitude}}', '{{ranking2_longitude}}','{{ranking3_longitude}}'],   // Longitude dos pontos
+                lat: ['{{ranking1_latitude}}', '{{ranking2_latitude}}', '{{ranking3_latitude}}'],  // Latitude dos pontos
+                lon: ['{{ranking1_longitude}}', '{{ranking2_longitude}}', '{{ranking3_longitude}}'],   // Longitude dos pontos
                 mode: 'markers',
                 marker: { size: 100 },
-                text: ['{{ranking1_name}}', '{{ranking2_name}}','{{ranking3_name}}']  // Textos dos pontos
+                text: ['{{ranking1_name}}', '{{ranking2_name}}', '{{ranking3_name}}']  // Textos dos pontos
             }];
 
             // Layout do mapa
-            var layout = {
+            var mapLayout = {
                 autosize: true,
                 hovermode: 'closest',
                 mapbox: {
@@ -89,9 +85,8 @@
             });
 
             // Desenhando o mapa
-            Plotly.newPlot('plotly-map', data, layout);
-        });
-    
+            Plotly.newPlot('plotly-map', mapData, mapLayout);
+
             // Carregar dados para o gráfico polar
             fetch('/polar-chart-data')
                 .then(response => response.json())
@@ -99,31 +94,43 @@
                     var polarData = [
                         {
                             type: 'scatterpolar',
-                            r: data['Borough 1'],
+                            r: data['Borough 1'].main,
                             theta: data['categories'],
                             fill: 'toself',
-                            name: '{{ranking1_name}}'
+                            name: '{{ranking1_name}}',
+                            line: { color: 'green' }, 
+                            text: data['Borough 1'].extra,  // Adiciona o valor fixo como texto
+                            hoverinfo: 'r+text'  // Exibe o valor de 'r' e o texto da nova variável
                         },
                         {
                             type: 'scatterpolar',
-                            r: data['Borough 2'],
+                            r: data['Borough 2'].main,
                             theta: data['categories'],
                             fill: 'toself',
-                            name: '{{ranking2_name}}'
+                            name: '{{ranking2_name}}',
+                            line: { color: 'green' }, 
+                            text: data['Borough 2'].extra,
+                            hoverinfo: 'r+text'
                         },
                         {
                             type: 'scatterpolar',
-                            r: data['Borough 3'],
+                            r: data['Borough 3'].main,
                             theta: data['categories'],
                             fill: 'toself',
-                            name: '{{ranking3_name}}'
+                            name: '{{ranking3_name}}',
+                            line: { color: 'green' }, 
+                            text: data['Borough 3'].extra,
+                            hoverinfo: 'r+text'
                         },
                         {
                             type: 'scatterpolar',
-                            r: data['Borough RF'],
+                            r: data['Borough RF'].main,
                             theta: data['categories'],
                             fill: 'toself',
-                            name: '{{rankingRef_name}}'
+                            name: '{{rankingRef_name}}',
+                            line: { color: 'blue' }, 
+                            text: data['Borough RF'].extra,
+                            hoverinfo: 'r+text'
                         }
                     ];
 
@@ -140,9 +147,7 @@
                     Plotly.newPlot('polar-chart', polarData, polarLayout);
                 })
                 .catch(error => console.error('Error loading polar chart data:', error));
-
+        });
     </script>
-
-
 </body>
 </html>
