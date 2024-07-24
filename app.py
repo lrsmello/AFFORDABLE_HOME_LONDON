@@ -57,7 +57,7 @@ def submit():
         'priorityValues': priority_values  # Adiciona os valores DS_PRIORITY ao payload
     }
 
-    print(payload)  # Print do payload
+    #print(payload)  # Print do payload
 
     # URL da API externa
     api_url = 'http://localhost:3000/api/model/run'
@@ -67,7 +67,7 @@ def submit():
 
     responseJson = response.json()
 
-    # print(responseJson)
+    print(responseJson)
 
     rankingRef = responseJson['ranking'][0]
     rankingRef_name = rankingRef['name']
@@ -159,10 +159,22 @@ def get_polar_chart_data():
     x = [categ_string[i] for i in categories if i < len(categ_string)]
     
     data = {
-        'Borough 1': ranking1Normalized,
-        'Borough 2': ranking2Normalized,
-        'Borough 3': ranking3Normalized,
-        'Borough RF': rankingRefNormalized,
+        'Borough 1': {
+            'main': ranking1Normalized,
+            'extra': 1
+        },
+        'Borough 2': {
+            'main': ranking2Normalized,
+            'extra': 2
+        },
+        'Borough 3': {
+            'main': ranking3Normalized,
+            'extra': 3
+        },
+        'Borough RF': {
+            'main': rankingRefNormalized,
+            'extra': 4
+        },
         'categories': x
     }
     return jsonify(data)
