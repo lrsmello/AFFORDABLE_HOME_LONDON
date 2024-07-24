@@ -25,35 +25,52 @@
 <body>
     <div class="container">
         <h1>WHERE TO LIVE IN LONDON</h1>
-        <h2>Here are the list of affordable boroughs to live in.</h2>
         <br>
 
         <!-- nova lista-->
-        <h3>Here are the list of affordable boroughs to live in.</h3>
-        <table id="lista_recomendacao" class="table table-hover">
+        <h3>Here is the list of boroughs to live in based on the priorities that were set.</h3>
+        <h4>Each line brings a quick description of the borough and information whether this borough is affordable, 
+            based on the monthly income that was informed, and if the borough is within the distance from the reference set.</h4>
+        <h4>Note: the first line is related to your reference selection.</h4>
+            <table id="lista_recomendacao" class="table table-hover">
             <thead>
                 <tr>
                     <th scope="col"> </th>
                     <th scope="col">Borough</th>
                     <th scope="col">Description</th>
-                </tr>
+                  <th scope="col">Affordable</th>
+                <th scope="col">Distance</th>
+              </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>{{ ranking1_name }}</td>
-                    <td>{{ranking1_description}}</td>
+            <tr>
+                <th scope="row">1</th>
+                <td>{{ rankingRef_name }}</td>
+                <td>{{rankingRef_description}}</td>
+                <td>{{rankingRef_IsAffordable}}</td>
+                <td>{{rankingRef_IsDistance}}</td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>{{ ranking2_name }}</td>
-                    <td>{{ranking2_description}}</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>{{ ranking3_name }}</td>
-                    <td>{{ranking3_description}}</td>
-                </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>{{ ranking1_name }}</td>
+                <td>{{ranking1_description}}</td>
+                <td>{{ranking1_IsAffordable}}</td>
+                <td>{{ranking1_IsDistance}}</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>{{ ranking2_name }}</td>
+                <td>{{ranking2_description}}</td>
+                <td>{{ranking2_IsAffordable}}</td>
+                <td>{{ranking2_IsDistance}}</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>{{ ranking3_name }}</td>
+                <td>{{ranking3_description}}</td>
+                <td>{{ranking3_IsAffordable}}</td>
+                <td>{{ranking3_IsDistance}}</td>
+              </tr>
             </tbody>
         </table>
 
@@ -62,6 +79,7 @@
 
 
         <!-- Div para o mapa Choropleth Plotly -->
+        <br>
         <h3>Compare the recommended boroughs on the map</h3>
         <div id="plotly-map" class="mt-5" style="height: 400;"></div>
 
@@ -73,7 +91,12 @@
             </div>
             <div id="polar-chart" class="mt-5" style="height: 400px;"></div>
         </div>
+        <br>
+        <button type="submit" class="btn btn-primary" onclick="goBack()">Back to query</button>
+
     </div>
+
+    
 
     <!-- jQuery e Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -83,7 +106,7 @@
 
     <!-- Código JavaScript para Plotly -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             // Dados dos pontos (latitude e longitude)
             // scl = [
             //         [0, 'rgb(150,0,90)'], 
@@ -108,10 +131,12 @@
                 lon: ['{{rankingRef_longitude}}', '{{ranking1_longitude}}', '{{ranking2_longitude}}', '{{ranking3_longitude}}'],   // Longitude dos pontos
                 mode: 'markers',
                 marker: {
-                    color: ['{{rankingRef_name}}', '{{ranking1_name}}', '{{ranking2_name}}', '{{ranking3_name}}'],
+                    color: '#03aca0',
                     size: 100,
                     opacity: 0.5,
-                    colorscale: scl
+                    colorscale: scl,
+                    cmin: 0,
+                    cmax: 1,
                 },
                 text: ['{{rankingRef_name}}', '{{ranking1_name}}', '{{ranking2_name}}', '{{ranking3_name}}']  // Textos dos pontos
             }];
@@ -119,14 +144,19 @@
             // Layout do mapa
             var mapLayout = {
                 autosize: true,
-                hovermode: 'closest',
+                // hovermode: 'closest',
+                font: {color: 'white'},
+                dragmode: 'zoom',
                 mapbox: {
                     style: "open-street-map",
                     center: { lat: '{{rankingRef_latitude}}', lon: '{{rankingRef_longitude}}' },
                     domain: {x: [0, 1], y: [0, 1]},
+                    // style: 'light',
                     zoom: 9
                 },
-                margin: { t: 0, b: 0, l: 0, r: 0 }
+                margin: { t: 0, b: 0, l: 0, r: 0 },
+                paper_bgcolor: '#191A1A',
+                plot_bgcolor: '#191A1A'
             };
 
             // Configuração do mapa

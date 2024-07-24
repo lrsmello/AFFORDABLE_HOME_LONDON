@@ -25,6 +25,22 @@ h2 {
     margin-bottom: 10px;
     font-size: small;
 }
+h3 {
+    color: #000000; /* Blue color representing the Thames river */
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: medium;
+    font-weight: bold;
+    font-family: Helvetica;
+}
+h4 {
+    color: #000000; /* Blue color representing the Thames river */
+    text-align: justify;
+    margin-bottom: 10px;
+    font-size: small;
+    font-style: italic;
+    font-family: Helvetica;
+}
 form {
     display: flex;
     flex-direction: column;
