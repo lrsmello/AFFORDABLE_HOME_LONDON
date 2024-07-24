@@ -36,8 +36,8 @@ def submit():
     # Criar um dicionário para mapear IDs para DS_PRIORITY
     priority_dict = {item['ID']: item['DS_PRIORITY'] for item in dimPriorityData}
 
-    userName = request.form['name']
-    emailAddres = request.form['email']
+    #userName = request.form['name']
+    #emailAddres = request.form['email']
     referenceBoroughId = request.form['borough']
     maximumDistanceFromReference = request.form['distance']
     incomePerMonth = request.form['income']
@@ -51,8 +51,8 @@ def submit():
 
     # Criando o payload para a API
     payload = {
-        'userName': userName,
-        'emailAddres': emailAddres,
+        #'userName': userName,
+        #'emailAddres': emailAddres,
         'referenceBoroughId': int(referenceBoroughId),
         'maximumDistanceFromReference': int(maximumDistanceFromReference),
         'incomePerMonth': int(incomePerMonth),
