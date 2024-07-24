@@ -44,7 +44,7 @@
                     <th scope="col">Description</th>
                   <th scope="col">Affordable</th>
                 <th scope="col">Distance</th>
-                <th scope="col">Avg Income</th>
+                <th scope="col">Income</th>
               </tr>
             </thead>
             <tbody>
@@ -147,16 +147,17 @@
                 type: 'scattermapbox',
                 lat: ['{{rankingRef_latitude}}', '{{ranking1_latitude}}', '{{ranking2_latitude}}', '{{ranking3_latitude}}'],  // Latitude dos pontos
                 lon: ['{{rankingRef_longitude}}', '{{ranking1_longitude}}', '{{ranking2_longitude}}', '{{ranking3_longitude}}'],   // Longitude dos pontos
+                text: ['{{rankingRef_name}}', '{{ranking1_name}}', '{{ranking2_name}}', '{{ranking3_name}}'],  // Textos dos pontos
                 mode: 'markers',
                 marker: {
-                    color: '#03aca0',
+                    color: ['blue', '#03aca0', '#03aca0', '#03aca0'],
                     size: 100,
                     opacity: 0.5,
                     colorscale: scl,
                     cmin: 0,
                     cmax: 1,
-                },
-                text: ['{{rankingRef_name}}', '{{ranking1_name}}', '{{ranking2_name}}', '{{ranking3_name}}']  // Textos dos pontos
+                }
+                
             }];
 
             // Layout do mapa
@@ -261,7 +262,7 @@
                 td.innerHTML = "<box-icon name='x' animation='tada' color='#ff0000' ></box-icon>";
             } else if (td.textContent.trim() === 'True') {
                 // Substitui o texto por um ícone de check
-                td.innerHTML = "<box-icon name='check' animation='tada' color='#2eff00' ></box-icon>";
+                td.innerHTML = "<box-icon name='check' animation='tada' color='#029d1b' ></box-icon>";
             }
         });
     });
