@@ -71,7 +71,7 @@ def submit():
 
     responseJson = response.json()
 
-    print(responseJson)
+    # print(responseJson)
 
     rankingRef = responseJson['ranking'][0]
     rankingRef_name = rankingRef['name']
