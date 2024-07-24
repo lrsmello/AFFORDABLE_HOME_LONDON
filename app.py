@@ -22,6 +22,10 @@ rankingRefNormalized = []
 ranking1Normalized = []
 ranking2Normalized = []
 ranking3Normalized = []
+rankingReffeatures = []
+ranking1features = []
+ranking2features = []
+ranking3features = []
 
 @app.route('/submit', methods=['POST'])
 def submit():
@@ -75,6 +79,7 @@ def submit():
     rankingRef_latitude = rankingRef['latitude']
     rankingRef_longitude = rankingRef['longitude']
     rankingRef_normalized = rankingRef['normalizedFeatures']
+    rankingRef_features = rankingRef['features']
     rankingRef_IsAffordable = rankingRef['isAffordableRent']
     rankingRef_IsDistance = rankingRef['isInsideDistance']
     rankingRef_IsAvgIncome = rankingRef['isInsideCostOfLiving']
@@ -82,12 +87,16 @@ def submit():
     global rankingRefNormalized
     rankingRefNormalized = functions.dict_to_list(rankingRef_normalized)
 
+    global rankingReffeatures
+    rankingReffeatures = functions.dict_to_list(rankingRef_features)
+
     ranking1 = responseJson['ranking'][1]
     ranking1_name = ranking1['name']
     ranking1_description = ranking1['description']
     ranking1_latitude = ranking1['latitude']
     ranking1_longitude = ranking1['longitude']
     ranking1_normalized = ranking1['normalizedFeatures']
+    ranking1_features = ranking1['features']
     ranking1_IsAffordable = ranking1['isAffordableRent']
     ranking1_IsDistance = ranking1['isInsideDistance']
     ranking1_IsAvgIncome = ranking1['isInsideCostOfLiving']
@@ -95,12 +104,16 @@ def submit():
     global ranking1Normalized
     ranking1Normalized = functions.dict_to_list(ranking1_normalized)
 
+    global ranking1features
+    ranking1features = functions.dict_to_list(ranking1_features)
+
     ranking2 = responseJson['ranking'][2]
     ranking2_name = ranking2['name']
     ranking2_description = ranking2['description']
     ranking2_latitude = ranking2['latitude']
     ranking2_longitude = ranking2['longitude']
     ranking2_normalized = ranking2['normalizedFeatures']
+    ranking2_features = ranking2['features']
     ranking2_IsAffordable = ranking2['isAffordableRent']
     ranking2_IsDistance = ranking2['isInsideDistance']
     ranking2_IsAvgIncome = ranking2['isInsideCostOfLiving']
@@ -108,18 +121,25 @@ def submit():
     global ranking2Normalized
     ranking2Normalized  = functions.dict_to_list(ranking2_normalized)
 
+    global ranking2features
+    ranking2features  = functions.dict_to_list(ranking2_features)
+
     ranking3 = responseJson['ranking'][3]
     ranking3_name = ranking3['name']
     ranking3_description = ranking3['description']
     ranking3_latitude = ranking3['latitude']
     ranking3_longitude = ranking3['longitude']
     ranking3_normalized = ranking3['normalizedFeatures']
+    ranking3_features = ranking3['features']
     ranking3_IsAffordable = ranking3['isAffordableRent']
     ranking3_IsDistance = ranking3['isInsideDistance']
     ranking3_IsAvgIncome = ranking3['isInsideCostOfLiving']
     
     global ranking3Normalized
     ranking3Normalized  = functions.dict_to_list(ranking3_normalized)
+
+    global ranking3features
+    ranking3features  = functions.dict_to_list(ranking3_features)
 
     global features
     features = responseJson['inputUser']['priorities']
@@ -207,19 +227,19 @@ def get_polar_chart_data():
     data = {
         'Borough 1': {
             'main': ranking1Normalized,
-            'extra': 1
+            'extra': ranking1features
         },
         'Borough 2': {
             'main': ranking2Normalized,
-            'extra': 2
+            'extra': ranking1features
         },
         'Borough 3': {
             'main': ranking3Normalized,
-            'extra': 3
+            'extra': ranking1features
         },
         'Borough RF': {
             'main': rankingRefNormalized,
-            'extra': 4
+            'extra': ranking1features
         },
         'categories': x
     }
