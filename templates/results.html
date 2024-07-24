@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>London Form</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Arquivo CSS personalizado -->
     <link rel="stylesheet" type="text/css" href="static/formsStyles.css">
- 
+
     <!-- Plotly JS -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
@@ -22,21 +23,24 @@
         }
     </script>
 </head>
+
 <body>
     <div class="container">
         <h1>WHERE TO LIVE IN LONDON</h1>
-        <h2>Here are the list of affordable boroughs to live in.</h2>
         <br>
 
         <!-- nova lista-->
-        <h3>Here are the list of affordable boroughs to live in.</h3>
-        <table id="lista_recomendacao" class="table table-hover">
+        <h3>Here is the list of boroughs to live in based on the priorities that were set.</h3>
+        <h4>Each line brings a quick description of the borough and information whether this borough is affordable, 
+            based on the monthly income that was informed, and if the borough is within the distance from the reference set.</h4>
+        <h4>Note: the first line is related to your reference selection.</h4>
+            <table id="lista_recomendacao" class="table table-hover">
             <thead>
-              <tr>
-                <th scope="col"> </th>
-                <th scope="col">Borough</th>
-                <th scope="col">Description</th>
-                <th scope="col">Affordable</th>
+                <tr>
+                    <th scope="col"> </th>
+                    <th scope="col">Borough</th>
+                    <th scope="col">Description</th>
+                  <th scope="col">Affordable</th>
                 <th scope="col">Distance</th>
                 <th scope="col">Avg Income</th>
               </tr>
@@ -75,19 +79,25 @@
                 <td>{{ranking3_IsAvgIncome}}</td>
               </tr>
             </tbody>
-          </table>
+        </table>
 
         <!-- fim nova lista-->
 
-        
+
 
         <!-- Div para o mapa Choropleth Plotly -->
+        <br>
         <h3>Compare the recommended boroughs on the map</h3>
+        <h4>Check here the location of the boroughs that were recomended. 
+            Move the mouse on top of each marker to visualize each borough's location.</h4>
         <div id="plotly-map" class="mt-5" style="height: 400;"></div>
 
         <div id="charts" class="mt-5">
-        
-        <h3>Compare the main characteristics of the boroughs</h3>
+
+            <h3>Compare the main characteristics of the boroughs</h3>
+            <h4>Based on the selected priorities, compare each borough's characteristics to decide which one fits better for you. </h4>
+            <h4>Note that the optimized option is the one which the parameters are close to 1. The reference borough will always show distance and travelling time equals to 1. You can click on the borough name in the legend to remove or add it from the graph view.</h4>
+            <h4>Note that Rent Prices at 1 means that there are no available data on the selected room category for that specidif borough.</h4>
             <div class="row">
                 <!-- Espaço onde estavam os gráficos removidos -->
             </div>
@@ -110,25 +120,55 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Dados dos pontos (latitude e longitude)
+            // scl = [
+            //         [0, 'rgb(150,0,90)'], 
+            //         [0.125, 'rgb(0, 0, 200)'], 
+            //         [0.25, 'rgb(0, 25, 255)'], 
+            //         [0.375, 'rgb(0, 152, 255)'], 
+            //         [0.5, 'rgb(44, 255, 150)'], 
+            //         [0.625, 'rgb(151, 255, 0)'], 
+            //         [0.75, 'rgb(255, 234, 0)'], 
+            //         [0.875, 'rgb(255, 111, 0)'], 
+            //         [1, 'rgb(255, 0, 0)']];
+                scl = [
+                    [0, 'rgb(150,0,90)'], 
+                    [0.25, 'rgb(0, 0, 200)'], 
+                    [0.5, 'rgb(0, 25, 255)'], 
+                    [0.75, 'rgb(0, 152, 255)'], 
+                    [1, 'rgb(44, 255, 150)']];
+
             var mapData = [{
                 type: 'scattermapbox',
-                lat: ['{{ranking1_latitude}}', '{{ranking2_latitude}}', '{{ranking3_latitude}}'],  // Latitude dos pontos
-                lon: ['{{ranking1_longitude}}', '{{ranking2_longitude}}', '{{ranking3_longitude}}'],   // Longitude dos pontos
+                lat: ['{{rankingRef_latitude}}', '{{ranking1_latitude}}', '{{ranking2_latitude}}', '{{ranking3_latitude}}'],  // Latitude dos pontos
+                lon: ['{{rankingRef_longitude}}', '{{ranking1_longitude}}', '{{ranking2_longitude}}', '{{ranking3_longitude}}'],   // Longitude dos pontos
                 mode: 'markers',
-                marker: { size: 100 },
-                text: ['{{ranking1_name}}', '{{ranking2_name}}', '{{ranking3_name}}']  // Textos dos pontos
+                marker: {
+                    color: '#03aca0',
+                    size: 100,
+                    opacity: 0.5,
+                    colorscale: scl,
+                    cmin: 0,
+                    cmax: 1,
+                },
+                text: ['{{rankingRef_name}}', '{{ranking1_name}}', '{{ranking2_name}}', '{{ranking3_name}}']  // Textos dos pontos
             }];
 
             // Layout do mapa
             var mapLayout = {
                 autosize: true,
-                hovermode: 'closest',
+                // hovermode: 'closest',
+                font: {color: 'white'},
+                dragmode: 'zoom',
                 mapbox: {
                     style: "open-street-map",
                     center: { lat: '{{rankingRef_latitude}}', lon: '{{rankingRef_longitude}}' },
+                    domain: {x: [0, 1], y: [0, 1]},
+                    // style: 'light',
                     zoom: 9
                 },
-                margin: { t: 0, b: 0, l: 0, r: 0 }
+                margin: { t: 0, b: 0, l: 0, r: 0 },
+                paper_bgcolor: '#191A1A',
+                plot_bgcolor: '#191A1A'
             };
 
             // Configuração do mapa
@@ -221,4 +261,5 @@
     });
 </script>
 </body>
+
 </html>
