@@ -24,27 +24,52 @@
     <div class="container">
         <h1>WHERE TO LIVE IN LONDON</h1>
         <h2>Here are the list of affordable boroughs to live in.</h2>
-        
-        <div id="ranking">
-            <br>
-           First option: {{ ranking1_name }} <br>
-           <br>
-           Second option: {{ ranking2_name }} <br>
-           <br>
-           Third option: {{ ranking3_name }} <br><br>
-        </div>
+        <br>
 
-        <button type="submit" class="btn btn-primary" onclick="goBack()">Back to query</button>
+        <!-- nova lista-->
+        <h3>Here are the list of affordable boroughs to live in.</h3>
+        <table id="lista_recomendacao" class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">Borough</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>{{ ranking1_name }}</td>
+                <td>{{ranking1_description}}</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>{{ ranking2_name }}</td>
+                <td>{{ranking2_description}}</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>{{ ranking3_name }}</td>
+                <td>{{ranking3_description}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+        <!-- fim nova lista-->
+
+        
 
         <!-- Div para o mapa Choropleth Plotly -->
-        <div id="plotly-map" class="mt-5" style="height: 500px;"></div>
+        <h3>Compare the recommended boroughs on the map</h3>
+        <div id="plotly-map" class="mt-5" style="height: 400;"></div>
 
         <div id="charts" class="mt-5">
-            <h2>Generated Charts</h2>
+        
+        <h3>Compare the main characteristics of the boroughs</h3>
             <div class="row">
                 <!-- Espaço onde estavam os gráficos removidos -->
             </div>
-            <div id="polar-chart" class="mt-5" style="height: 500px;"></div>
+            <div id="polar-chart" class="mt-5" style="height: 400px;"></div>
         </div>
     </div>
 
