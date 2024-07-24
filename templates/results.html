@@ -14,6 +14,8 @@
     <!-- Plotly JS -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
     <script>
         function goBack() {
             window.history.back();
@@ -34,23 +36,43 @@
                 <th scope="col"> </th>
                 <th scope="col">Borough</th>
                 <th scope="col">Description</th>
+                <th scope="col">Affordable</th>
+                <th scope="col">Distance</th>
+                <th scope="col">Avg Income</th>
               </tr>
             </thead>
             <tbody>
+            <tr  style="background-color: #d2dcf8;">
+                <th scope="row"></th>
+                <td>{{ rankingRef_name }}</td>
+                <td>{{rankingRef_description}}</td>
+                <td>{{rankingRef_IsAffordable}}</td>
+                <td>{{rankingRef_IsDistance}}</td>
+                <td>{{rankingRef_IsAvgIncome}}</td>
+                </tr>
               <tr>
                 <th scope="row">1</th>
                 <td>{{ ranking1_name }}</td>
                 <td>{{ranking1_description}}</td>
+                <td>{{ranking1_IsAffordable}}</td>
+                <td>{{ranking1_IsDistance}}</td>
+                <td>{{ranking1_IsAvgIncome}}</td>
               </tr>
               <tr>
                 <th scope="row">2</th>
                 <td>{{ ranking2_name }}</td>
                 <td>{{ranking2_description}}</td>
+                <td>{{ranking2_IsAffordable}}</td>
+                <td>{{ranking2_IsDistance}}</td>
+                <td>{{ranking2_IsAvgIncome}}</td>
               </tr>
               <tr>
                 <th scope="row">3</th>
                 <td>{{ ranking3_name }}</td>
                 <td>{{ranking3_description}}</td>
+                <td>{{ranking3_IsAffordable}}</td>
+                <td>{{ranking3_IsDistance}}</td>
+                <td>{{ranking3_IsAvgIncome}}</td>
               </tr>
             </tbody>
           </table>
@@ -71,7 +93,12 @@
             </div>
             <div id="polar-chart" class="mt-5" style="height: 400px;"></div>
         </div>
+        <br>
+        <button type="submit" class="btn btn-primary" onclick="goBack()">Back to query</button>
+
     </div>
+
+    
 
     <!-- jQuery e Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -123,7 +150,7 @@
                             theta: data['categories'],
                             fill: 'toself',
                             name: '{{ranking1_name}}',
-                            line: { color: 'green' }, 
+                            line: { color: '#e16941' },  // Laranja
                             text: data['Borough 1'].extra,  // Adiciona o valor fixo como texto
                             hoverinfo: 'r+text'  // Exibe o valor de 'r' e o texto da nova variável
                         },
@@ -133,7 +160,7 @@
                             theta: data['categories'],
                             fill: 'toself',
                             name: '{{ranking2_name}}',
-                            line: { color: 'green' }, 
+                            line: { color: '#ffd000' },  // Amarelo
                             text: data['Borough 2'].extra,
                             hoverinfo: 'r+text'
                         },
@@ -143,7 +170,7 @@
                             theta: data['categories'],
                             fill: 'toself',
                             name: '{{ranking3_name}}',
-                            line: { color: 'green' }, 
+                            line: { color: '#69e141' },  // Verde 
                             text: data['Borough 3'].extra,
                             hoverinfo: 'r+text'
                         },
@@ -153,7 +180,7 @@
                             theta: data['categories'],
                             fill: 'toself',
                             name: '{{rankingRef_name}}',
-                            line: { color: 'blue' }, 
+                            line: { color: '#4169e1' },  // Azul do Times River (Royal Blue)
                             text: data['Borough RF'].extra,
                             hoverinfo: 'r+text'
                         }
@@ -174,5 +201,24 @@
                 .catch(error => console.error('Error loading polar chart data:', error));
         });
     </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Seleciona todas as <td> da tabela dentro do tbody
+        let tds = document.querySelectorAll('#lista_recomendacao tbody td');
+
+        // Percorre todas as <td>
+        tds.forEach(td => {
+            // Verifica se o texto dentro do <td> é "TRUE"
+            if (td.textContent.trim() === 'False') {
+                // Substitui o texto por um ícone de x
+                td.innerHTML = "<box-icon name='x' animation='tada' color='#ff0000' ></box-icon>";
+            } else if (td.textContent.trim() === 'True') {
+                // Substitui o texto por um ícone de check
+                td.innerHTML = "<box-icon name='check' animation='tada' color='#2eff00' ></box-icon>";
+            }
+        });
+    });
+</script>
 </body>
 </html>

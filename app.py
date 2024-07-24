@@ -75,6 +75,9 @@ def submit():
     rankingRef_latitude = rankingRef['latitude']
     rankingRef_longitude = rankingRef['longitude']
     rankingRef_normalized = rankingRef['normalizedFeatures']
+    rankingRef_IsAffordable = rankingRef['isAffordableRent']
+    rankingRef_IsDistance = rankingRef['isInsideDistance']
+    rankingRef_IsAvgIncome = rankingRef['isInsideCostOfLiving']
     
     global rankingRefNormalized
     rankingRefNormalized = functions.dict_to_list(rankingRef_normalized)
@@ -85,6 +88,9 @@ def submit():
     ranking1_latitude = ranking1['latitude']
     ranking1_longitude = ranking1['longitude']
     ranking1_normalized = ranking1['normalizedFeatures']
+    ranking1_IsAffordable = ranking1['isAffordableRent']
+    ranking1_IsDistance = ranking1['isInsideDistance']
+    ranking1_IsAvgIncome = ranking1['isInsideCostOfLiving']
 
     global ranking1Normalized
     ranking1Normalized = functions.dict_to_list(ranking1_normalized)
@@ -95,6 +101,9 @@ def submit():
     ranking2_latitude = ranking2['latitude']
     ranking2_longitude = ranking2['longitude']
     ranking2_normalized = ranking2['normalizedFeatures']
+    ranking2_IsAffordable = ranking2['isAffordableRent']
+    ranking2_IsDistance = ranking2['isInsideDistance']
+    ranking2_IsAvgIncome = ranking2['isInsideCostOfLiving']
     
     global ranking2Normalized
     ranking2Normalized  = functions.dict_to_list(ranking2_normalized)
@@ -105,6 +114,9 @@ def submit():
     ranking3_latitude = ranking3['latitude']
     ranking3_longitude = ranking3['longitude']
     ranking3_normalized = ranking3['normalizedFeatures']
+    ranking3_IsAffordable = ranking3['isAffordableRent']
+    ranking3_IsDistance = ranking3['isInsideDistance']
+    ranking3_IsAvgIncome = ranking3['isInsideCostOfLiving']
     
     global ranking3Normalized
     ranking3Normalized  = functions.dict_to_list(ranking3_normalized)
@@ -114,7 +126,41 @@ def submit():
 
     # print(features)
 
-    return render_template('results.html', rankingRef_name=rankingRef_name, rankingRef_description=rankingRef_description, rankingRef_latitude=rankingRef_latitude, rankingRef_longitude=rankingRef_longitude, ranking1_name=ranking1_name, ranking1_description=ranking1_description, ranking1_latitude=ranking1_latitude, ranking1_longitude=ranking1_longitude, ranking2_name=ranking2_name, ranking2_description=ranking2_description, ranking2_latitude=ranking2_latitude, ranking2_longitude=ranking2_longitude, ranking3_name=ranking3_name, ranking3_description=ranking3_description, ranking3_latitude=ranking3_latitude, ranking3_longitude=ranking3_longitude, features=features)
+    return render_template('results.html', 
+                           rankingRef_name=rankingRef_name, 
+                           rankingRef_description=rankingRef_description, 
+                           rankingRef_latitude=rankingRef_latitude, 
+                           rankingRef_longitude=rankingRef_longitude,
+                           rankingRef_IsAffordable=rankingRef_IsAffordable,
+                           rankingRef_IsDistance=rankingRef_IsDistance,
+                           rankingRef_IsAvgIncome=rankingRef_IsAvgIncome,
+
+                           ranking1_name=ranking1_name, 
+                           ranking1_description=ranking1_description, 
+                           ranking1_latitude=ranking1_latitude,
+                           ranking1_longitude=ranking1_longitude,
+                           ranking1_IsAffordable=ranking1_IsAffordable,
+                           ranking1_IsDistance=ranking1_IsDistance,
+                           ranking1_IsAvgIncome=ranking1_IsAvgIncome,
+
+                           ranking2_name=ranking2_name,
+                           ranking2_description=ranking2_description,
+                           ranking2_latitude=ranking2_latitude,
+                           ranking2_longitude=ranking2_longitude,
+                           ranking2_IsAffordable=ranking2_IsAffordable,
+                           ranking2_IsDistance=ranking2_IsDistance,
+                           ranking2_IsAvgIncome=ranking2_IsAvgIncome,
+
+                           ranking3_name=ranking3_name,
+                           ranking3_description=ranking3_description,
+                           ranking3_latitude=ranking3_latitude,
+                           ranking3_longitude=ranking3_longitude,
+                           ranking3_IsAffordable=ranking3_IsAffordable,
+                           ranking3_IsDistance=ranking3_IsDistance,
+                           ranking3_IsAvgIncome=ranking3_IsAvgIncome,
+
+                           features=features)
+
 
 @app.route('/data/boroughs')
 def get_boroughs():
