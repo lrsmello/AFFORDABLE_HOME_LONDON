@@ -34,23 +34,38 @@
                 <th scope="col"> </th>
                 <th scope="col">Borough</th>
                 <th scope="col">Description</th>
+                <th scope="col">Affordable</th>
+                <th scope="col">Distance</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
+            <tr>
                 <th scope="row">1</th>
-                <td>{{ ranking1_name }}</td>
-                <td>{{ranking1_description}}</td>
-              </tr>
+                <td>{{ rankingRef_name }}</td>
+                <td>{{rankingRef_description}}</td>
+                <td>{{rankingRef_IsAffordable}}</td>
+                <td>{{rankingRef_IsDistance}}</td>
+                </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>{{ ranking2_name }}</td>
-                <td>{{ranking2_description}}</td>
+                <td>{{ ranking1_name }}</td>
+                <td>{{ranking1_description}}</td>
+                <td>{{ranking1_IsAffordable}}</td>
+                <td>{{ranking1_IsDistance}}</td>
               </tr>
               <tr>
                 <th scope="row">3</th>
+                <td>{{ ranking2_name }}</td>
+                <td>{{ranking2_description}}</td>
+                <td>{{ranking2_IsAffordable}}</td>
+                <td>{{ranking2_IsDistance}}</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
                 <td>{{ ranking3_name }}</td>
                 <td>{{ranking3_description}}</td>
+                <td>{{ranking3_IsAffordable}}</td>
+                <td>{{ranking3_IsDistance}}</td>
               </tr>
             </tbody>
           </table>
@@ -71,7 +86,12 @@
             </div>
             <div id="polar-chart" class="mt-5" style="height: 400px;"></div>
         </div>
+        <br>
+        <button type="submit" class="btn btn-primary" onclick="goBack()">Back to query</button>
+
     </div>
+
+    
 
     <!-- jQuery e Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
