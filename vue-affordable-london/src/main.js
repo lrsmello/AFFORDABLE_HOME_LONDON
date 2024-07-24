@@ -1,7 +1,8 @@
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap"
 import './assets/main.css'
 import axios from 'axios';
 import VueAxios from 'vue-axios';
-
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
