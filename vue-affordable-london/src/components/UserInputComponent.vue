@@ -189,7 +189,7 @@ onMounted(() => {
             id="distance"
             name="distance"
             min="0"
-            max="100"
+            max="50"
             step="1"
             required
             v-model="dados.maximumDistanceFromReference"
