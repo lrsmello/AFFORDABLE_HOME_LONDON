@@ -81,11 +81,14 @@
         <!-- Div para o mapa Choropleth Plotly -->
         <br>
         <h3>Compare the recommended boroughs on the map</h3>
+        <h4>Check here the location of the boroughs that were recomended. 
+            Scroll the mouse on top of each marker to check each borough's location.</h4>
         <div id="plotly-map" class="mt-5" style="height: 400;"></div>
 
         <div id="charts" class="mt-5">
 
             <h3>Compare the main characteristics of the boroughs</h3>
+            <h4>Based on the selected priorities, compare each borough's characteristics</h4>
             <div class="row">
                 <!-- Espaço onde estavam os gráficos removidos -->
             </div>
@@ -178,7 +181,7 @@
                             theta: data['categories'],
                             fill: 'toself',
                             name: '{{ranking1_name}}',
-                            line: { color: 'green' },
+                            line: { color: '#e16941' },  // Laranja
                             text: data['Borough 1'].extra,  // Adiciona o valor fixo como texto
                             hoverinfo: 'r+text'  // Exibe o valor de 'r' e o texto da nova variável
                         },
@@ -188,7 +191,7 @@
                             theta: data['categories'],
                             fill: 'toself',
                             name: '{{ranking2_name}}',
-                            line: { color: 'green' },
+                            line: { color: '#ffd000' },  // Amarelo
                             text: data['Borough 2'].extra,
                             hoverinfo: 'r+text'
                         },
@@ -198,7 +201,7 @@
                             theta: data['categories'],
                             fill: 'toself',
                             name: '{{ranking3_name}}',
-                            line: { color: 'green' },
+                            line: { color: '#69e141' },  // Verde 
                             text: data['Borough 3'].extra,
                             hoverinfo: 'r+text'
                         },
@@ -208,7 +211,7 @@
                             theta: data['categories'],
                             fill: 'toself',
                             name: '{{rankingRef_name}}',
-                            line: { color: 'blue' },
+                            line: { color: '#4169e1' },  // Azul do Times River (Royal Blue)
                             text: data['Borough RF'].extra,
                             hoverinfo: 'r+text'
                         }
