@@ -25,6 +25,12 @@ ranking3Normalized = []
 
 @app.route('/submit', methods=['POST'])
 def submit():
+    # Carregar o arquivo dimPriority.json
+    with open(os.path.join('data', 'dimPriority.json')) as f:
+        dimPriorityData = json.load(f)
+    
+    # Criar um dicionário para mapear IDs para DS_PRIORITY
+    priority_dict = {item['ID']: item['DS_PRIORITY'] for item in dimPriorityData}
 
     userName = request.form['name']
     emailAddres = request.form['email']
@@ -36,6 +42,9 @@ def submit():
 
     priorities = [int(x) for x in priorities]
 
+    # Obter os valores DS_PRIORITY correspondentes
+    priority_values = [priority_dict.get(priority_id, '') for priority_id in priorities]
+
     # Criando o payload para a API
     payload = {
         'userName': userName,
@@ -44,10 +53,11 @@ def submit():
         'maximumDistanceFromReference': int(maximumDistanceFromReference),
         'incomePerMonth': int(incomePerMonth),
         'categoryPlace': int(categoryPlace),
-        'priorities': priorities
+        'priorities': priorities,
+        'priorityValues': priority_values  # Adiciona os valores DS_PRIORITY ao payload
     }
 
-    # print(payload)
+    #print(payload)  # Print do payload
 
     # URL da API externa
     api_url = 'http://localhost:3000/api/model/run'
@@ -57,7 +67,7 @@ def submit():
 
     responseJson = response.json()
 
-    # print(responseJson)
+    print(responseJson)
 
     rankingRef = responseJson['ranking'][0]
     rankingRef_name = rankingRef['name']
@@ -151,7 +161,6 @@ def get_boroughs():
         boroughs = json.load(f)
     return jsonify(boroughs)
 
-
 @app.route('/data/dimPriority')
 def get_dimPriorities():
     data_path = os.path.join('data', 'dimPriority.json')
@@ -185,17 +194,25 @@ def generate_chart(chart_id):
 def get_polar_chart_data():
     categ_string = ['Exclui','Rent Price','Distance','Wellbeing','Travelling time','Cost of Living']
     categories = features
-    x = []
-    for i in categories:
-        for j in categ_string:
-            if categ_string.index(j) == i:
-                x.append(categ_string[i])      
+    x = [categ_string[i] for i in categories if i < len(categ_string)]
     
     data = {
-        'Borough 1': ranking1Normalized,
-        'Borough 2': ranking2Normalized,
-        'Borough 3': ranking3Normalized,
-        'Borough RF': rankingRefNormalized,
+        'Borough 1': {
+            'main': ranking1Normalized,
+            'extra': 1
+        },
+        'Borough 2': {
+            'main': ranking2Normalized,
+            'extra': 2
+        },
+        'Borough 3': {
+            'main': ranking3Normalized,
+            'extra': 3
+        },
+        'Borough RF': {
+            'main': rankingRefNormalized,
+            'extra': 4
+        },
         'categories': x
     }
     return jsonify(data)
