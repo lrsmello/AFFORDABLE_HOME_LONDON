@@ -16,63 +16,84 @@
 
     <script>
         function goBack() {
-          window.history.back()
+            window.history.back();
         }
     </script>
-
 </head>
 <body>
     <div class="container">
         <h1>WHERE TO LIVE IN LONDON</h1>
         <h2>Here are the list of affordable boroughs to live in.</h2>
-        
-        <div id="ranking">
-            <br>
-           First option: {{ ranking1_name }} <br>
-           <br>
-           Second option: {{ ranking2_name }} <br>
-           <br>
-           Third option: {{ ranking3_name }} <br><br>
-        </div>
+        <br>
 
-        <button type="submit" class="btn btn-primary" onclick="goBack()">Back to query</button>
+        <!-- nova lista-->
+        <h3>Here are the list of affordable boroughs to live in.</h3>
+        <table id="lista_recomendacao" class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">Borough</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>{{ ranking1_name }}</td>
+                <td>{{ranking1_description}}</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>{{ ranking2_name }}</td>
+                <td>{{ranking2_description}}</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>{{ ranking3_name }}</td>
+                <td>{{ranking3_description}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+        <!-- fim nova lista-->
+
+        
 
         <!-- Div para o mapa Choropleth Plotly -->
-        <div id="plotly-map" class="mt-5" style="height: 500px;"></div>
+        <h3>Compare the recommended boroughs on the map</h3>
+        <div id="plotly-map" class="mt-5" style="height: 400;"></div>
 
         <div id="charts" class="mt-5">
-            <h2>Generated Charts</h2>
+        
+        <h3>Compare the main characteristics of the boroughs</h3>
             <div class="row">
                 <!-- Espaço onde estavam os gráficos removidos -->
             </div>
-            <div id="polar-chart" class="mt-5" style="height: 500px;"></div>
+            <div id="polar-chart" class="mt-5" style="height: 400px;"></div>
         </div>
     </div>
-     
-    </div>
 
- 
-<!-- jQuery e Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jQuery e Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Código JavaScript para Plotly -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Dados dos pontos (latitude e longitude)
-            var data = [{
+            var mapData = [{
                 type: 'scattermapbox',
-                lat: ['{{ranking1_latitude}}', '{{ranking2_latitude}}','{{ranking3_latitude}}'],  // Latitude dos pontos
-                lon: ['{{ranking1_longitude}}', '{{ranking2_longitude}}','{{ranking3_longitude}}'],   // Longitude dos pontos
+                lat: ['{{ranking1_latitude}}', '{{ranking2_latitude}}', '{{ranking3_latitude}}'],  // Latitude dos pontos
+                lon: ['{{ranking1_longitude}}', '{{ranking2_longitude}}', '{{ranking3_longitude}}'],   // Longitude dos pontos
                 mode: 'markers',
                 marker: { size: 100 },
-                text: ['{{ranking1_name}}', '{{ranking2_name}}','{{ranking3_name}}']  // Textos dos pontos
+                text: ['{{ranking1_name}}', '{{ranking2_name}}', '{{ranking3_name}}']  // Textos dos pontos
             }];
 
             // Layout do mapa
-            var layout = {
+            var mapLayout = {
                 autosize: true,
                 hovermode: 'closest',
                 mapbox: {
@@ -89,9 +110,8 @@
             });
 
             // Desenhando o mapa
-            Plotly.newPlot('plotly-map', data, layout);
-        });
-    
+            Plotly.newPlot('plotly-map', mapData, mapLayout);
+
             // Carregar dados para o gráfico polar
             fetch('/polar-chart-data')
                 .then(response => response.json())
@@ -99,31 +119,43 @@
                     var polarData = [
                         {
                             type: 'scatterpolar',
-                            r: data['Borough 1'],
+                            r: data['Borough 1'].main,
                             theta: data['categories'],
                             fill: 'toself',
-                            name: '{{ranking1_name}}'
+                            name: '{{ranking1_name}}',
+                            line: { color: 'green' }, 
+                            text: data['Borough 1'].extra,  // Adiciona o valor fixo como texto
+                            hoverinfo: 'r+text'  // Exibe o valor de 'r' e o texto da nova variável
                         },
                         {
                             type: 'scatterpolar',
-                            r: data['Borough 2'],
+                            r: data['Borough 2'].main,
                             theta: data['categories'],
                             fill: 'toself',
-                            name: '{{ranking2_name}}'
+                            name: '{{ranking2_name}}',
+                            line: { color: 'green' }, 
+                            text: data['Borough 2'].extra,
+                            hoverinfo: 'r+text'
                         },
                         {
                             type: 'scatterpolar',
-                            r: data['Borough 3'],
+                            r: data['Borough 3'].main,
                             theta: data['categories'],
                             fill: 'toself',
-                            name: '{{ranking3_name}}'
+                            name: '{{ranking3_name}}',
+                            line: { color: 'green' }, 
+                            text: data['Borough 3'].extra,
+                            hoverinfo: 'r+text'
                         },
                         {
                             type: 'scatterpolar',
-                            r: data['Borough RF'],
+                            r: data['Borough RF'].main,
                             theta: data['categories'],
                             fill: 'toself',
-                            name: '{{rankingRef_name}}'
+                            name: '{{rankingRef_name}}',
+                            line: { color: 'blue' }, 
+                            text: data['Borough RF'].extra,
+                            hoverinfo: 'r+text'
                         }
                     ];
 
@@ -140,9 +172,7 @@
                     Plotly.newPlot('polar-chart', polarData, polarLayout);
                 })
                 .catch(error => console.error('Error loading polar chart data:', error));
-
+        });
     </script>
-
-
 </body>
 </html>
