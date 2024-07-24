@@ -1,9 +1,8 @@
 <template>
-  <Radar :data="chartData" :options="options" />
+  <Radar v-if="loaded" :data="chartData" :options="options" />
 </template>
 
 <script setup>
-import { defineProps } from "vue";
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -13,6 +12,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+
 import { Radar } from "vue-chartjs";
 
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
@@ -29,11 +29,5 @@ const props = defineProps({
         default: false
     }
 });
-
-
-const options = {
-  responsive: true,
-  maintainAspectRatio: false
-};
 
 </script>

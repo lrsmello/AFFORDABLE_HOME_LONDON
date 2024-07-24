@@ -82,6 +82,7 @@ def submit():
     rankingRef_features = rankingRef['features']
     rankingRef_IsAffordable = rankingRef['isAffordableRent']
     rankingRef_IsDistance = rankingRef['isInsideDistance']
+    rankingRef_IsAvgIncome = rankingRef['isInsideCostOfLiving']
     
     global rankingRefNormalized
     rankingRefNormalized = functions.dict_to_list(rankingRef_normalized)
@@ -98,6 +99,7 @@ def submit():
     ranking1_features = ranking1['features']
     ranking1_IsAffordable = ranking1['isAffordableRent']
     ranking1_IsDistance = ranking1['isInsideDistance']
+    ranking1_IsAvgIncome = ranking1['isInsideCostOfLiving']
 
     global ranking1Normalized
     ranking1Normalized = functions.dict_to_list(ranking1_normalized)
@@ -114,6 +116,7 @@ def submit():
     ranking2_features = ranking2['features']
     ranking2_IsAffordable = ranking2['isAffordableRent']
     ranking2_IsDistance = ranking2['isInsideDistance']
+    ranking2_IsAvgIncome = ranking2['isInsideCostOfLiving']
     
     global ranking2Normalized
     ranking2Normalized  = functions.dict_to_list(ranking2_normalized)
@@ -130,6 +133,7 @@ def submit():
     ranking3_features = ranking3['features']
     ranking3_IsAffordable = ranking3['isAffordableRent']
     ranking3_IsDistance = ranking3['isInsideDistance']
+    ranking3_IsAvgIncome = ranking3['isInsideCostOfLiving']
     
     global ranking3Normalized
     ranking3Normalized  = functions.dict_to_list(ranking3_normalized)
@@ -149,6 +153,7 @@ def submit():
                            rankingRef_longitude=rankingRef_longitude,
                            rankingRef_IsAffordable=rankingRef_IsAffordable,
                            rankingRef_IsDistance=rankingRef_IsDistance,
+                           rankingRef_IsAvgIncome=rankingRef_IsAvgIncome,
 
                            ranking1_name=ranking1_name, 
                            ranking1_description=ranking1_description, 
@@ -156,6 +161,7 @@ def submit():
                            ranking1_longitude=ranking1_longitude,
                            ranking1_IsAffordable=ranking1_IsAffordable,
                            ranking1_IsDistance=ranking1_IsDistance,
+                           ranking1_IsAvgIncome=ranking1_IsAvgIncome,
 
                            ranking2_name=ranking2_name,
                            ranking2_description=ranking2_description,
@@ -163,6 +169,7 @@ def submit():
                            ranking2_longitude=ranking2_longitude,
                            ranking2_IsAffordable=ranking2_IsAffordable,
                            ranking2_IsDistance=ranking2_IsDistance,
+                           ranking2_IsAvgIncome=ranking2_IsAvgIncome,
 
                            ranking3_name=ranking3_name,
                            ranking3_description=ranking3_description,
@@ -170,6 +177,7 @@ def submit():
                            ranking3_longitude=ranking3_longitude,
                            ranking3_IsAffordable=ranking3_IsAffordable,
                            ranking3_IsDistance=ranking3_IsDistance,
+                           ranking3_IsAvgIncome=ranking3_IsAvgIncome,
 
                            features=features)
 
